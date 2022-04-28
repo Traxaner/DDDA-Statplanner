@@ -13,8 +13,7 @@ public class Character : MonoBehaviour {
 	[SerializeField] private TextMeshProUGUI matkDisplay;
 	[SerializeField] private TextMeshProUGUI mdefDisplay;
 
-	void UpdateStats () {
-		iHp = 1;
+	void FixedUpdate() {
 		hpDisplay.text = iHp.ToString();
 		spDisplay.text = iSp.ToString();
 		lvlDisplay.text = iLvl.ToString();
@@ -23,4 +22,26 @@ public class Character : MonoBehaviour {
 		matkDisplay.text = iMAtk.ToString();
 		mdefDisplay.text = iMDef.ToString();
 	}
+
+	//Getters
+	public int GetHp() { return iHp; }
+	public int GetSp() { return iSp; }
+	public int GetLvl() { return iLvl; }
+	public int GetAtk() { return iAtk; }
+	public int GetDef() { return iDef; }
+	public int GetMAtk() { return iMAtk; }
+	public int GetMDef() { return iMDef; }
+	
+	//Setters
+	public void SetHp(int iHP) { this.iHp = iHp; }
+	public void SetSp(int iSP) { this.iSp = iSp; }
+	public void SetLvl(int iLvl) {
+		if (iLvl < 0) { iLvl = 0; }
+		else if (iLvl > 200) { iLvl = 200; }
+		this.iLvl = iLvl;
+	}
+	public void SetAtk(int iAtk) { this.iAtk = iAtk; }
+	public void SetDef(int iDef) { this.iDef = iDef; }
+	public void SetMAtk(int iMAtk) { this.iMAtk = iMAtk; }
+	public void SetMDef(int iMDef) { this.iMDef = iMDef; }
 }

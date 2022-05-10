@@ -39,8 +39,8 @@ public class CCharacter : MonoBehaviour {
 	public void SetHp(int iHP) { this.iHp += iHP; }
 	public void SetSp(int iSP) { this.iSp += iSP; }
 	public void SetLvl(int iLvl) {
-		if (iLvl < 0) { iLvl = 0; }
-		else if (iLvl > 200) { iLvl = 200; }
+		if (iLvl > 200) { iLvl = 200; }
+		if (iLvl < 1) { iLvl = 1; } 
 		this.iLvl = iLvl;
 	}
 	public void SetAtk(int iAtk) { this.iAtk += iAtk; }

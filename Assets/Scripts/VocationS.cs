@@ -16,7 +16,7 @@ public class VocationS : MonoBehaviour {
 
 	public void LvlUp() {
 		UpdateInfo();
-		if (iCount < 10) {
+		if (iCount < 9) {
 			iCDis++;
 			chara.SetHp(iHPGr);
 			chara.SetSp(iSPGr);
@@ -32,7 +32,7 @@ public class VocationS : MonoBehaviour {
 
 	public void LvlDown() {
 		UpdateInfo();
-		if (iCount > 1) {
+		if (iCount > 0) {
 			iCDis--;
 			chara.SetHp(-iHPGr);
 			chara.SetSp(-iSPGr);

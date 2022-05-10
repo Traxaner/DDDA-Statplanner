@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class CCharacter : MonoBehaviour {
-	private int iLvl = 50, iHp = 0, iSp = 0, iAtk = 0, iDef = 0, iMAtk = 0, iMDef = 0, iCount0 = 0, iCount1 = 0, iCount2 = 0;
+	private int iLvl = 1, iHp = 0, iSp = 0, iAtk = 0, iDef = 0, iMAtk = 0, iMDef = 0, iCount0 = 0, iCount1 = 0, iCount2 = 0;
 	[SerializeField] private TextMeshProUGUI hpDisplay;
 	[SerializeField] private TextMeshProUGUI spDisplay;
 	[SerializeField] private TextMeshProUGUI lvlDisplay;

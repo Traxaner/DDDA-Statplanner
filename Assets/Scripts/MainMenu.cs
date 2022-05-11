@@ -21,6 +21,8 @@ public class MainMenu : MonoBehaviour {
 		fPos0 = mainMenu.transform.position.x;
 		fPos1 = aPanel.transform.position.x;
 		fPos2 = pPanel.transform.position.x;
+		aPanel.SetActive(false);
+		pPanel.SetActive(false);
 	}
 
 	void FixedUpdate() {

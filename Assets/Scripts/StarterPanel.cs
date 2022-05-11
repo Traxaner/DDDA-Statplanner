@@ -2,16 +2,35 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
-public class StartingStats : MonoBehaviour {
+public class StarterPanel : MonoBehaviour {
 
-	public Toggle tFighter, tStrider;
-	public CCharacter chara;
+	[SerializeField] private TextMeshProUGUI DropDown;
+	[SerializeField] private Toggle tFighter, tStrider;
+	[SerializeField] private CCharacter chara;
 
 	private int iHP = 0, iAT = 0, iDE = 0, iMA = 0, iMD = 0;
 	private char cPrev;
 
-	void Start() { UpdateToggle(); }
+	void Awake() {
+		UpdateToggle();
+		UpdateVocation();
+	}
+
+	public void UpdateVocation() {
+        switch (DropDown.text) {
+			case "Magick Archer":
+				chara.SetVocation("M. Archer");
+				break;
+			case "Mystic Knight":
+				chara.SetVocation("M. Knight");
+				break;
+			default:
+				chara.SetVocation(DropDown.text);
+				break;
+        }
+    }
 
 	public void UpdateToggle() {
 		chara.SetHp(-iHP);

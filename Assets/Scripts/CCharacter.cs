@@ -1,10 +1,10 @@
-using TMPro;
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
+using UnityEngine;
+using TMPro;
 
 public class CCharacter : MonoBehaviour {
-	private int iLvl = 1, iHp = 0, iSp = 0, iAtk = 0, iDef = 0, iMAtk = 0, iMDef = 0, iCount0 = 0, iCount1 = 0, iCount2 = 0;
+	[SerializeField] private TextMeshProUGUI Vocation;
 	[SerializeField] private TextMeshProUGUI hpDisplay;
 	[SerializeField] private TextMeshProUGUI spDisplay;
 	[SerializeField] private TextMeshProUGUI lvlDisplay;
@@ -13,7 +13,11 @@ public class CCharacter : MonoBehaviour {
 	[SerializeField] private TextMeshProUGUI matkDisplay;
 	[SerializeField] private TextMeshProUGUI mdefDisplay;
 
+	private int iLvl = 1, iHp = 0, iSp = 0, iAtk = 0, iDef = 0, iMAtk = 0, iMDef = 0, iCount0 = 0, iCount1 = 0, iCount2 = 0;
+	private string sVocation;
+
 	void FixedUpdate() {
+		Vocation.text = sVocation;
 		hpDisplay.text = iHp.ToString();
 		spDisplay.text = iSp.ToString();
 		lvlDisplay.text = iLvl.ToString();
@@ -34,7 +38,8 @@ public class CCharacter : MonoBehaviour {
 	public int GetICount0() { return iCount0; }
 	public int GetICount1() { return iCount1; }
 	public int GetICount2() { return iCount2; }
-	
+	public string GetVocation() { return sVocation; }
+
 	//Setters
 	public void SetHp(int iHP) { this.iHp += iHP; }
 	public void SetSp(int iSP) { this.iSp += iSP; }
@@ -50,4 +55,5 @@ public class CCharacter : MonoBehaviour {
 	public void SetICount0(int iCount0) { this.iCount0 = iCount0; }
 	public void SetICount1(int iCount1) { this.iCount1 = iCount1; }
 	public void SetICount2(int iCount2) { this.iCount2 = iCount2; }
+	public void SetVocation(string sVocation) { this.sVocation = sVocation; }
 }

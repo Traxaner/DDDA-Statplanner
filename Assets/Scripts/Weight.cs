@@ -13,7 +13,7 @@ public class Weight : MonoBehaviour {
 	private int iWeight, iStamBase = 0;
 	private char cWeightClass;
 
-	void Start() {
+	void Awake() {
 		UpdateVisuals();
 	}
 

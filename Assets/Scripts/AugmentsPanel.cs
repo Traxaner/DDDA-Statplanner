@@ -142,7 +142,9 @@ public class AugmentsPanel : MonoBehaviour {
 		Augment.Add("Tenacity (BBI)");
 	}
 
+	//Preventing Doubleselection and Calculating Stats/Boosts
 	void DropdownItemSelected(int iDdown) {
+		//Preventing Doubleselection
 		iIndexes[6] = Dropdowns[iDdown].value;
 		bool bAlarm = false;
 		for (int i = 0; i < 6; i++) {
@@ -154,10 +156,12 @@ public class AugmentsPanel : MonoBehaviour {
 			}
 		}
 		if (!bAlarm) {
-            switch (iIndexes[6]) {
+			//Removing Stats and Boosts
+            switch (iIndexes[iDdown]) {
 				case 1:
                     if (Check(1)) {
 						Debug.Log("Augments[1]: 100 HP");
+						chara.SetHp(-100);
 					}
 					break;
 				case 4:
@@ -173,6 +177,7 @@ public class AugmentsPanel : MonoBehaviour {
 				case 8:
                     if (Check(8)) {
 						Debug.Log("Augments[8]: 100 SP");
+						chara.SetSp(-100);
 					}
 					break;
 				case 10:
@@ -203,6 +208,7 @@ public class AugmentsPanel : MonoBehaviour {
 				case 28:
                     if (Check(28)) {
 						Debug.Log("Augments[28]: 100 HP");
+						chara.SetHp(-100);
 					}
 					break;
 				case 40:
@@ -218,7 +224,6 @@ public class AugmentsPanel : MonoBehaviour {
 	bool Check(int iIndex) {
 		for(int i = 0; i < 6; i++) {
             if (iIndex == iIndexes[i]) { return true; }
-        }
-		return false;
+        } return false;
     }
 }

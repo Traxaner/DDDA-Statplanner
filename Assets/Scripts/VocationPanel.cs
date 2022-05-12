@@ -1,9 +1,9 @@
-using TMPro;
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
+using UnityEngine;
+using TMPro;
 
-public class VocationN : MonoBehaviour {
+public class VocationPanel : MonoBehaviour {
 	public CCharacter chara;
 	[SerializeField] private TextMeshProUGUI lvl1, lvl2;
 	[SerializeField] private int iHPGr1, iSPGr1, iATGr1, iDEGr1, iMAGr1, iMDGr1, iHPGr2, iSPGr2, iATGr2, iDEGr2, iMAGr2, iMDGr2;

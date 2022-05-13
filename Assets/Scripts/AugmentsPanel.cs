@@ -15,12 +15,13 @@ public class AugmentsPanel : MonoBehaviour {
 	[SerializeField] private GameObject ADd5;
 	[SerializeField] private GameObject ADd6;
 	List<string> Augment = new List<string>();
-	private int[] iIndexes = new int[7];
 
 	//Anything else
 	[SerializeField] private TextMeshProUGUI SBoost;
 	[SerializeField] private TextMeshProUGUI MBoost;
-	[SerializeField] private CCharacter chara;
+	[SerializeField] private CCharacter chara;	
+	private float fSBoost = 1, fMBoost = 1;
+	private int[] iIndexes = new int[7];
 	public bool bArisen = false;
 
 
@@ -107,18 +108,13 @@ public class AugmentsPanel : MonoBehaviour {
 			Augment.Add("Restoration (M. Knight)");
 			Augment.Add("Sanctuary (M. Knight)");
 			Augment.Add("Watchfullness (Assassin)");
-			Debug.Log("Augments[50]: 100 SP");
 			Augment.Add("Entrancement (Assassin)");
-			Debug.Log("Augments[51]: 100 HP");
 			Augment.Add("Sanguinity (Assassin)");
-			Debug.Log("Augments[52]: 20% SBoost und MBoost");
 			Augment.Add("Bloodlust (Assassin)");
 			Augment.Add("Preemption (Assassin)");
 			Augment.Add("Toxicity (Assassin)");
-			Debug.Log("Augments[55]: 20% SBoost und Mboost");
 			Augment.Add("Autonomy (Assassin)");
 			Augment.Add("Detection (M. Archer)");
-			Debug.Log("Augments[57]: 100 SP");
 			Augment.Add("Potential (M. Archer)");
 			Augment.Add("Resilience (M. Archer)");
 			Augment.Add("Allure (M. Archer)");
@@ -144,86 +140,175 @@ public class AugmentsPanel : MonoBehaviour {
 
 	//Preventing Doubleselection and Calculating Stats/Boosts
 	void DropdownItemSelected(int iDdown) {
-		//Preventing Doubleselection
 		iIndexes[6] = Dropdowns[iDdown].value;
-		bool bAlarm = false;
+		//Preventing Doubleselection
 		for (int i = 0; i < 6; i++) {
-			Debug.Log("Cycle " + (i + 1));
-			if(iIndexes[i] == iIndexes[6]) {
-				Dropdowns[iDdown].RefreshShownValue();
-				Debug.Log("This shouldn't be possible");
-				bAlarm = true;
-			}
+			Dropdowns[i].GetComponent<DropDownController>().EnableOption(iIndexes[iDdown], true);
+			Dropdowns[i].GetComponent<DropDownController>().EnableOption(iIndexes[6], false);
 		}
-		if (!bAlarm) {
-			//Removing Stats and Boosts
-            switch (iIndexes[iDdown]) {
+		//Removing Stats and Boosts
+		switch (iIndexes[iDdown]){
 				case 1:
-                    if (Check(1)) {
-						Debug.Log("Augments[1]: 100 HP");
-						chara.SetHp(-100);
-					}
+					if (Check(1)) { chara.SetHp(-100); }
 					break;
 				case 4:
-                    if (Check(4)) {
-						Debug.Log("Augments[4]: 35% SBoost");
-					}
+					if (Check(4)) { ApplySBoost(-35); }
 					break;
 				case 6:
-                    if (Check(6)) {
-						Debug.Log("Augments[6]: 10% SBoost");
-					}
+					if (Check(6)) { ApplySBoost(-10); }
 					break;
 				case 8:
-                    if (Check(8)) {
-						Debug.Log("Augments[8]: 100 SP");
-						chara.SetSp(-100);
-					}
+					if (Check(8)) { chara.SetSp(-100); }
 					break;
 				case 10:
-                    if (Check(10)) {
-						Debug.Log("Augments[10]: 30% SBoost");
-					}
+					if (Check(10)) { ApplySBoost(-30); }
 					break;
 				case 14:
-                    if (Check(14)) {
-						Debug.Log("Augments[14]: 20% MBoost");
-					}
+					if (Check(14)) { ApplyMBoost(-20); }
 					break;
 				case 19:
-                    if (Check(19)) {
-						Debug.Log("Augements[19]: 10% SBoost");
-					}
+					if (Check(19)) { ApplyMBoost(-10); }
 					break;
 				case 22:
 					if (Check(22)) {
-						Debug.Log("Augments[22]: 10% SBoost 10% MBoost");
+						ApplySBoost(-10);
+						ApplyMBoost(-10);
 					}
 					break;
 				case 26:
-					if (Check(26)) {
-						Debug.Log("Augments[26]: 20% SBoost");
-					}
+					if (Check(26)) { ApplySBoost(-20); }
 					break;
 				case 28:
-                    if (Check(28)) {
-						Debug.Log("Augments[28]: 100 HP");
-						chara.SetHp(-100);
-					}
+					if (Check(28)) { chara.SetHp(-100); }
 					break;
 				case 40:
-                    if (Check(40)) {
-						Debug.Log("Augments[40]: 20% MBoost");
+					if (Check(40)) { ApplyMBoost(-20); }
+					break;
+				case 50:
+					if (bArisen && Check(50)) { chara.SetSp(-100); }
+					break;
+				case 51:
+					if (bArisen && Check(51)) { chara.SetHp(-100); }
+					break;
+				case 52:
+					if (bArisen && Check(52)) {
+						ApplySBoost(-20);
+						ApplyMBoost(-20);
 					}
 					break;
+				case 55:
+					if (bArisen && Check(55)) { 
+						ApplySBoost(-20);
+						ApplyMBoost(-20);
+					}
+					break;
+				case (57):
+					if (bArisen && Check(57)) { chara.SetSp(-100); }
+					break;
 			}
-			iIndexes[iDdown] = iIndexes[6];
-		}			
+		iIndexes[iDdown] = iIndexes[6];
+		//Applying Stats and Boosts
+		switch (iIndexes[6]) {
+				case 1:
+					if (Check(1)) { chara.SetHp(100); }
+					break;
+				case 4:
+					if (Check(4)) { ApplySBoost(35); }
+					break;
+				case 6:
+					if (Check(6)) { ApplySBoost(10); }
+					break;
+				case 8:
+					if (Check(8)) { chara.SetSp(100); }
+					break;
+				case 10:
+					if (Check(10)) { ApplySBoost(30); }
+					break;
+				case 14:
+					if (Check(14)) { ApplyMBoost(20); }
+					break;
+				case 19:
+					if (Check(19)) { ApplyMBoost(10); }
+					break;
+				case 22:
+					if (Check(22)) {
+						ApplySBoost(10);
+						ApplyMBoost(10);
+					}
+					break;
+				case 26:
+					if (Check(26)) { ApplySBoost(20); }
+					break;
+				case 28:
+					if (Check(28)) { chara.SetHp(100); }
+					break;
+				case 40:
+					if (Check(40)) { ApplyMBoost(20); }
+					break;
+				case 50:
+					if (bArisen && Check(50)) { chara.SetSp(100); }
+					break;
+				case 51:
+					if (bArisen && Check(51)) { chara.SetHp(100); }
+					break;
+				case 52:
+					if (bArisen && Check(52)) {
+						ApplySBoost(20);
+						ApplyMBoost(20);
+					}
+					break;
+				case 55:
+					if (bArisen && Check(55)) {
+						ApplySBoost(20);
+						ApplyMBoost(20);
+					}
+					break;
+				case (57):
+					if (bArisen && Check(57)) { chara.SetSp(100); }
+					break;
+			}
+		UpdateVisuals();
+	}
+	
+	private bool Check(int iIndex) {
+		for (int i = 0; i < 6; i++) {
+			if (iIndex == iIndexes[i]) { return true; }
+		}
+		return false;
+	}
+	
+	//Applying the Boosts from Augments multiplicatively
+	private void ApplySBoost(int iSBoost) {
+		if (iSBoost > 0) {
+			fSBoost *= (1 + ((float)iSBoost / 100));
+		} else {
+			fSBoost /= (1 + ((float)-iSBoost / 100));
+		}
+	}
+	private void ApplyMBoost(int iMBoost) {
+		if (iMBoost > 0) { 
+			fMBoost *= (1 + ((float)iMBoost / 100));
+		} else {
+			fMBoost /= (1 + ((float)-iMBoost / 100));
+		}
 	}
 
-	bool Check(int iIndex) {
-		for(int i = 0; i < 6; i++) {
-            if (iIndex == iIndexes[i]) { return true; }
-        } return false;
+	private void UpdateVisuals() {
+		int iCalc = (int)((fSBoost - 1) * 100);
+		if (iCalc > 80) {
+			SBoost.text = "80%";
+			SBoost.color = new Color32(255, 75, 0, 200);
+		} else {
+			SBoost.text = iCalc.ToString() + "%";
+			SBoost.color = new Color32(0, 0, 255, 200);
+		}
+		iCalc = (int)((fMBoost - 1) * 100);
+		if (iCalc > 80) {
+			MBoost.text = "80%";
+			MBoost.color = new Color32(255, 75, 0, 200);
+		} else {
+			MBoost.text = iCalc.ToString() + "%";
+			MBoost.color = new Color32(0, 0, 255, 200);
+		}
     }
 }

@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour {
 
 	[SerializeField] private GameObject aPanel, aSPanel, aVPanel,aAPanel,aEPanel,aSkPanel;
 	[SerializeField] private GameObject pPanel, pSPanel, pVPanel,pAPanel,pEPanel,pSkPanel;
-	[SerializeField] private GameObject mainMenu, menuMode, saveMode;
+	[SerializeField] private GameObject mainMenu, menuMode, saveMode, VPTools;
 	[SerializeField] private TextMeshProUGUI information;
 	[SerializeField] private Button SAV;
 
@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour {
 		fPos0 = mainMenu.transform.position.x;
 		fPos1 = aPanel.transform.position.x;
 		fPos2 = pPanel.transform.position.x;
+		VPTools.SetActive(false);
 		aPanel.SetActive(false);
 		pPanel.SetActive(false);
 	}
@@ -51,10 +52,12 @@ public class MainMenu : MonoBehaviour {
 						information.text = "Here you can pick 6 augments\nfrom all available Vocations";
 						break;
 					case 4:
-						information.text = "Here you can select all the\nequipment pieces you want to have";
+						information.text = "TODO";
+//						information.text = "Here you can select all the\nequipment pieces you want to have";
 						break;
 					case 5:
-						information.text = "Here you can select your skills\nbased on chosen weapons";
+						information.text = "TODO";
+//						information.text = "Here you can select your skills\nbased on chosen weapons";
 						break;
 					case 6:
 						iMessage = 2;
@@ -129,6 +132,7 @@ public class MainMenu : MonoBehaviour {
 			aPanel.SetActive(true);
 			pPanel.SetActive(false);
 		}
+		VPTools.SetActive(false);
 		aSPanel.SetActive(false);
 		pSPanel.SetActive(false);
 		aVPanel.SetActive(false);
@@ -145,6 +149,7 @@ public class MainMenu : MonoBehaviour {
 		} else if (index < 4) {
 			aVPanel.SetActive(true);
 			pVPanel.SetActive(true);
+			VPTools.SetActive(true);
 		} else if (index < 6) {
 			aAPanel.SetActive(true);
 			pAPanel.SetActive(true);

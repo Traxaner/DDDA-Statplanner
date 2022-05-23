@@ -1,7 +1,7 @@
-using TMPro;
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
+using UnityEngine;
+using TMPro;
 
 public class VocationS : MonoBehaviour {
 	public CCharacter chara;

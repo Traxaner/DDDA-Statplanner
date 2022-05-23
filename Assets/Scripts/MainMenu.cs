@@ -61,7 +61,7 @@ public class MainMenu : MonoBehaviour {
 						break;
 					case 6:
 						iMessage = 2;
-						information.text = "TODO";
+						information.text = "You can change \"Saving to\" into\n\"Loading from\" by pressing on it";
 						break;
 				}
 				break;
@@ -73,10 +73,13 @@ public class MainMenu : MonoBehaviour {
 				break;
 			case 2:
 				iMessage = 0;
-                if (iState != 6) {
-					information.text = "Press here to close the editing Options\nSaving and Loading is only possible then";
-				} else { 
-					information.text = "Press here to return to the main menu";
+				switch (iState) {
+					default:
+						information.text = "Press here to close the editing Options\nSaving and Loading is only possible then";
+						break;
+					case 6:
+						information.text = "Press here to return to the main menu";
+						break;
 				}
 				break;
 	}	}
@@ -96,20 +99,21 @@ public class MainMenu : MonoBehaviour {
 			case 2:
 				Pos.Set(fPos2,fPosY,0f);
 				break;
-        }
+		}
 		mainMenu.transform.SetPositionAndRotation(Pos, new Quaternion());
 		//Update saved placement
 		cPos = tPos;
-    }
+	}
 
 	//Reset the Information given by the main menu
 	public void SetState(int iState) {
 		//Stop if already in this state
-        if (this.iState == iState) { return; }
+		if (this.iState == iState) { return; }
 		//Changing main menu if needed
 		if (iState == 0) {
 			menuMode.SetActive(true);
 			saveMode.SetActive(false);
+			VPTools.SetActive(false);
 			aPanel.SetActive(false);
 			pPanel.SetActive(false);
 			SAV.interactable = true;
@@ -125,10 +129,10 @@ public class MainMenu : MonoBehaviour {
 
 	//Enable the right Areas; odd Pawn, even Arisen
 	public void Display(int index) {
-        if (index % 2 == 1) {
+		if (index % 2 == 1) {
 			aPanel.SetActive(false);
 			pPanel.SetActive(true);
-        } else {
+		} else {
 			aPanel.SetActive(true);
 			pPanel.SetActive(false);
 		}

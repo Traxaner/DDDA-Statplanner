@@ -6,8 +6,8 @@ using TMPro;
 
 public class StarterPanel : MonoBehaviour {
 
-	[SerializeField] private TextMeshProUGUI DropDown;
-	[SerializeField] private Toggle tFighter, tStrider;
+	[SerializeField] private TMP_Dropdown DropDown;
+	[SerializeField] private Toggle tFighter, tStrider, tMage;
 	[SerializeField] private CCharacter chara;
 
 	private int iHP = 0, iAT = 0, iDE = 0, iMA = 0, iMD = 0;
@@ -19,7 +19,7 @@ public class StarterPanel : MonoBehaviour {
 	}
 
 	public void UpdateVocation() {
-        switch (DropDown.text) {
+        switch (DropDown.captionText.text) {
 			case "Magick Archer":
 				chara.SetVocation("M. Archer");
 				break;
@@ -27,7 +27,7 @@ public class StarterPanel : MonoBehaviour {
 				chara.SetVocation("M. Knight");
 				break;
 			default:
-				chara.SetVocation(DropDown.text);
+				chara.SetVocation(DropDown.captionText.text);
 				break;
         }
     }

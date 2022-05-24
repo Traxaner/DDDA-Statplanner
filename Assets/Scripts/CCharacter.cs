@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class CCharacter : MonoBehaviour {
+	[SerializeField] private TextMeshProUGUI CName;
 	[SerializeField] private TextMeshProUGUI Vocation;
 	[SerializeField] private TextMeshProUGUI hpDisplay;
 	[SerializeField] private TextMeshProUGUI spDisplay;

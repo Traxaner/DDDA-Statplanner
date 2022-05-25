@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class CCharacter : MonoBehaviour {
+public class CCharacter : MonoBehaviour, IDataPersistance {
 	[SerializeField] private TMP_InputField CName;
 	[SerializeField] private TextMeshProUGUI Vocation;
 	[SerializeField] private TextMeshProUGUI hpDisplay;
@@ -62,4 +62,13 @@ public class CCharacter : MonoBehaviour {
 	public void SetICount1(int iCount1) { this.iCount1 = iCount1; }
 	public void SetICount2(int iCount2) { this.iCount2 = iCount2; }
 	public void SetVocation(string sVocation) { this.sVocation = sVocation; }
+
+	public void SaveData(GameData data) {
+		if (bArisen) { data.aName = CName.GetComponentInChildren<TextMeshProUGUI>().text; }
+		else { data.pName = CName.GetComponentInChildren<TextMeshProUGUI>().text; }
+	}
+
+	public void LoadData(GameData data) {
+		if (bArisen) { CName.text = data.aName; } else { CName.text = data.pName; }
+	}
 }

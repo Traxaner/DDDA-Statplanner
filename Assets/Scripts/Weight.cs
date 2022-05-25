@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-public class Weight : MonoBehaviour {
+public class Weight : MonoBehaviour, IDataPersistance {
 	
 	[SerializeField] private TextMeshProUGUI CarryCap, WeightDis, WeightCl;
 	[SerializeField] private Slider WeightSlider;
@@ -71,4 +71,17 @@ public class Weight : MonoBehaviour {
 			chara.SetSp(iStamBase);
         }
     }
+
+	public void SaveData(GameData data) {
+		Debug.Log("em...."+(int)WeightSlider.value);
+		if (bArisen) { data.aWeight = (int)WeightSlider.value; } else { data.pWeight = iWeight; }
+	}
+
+	public void LoadData(GameData data) {
+		int iWeight;
+		if (bArisen) { iWeight = data.aWeight; } else { iWeight = data.pWeight; }
+		WeightSlider.value = iWeight;
+		UpdateVisuals();
+		Debug.Log(this.iWeight);
+	}
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class CCharacter : MonoBehaviour {
-	[SerializeField] private TextMeshProUGUI CName;
+	[SerializeField] private TMP_InputField CName;
 	[SerializeField] private TextMeshProUGUI Vocation;
 	[SerializeField] private TextMeshProUGUI hpDisplay;
 	[SerializeField] private TextMeshProUGUI spDisplay;
@@ -16,6 +16,11 @@ public class CCharacter : MonoBehaviour {
 
 	private int iLvl = 1, iHp = 0, iSp = 0, iAtk = 0, iDef = 0, iMAtk = 0, iMDef = 0, iCount0 = 0, iCount1 = 0, iCount2 = 0;
 	private string sVocation;
+	private bool bArisen;
+
+	private void Start() {
+		if (this.CompareTag("Arisen")) { bArisen = true; } else { bArisen = false; }
+	}
 
 	void FixedUpdate() {
 		Vocation.text = sVocation;

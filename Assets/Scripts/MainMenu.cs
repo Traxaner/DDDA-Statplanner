@@ -129,12 +129,19 @@ public class MainMenu : MonoBehaviour {
 
 	//Enable the right Areas; odd Pawn, even Arisen
 	public void Display(int index) {
-		if (index % 2 == 1) {
-			aPanel.SetActive(false);
-			pPanel.SetActive(true);
-		} else {
+		if (index == 10) {
 			aPanel.SetActive(true);
-			pPanel.SetActive(false);
+			pPanel.SetActive(true);
+			return;
+		}
+		aPanel.SetActive(false);
+		pPanel.SetActive(false);
+		if (index != 0) {
+			if (index % 2 == 1) {
+				pPanel.SetActive(true);
+			} else {
+				aPanel.SetActive(true);
+			}
 		}
 		VPTools.SetActive(false);
 		aSPanel.SetActive(false);

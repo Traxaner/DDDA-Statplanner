@@ -12,8 +12,10 @@ public class Weight : MonoBehaviour {
 
 	private int iWeight, iStamBase = 0;
 	private char cWeightClass;
+	private bool bArisen;
 
 	void Awake() {
+		if (this.CompareTag("Arisen")) { bArisen = true; } else { bArisen = false; }
 		UpdateVisuals();
 	}
 

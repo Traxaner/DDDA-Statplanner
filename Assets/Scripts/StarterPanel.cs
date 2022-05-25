@@ -11,9 +11,10 @@ public class StarterPanel : MonoBehaviour {
 	[SerializeField] private CCharacter chara;
 
 	private int iHP = 0, iAT = 0, iDE = 0, iMA = 0, iMD = 0;
-	private char cPrev;
+	private bool bArisen;
 
 	void Awake() {
+		if (this.CompareTag("Arisen")) { bArisen = true; } else { bArisen = false; }
 		UpdateToggle();
 		UpdateVocation();
 	}

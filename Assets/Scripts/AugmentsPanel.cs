@@ -22,10 +22,11 @@ public class AugmentsPanel : MonoBehaviour {
 	[SerializeField] private CCharacter chara;	
 	private float fSBoost = 1, fMBoost = 1;
 	private int[] iIndexes = new int[7];
-	public bool bArisen = false;
+	private bool bArisen;
 
 
 	void Start() {
+		if (this.CompareTag("Arisen")) { bArisen = true; } else { bArisen = false; }
 		int i;
 		//Emptying out all the Dropdowns
 		Dropdowns[0] = ADd1.GetComponent<TMP_Dropdown>();

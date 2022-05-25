@@ -73,7 +73,6 @@ public class Weight : MonoBehaviour, IDataPersistance {
     }
 
 	public void SaveData(GameData data) {
-		Debug.Log("em...."+(int)WeightSlider.value);
 		if (bArisen) { data.aWeight = (int)WeightSlider.value; } else { data.pWeight = iWeight; }
 	}
 
@@ -82,6 +81,5 @@ public class Weight : MonoBehaviour, IDataPersistance {
 		if (bArisen) { iWeight = data.aWeight; } else { iWeight = data.pWeight; }
 		WeightSlider.value = iWeight;
 		UpdateVisuals();
-		Debug.Log(this.iWeight);
 	}
 }

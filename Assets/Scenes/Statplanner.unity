@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!114 &4482109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3880,7 +3880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!1 &144751594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,7 +4364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!114 &177817713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5939,7 +5939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!1 &211428897
 GameObject:
   m_ObjectHideFlags: 0
@@ -8739,7 +8739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!1 &334045732
 GameObject:
   m_ObjectHideFlags: 0
@@ -16616,7 +16616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!114 &673166337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20121,7 +20121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!114 &824935392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27228,7 +27228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!114 &1164564992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28521,7 +28521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!1 &1235506790
 GameObject:
   m_ObjectHideFlags: 0
@@ -31122,6 +31122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71867705e8993864896835cd1057e5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 113438062}
 --- !u!1 &1386911682
 GameObject:
   m_ObjectHideFlags: 0
@@ -35401,7 +35402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!1 &1561265560
 GameObject:
   m_ObjectHideFlags: 0
@@ -41558,7 +41559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!114 &1800559481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44304,7 +44305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cdb7e5a99115d4e910af0407305d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToDisable: 000000000000000000000000000000000000000000000000
+  indexesToDisable: 
 --- !u!1 &1937096953
 GameObject:
   m_ObjectHideFlags: 0

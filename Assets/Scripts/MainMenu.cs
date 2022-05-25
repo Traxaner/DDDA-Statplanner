@@ -12,8 +12,9 @@ public class MainMenu : MonoBehaviour {
 	[SerializeField] private TextMeshProUGUI information;
 	[SerializeField] private Button SAV;
 
-	private float fTimer = 0f, fPos0, fPos1, fPos2, fPosY;
+	private float fTimer, fPos0, fPos1, fPos2, fPosY;
 	private int iState = 0, iMessage = 0, cPos = 0;
+	private bool init = true;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -21,17 +22,20 @@ public class MainMenu : MonoBehaviour {
 		fPos0 = mainMenu.transform.position.x;
 		fPos1 = aPanel.transform.position.x;
 		fPos2 = pPanel.transform.position.x;
-		VPTools.SetActive(false);
-		aPanel.SetActive(false);
-		pPanel.SetActive(false);
+		fTimer = Time.time + 3f;
 	}
 
 	void FixedUpdate() {
 		if (Time.time >= fTimer) {
 			fTimer = Time.time + 5;
 			Infotext();
-		}
-	}
+		} else {
+			if (init) {
+				VPTools.SetActive(false);
+				aPanel.SetActive(false);
+				pPanel.SetActive(false);
+				init = false;
+	}	}	}
 
 	//Changes the Infotext based on Context
 	private void Infotext() {
@@ -129,19 +133,12 @@ public class MainMenu : MonoBehaviour {
 
 	//Enable the right Areas; odd Pawn, even Arisen
 	public void Display(int index) {
-		if (index >= 11) {
-			aPanel.SetActive(true);
-			pPanel.SetActive(true);
-			return;
-		}
 		aPanel.SetActive(false);
 		pPanel.SetActive(false);
-		if (index != 10) {
-			if (index % 2 == 1) {
-				pPanel.SetActive(true);
-			} else {
-				aPanel.SetActive(true);
-			}
+		if (index % 2 == 1) {
+			pPanel.SetActive(true);
+		} else {
+			aPanel.SetActive(true);
 		}
 		VPTools.SetActive(false);
 		aSPanel.SetActive(false);

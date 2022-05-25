@@ -7,8 +7,9 @@ public class DataPersistenceManager : MonoBehaviour {
 
 	public static DataPersistenceManager instance { get; private set; }
 	private List<IDataPersistance> dataPersistanceObjects;
+	[SerializeField] private MainMenu menu;
 	private GameData gameData;
-
+	
 	private void Awake() {
 		if (instance != null) {
 			Debug.LogError("Found more than one Data PersistanceManager in the scene.");
@@ -33,12 +34,13 @@ public class DataPersistenceManager : MonoBehaviour {
 		//TODO file data handler
 
 		if (this.gameData == null) {
-			Debug.Log("No data was found. Initializing data to defaults.");
+			Debug.LogError("No data was found. Initializing data to defaults.");
 			NewData();
 		}
 		//Push loaded data to other Scripts
 		foreach(IDataPersistance dataPersistanceObj in dataPersistanceObjects) {
 			dataPersistanceObj.SaveData(gameData);
+
 		}
 	}
 
@@ -47,7 +49,7 @@ public class DataPersistenceManager : MonoBehaviour {
 		foreach(IDataPersistance dataPersistanceObj in dataPersistanceObjects) {
 			dataPersistanceObj.LoadData(gameData);
 		}
-
 		//TODO file data handler
+
 	}
 }

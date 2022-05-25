@@ -4,9 +4,10 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-public class AugmentsPanel : MonoBehaviour {
+public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 
 	//Objects just for the Dropdown Selections
+	private DropDownController[] DDownCon = new DropDownController[6];
 	private TMP_Dropdown[] Dropdowns = new TMP_Dropdown[6];
 	[SerializeField] private GameObject ADd1;
 	[SerializeField] private GameObject ADd2;
@@ -15,6 +16,7 @@ public class AugmentsPanel : MonoBehaviour {
 	[SerializeField] private GameObject ADd5;
 	[SerializeField] private GameObject ADd6;
 	List<string> Augment = new List<string>();
+	private int iC;
 
 	//Anything else
 	[SerializeField] private TextMeshProUGUI SBoost;
@@ -35,6 +37,12 @@ public class AugmentsPanel : MonoBehaviour {
 		Dropdowns[3] = ADd4.GetComponent<TMP_Dropdown>();
 		Dropdowns[4] = ADd5.GetComponent<TMP_Dropdown>();
 		Dropdowns[5] = ADd6.GetComponent<TMP_Dropdown>();
+		DDownCon[0] = ADd1.GetComponent<DropDownController>();
+		DDownCon[1] = ADd2.GetComponent<DropDownController>();
+		DDownCon[2] = ADd3.GetComponent<DropDownController>();
+		DDownCon[3] = ADd4.GetComponent<DropDownController>();
+		DDownCon[4] = ADd5.GetComponent<DropDownController>();
+		DDownCon[5] = ADd6.GetComponent<DropDownController>();
 		for(i = 0; i < 6; i++) { Dropdowns[i].options.Clear(); }
 		FillList();
 		foreach(string Augment in Augment) {
@@ -53,7 +61,6 @@ public class AugmentsPanel : MonoBehaviour {
 		Dropdowns[3].onValueChanged.AddListener(delegate { DropdownItemSelected(3); });
 		Dropdowns[4].onValueChanged.AddListener(delegate { DropdownItemSelected(4); });
 		Dropdowns[5].onValueChanged.AddListener(delegate { DropdownItemSelected(5); });
-
 	}
 
 	//Don't want to make Start() have 100 lines
@@ -144,8 +151,8 @@ public class AugmentsPanel : MonoBehaviour {
 		iIndexes[6] = Dropdowns[iDdown].value;
 		//Preventing Doubleselection
 		for (int i = 0; i < 6; i++) {
-			Dropdowns[i].GetComponent<DropDownController>().EnableOption(iIndexes[iDdown], true);
-			Dropdowns[i].GetComponent<DropDownController>().EnableOption(iIndexes[6], false);
+			DDownCon[i].EnableOption(iIndexes[iDdown], true);
+			DDownCon[i].EnableOption(iIndexes[6], false);
 		}
 		//Removing Stats and Boosts
 		switch (iIndexes[iDdown]){
@@ -312,4 +319,30 @@ public class AugmentsPanel : MonoBehaviour {
 			MBoost.color = new Color32(0, 0, 255, 200);
 		}
     }
+
+	public void SaveData(GameData data) {
+		for(int i = 0; i < 6; i++) {
+			if (bArisen) { data.aAug[i] = this.iIndexes[i]; } else { data.pAug[i] = this.iIndexes[i]; }
+		}
+	}
+
+	public void LoadData(GameData data) {
+		for (int i = 0; i < 6; i++) {
+			if (bArisen) { this.Dropdowns[i].value = data.aAug[i]; }
+			else { this.Dropdowns[i].value = data.pAug[i]; }
+		}
+
+		Dropdowns[0] = ADd1.GetComponent<TMP_Dropdown>();
+		Dropdowns[1] = ADd2.GetComponent<TMP_Dropdown>();
+		Dropdowns[2] = ADd3.GetComponent<TMP_Dropdown>();
+		Dropdowns[3] = ADd4.GetComponent<TMP_Dropdown>();
+		Dropdowns[4] = ADd5.GetComponent<TMP_Dropdown>();
+		Dropdowns[5] = ADd6.GetComponent<TMP_Dropdown>();
+			DropdownItemSelected(0);
+			DropdownItemSelected(1);
+			DropdownItemSelected(2);
+			DropdownItemSelected(3);
+			DropdownItemSelected(4);
+			DropdownItemSelected(5);
+	}
 }

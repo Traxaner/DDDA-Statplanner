@@ -39,7 +39,6 @@ public class VocationTools : MonoBehaviour {
 				ModeDisplay.color = orange;
 				break;
 		}
-		Debug.Log(iMode);
 	}
 
 	//Changes how often a button gets pressed

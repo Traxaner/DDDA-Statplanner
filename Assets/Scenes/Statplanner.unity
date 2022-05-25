@@ -21712,6 +21712,7 @@ MonoBehaviour:
   tFighter: {fileID: 365486325}
   tStrider: {fileID: 2062241217}
   tMage: {fileID: 2143593187}
+  Toggles: {fileID: 1651003211}
   chara: {fileID: 836251113}
 --- !u!114 &892742936
 MonoBehaviour:
@@ -22254,6 +22255,7 @@ MonoBehaviour:
   tFighter: {fileID: 1574733236}
   tStrider: {fileID: 1271656234}
   tMage: {fileID: 460893897}
+  Toggles: {fileID: 933038530}
   chara: {fileID: 91132720}
 --- !u!1 &921224664
 GameObject:

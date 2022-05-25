@@ -133,6 +133,21 @@ public class MainMenu : MonoBehaviour {
 
 	//Enable the right Areas; odd Pawn, even Arisen
 	public void Display(int index) {
+		if (index == 11) {
+			aPanel.SetActive(true);
+			pPanel.SetActive(true);
+			aSPanel.SetActive(true);
+			pSPanel.SetActive(true);
+			aVPanel.SetActive(true);
+			pVPanel.SetActive(true);
+			aAPanel.SetActive(true);
+			pAPanel.SetActive(true);
+			aEPanel.SetActive(true);
+			pEPanel.SetActive(true);
+			aSkPanel.SetActive(true);
+			pSkPanel.SetActive(true);
+			return;
+		}
 		aPanel.SetActive(false);
 		pPanel.SetActive(false);
 		if (index % 2 == 1) {

@@ -16,7 +16,6 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 	[SerializeField] private GameObject ADd5;
 	[SerializeField] private GameObject ADd6;
 	List<string> Augment = new List<string>();
-	private int iC;
 
 	//Anything else
 	[SerializeField] private TextMeshProUGUI SBoost;
@@ -330,19 +329,7 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 		for (int i = 0; i < 6; i++) {
 			if (bArisen) { this.Dropdowns[i].value = data.aAug[i]; }
 			else { this.Dropdowns[i].value = data.pAug[i]; }
+			DropdownItemSelected(i);
 		}
-
-		Dropdowns[0] = ADd1.GetComponent<TMP_Dropdown>();
-		Dropdowns[1] = ADd2.GetComponent<TMP_Dropdown>();
-		Dropdowns[2] = ADd3.GetComponent<TMP_Dropdown>();
-		Dropdowns[3] = ADd4.GetComponent<TMP_Dropdown>();
-		Dropdowns[4] = ADd5.GetComponent<TMP_Dropdown>();
-		Dropdowns[5] = ADd6.GetComponent<TMP_Dropdown>();
-			DropdownItemSelected(0);
-			DropdownItemSelected(1);
-			DropdownItemSelected(2);
-			DropdownItemSelected(3);
-			DropdownItemSelected(4);
-			DropdownItemSelected(5);
 	}
 }

@@ -51,12 +51,19 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 			for (i = 0; i < 6; i++) {
 				Dropdowns[i].options.Add(new TMP_Dropdown.OptionData() { text = Augment });
 		}	}
-		//Do the First filling of the Augments automatically to avoid issues
+
 		for (i = 0; i < 6; i++) {
 			DropdownItemSelected(i);
 			Dropdowns[i].RefreshShownValue();
-			Dropdowns[i].onValueChanged.AddListener(delegate { DropdownItemSelected(i); });
-	}	}
+		}
+
+		Dropdowns[0].onValueChanged.AddListener(delegate { DropdownItemSelected(0); });
+		Dropdowns[1].onValueChanged.AddListener(delegate { DropdownItemSelected(1); });
+		Dropdowns[2].onValueChanged.AddListener(delegate { DropdownItemSelected(2); });
+		Dropdowns[3].onValueChanged.AddListener(delegate { DropdownItemSelected(3); });
+		Dropdowns[4].onValueChanged.AddListener(delegate { DropdownItemSelected(4); });
+		Dropdowns[5].onValueChanged.AddListener(delegate { DropdownItemSelected(5); });
+	}
 
 	//Don't want to make Start() have 100 lines
 	private void FillList() {

@@ -29,7 +29,8 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 	void Start() {
 		if (this.CompareTag("Arisen")) { bArisen = true; } else { bArisen = false; }
 		int i;
-		//Emptying out all the Dropdowns
+		//Filling Arrays for less duplicate writing
+		#region
 		Dropdowns[0] = ADd1.GetComponent<TMP_Dropdown>();
 		Dropdowns[1] = ADd2.GetComponent<TMP_Dropdown>();
 		Dropdowns[2] = ADd3.GetComponent<TMP_Dropdown>();
@@ -42,25 +43,20 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 		DDownCon[3] = ADd4.GetComponent<DropDownController>();
 		DDownCon[4] = ADd5.GetComponent<DropDownController>();
 		DDownCon[5] = ADd6.GetComponent<DropDownController>();
-		for(i = 0; i < 6; i++) { Dropdowns[i].options.Clear(); }
+		#endregion
+		//Emptying out and refilling all the Dropdowns
+		for (i = 0; i < 6; i++) { Dropdowns[i].options.Clear(); }
 		FillList();
 		foreach(string Augment in Augment) {
 			for (i = 0; i < 6; i++) {
 				Dropdowns[i].options.Add(new TMP_Dropdown.OptionData() { text = Augment });
 		}	}
-
+		//Do the First filling of the Augments automatically to avoid issues
 		for (i = 0; i < 6; i++) {
 			DropdownItemSelected(i);
 			Dropdowns[i].RefreshShownValue();
-		}
-
-		Dropdowns[0].onValueChanged.AddListener(delegate { DropdownItemSelected(0); });
-		Dropdowns[1].onValueChanged.AddListener(delegate { DropdownItemSelected(1); });
-		Dropdowns[2].onValueChanged.AddListener(delegate { DropdownItemSelected(2); });
-		Dropdowns[3].onValueChanged.AddListener(delegate { DropdownItemSelected(3); });
-		Dropdowns[4].onValueChanged.AddListener(delegate { DropdownItemSelected(4); });
-		Dropdowns[5].onValueChanged.AddListener(delegate { DropdownItemSelected(5); });
-	}
+			Dropdowns[i].onValueChanged.AddListener(delegate { DropdownItemSelected(i); });
+	}	}
 
 	//Don't want to make Start() have 100 lines
 	private void FillList() {
@@ -322,14 +318,12 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 	public void SaveData(GameData data) {
 		for(int i = 0; i < 6; i++) {
 			if (bArisen) { data.aAug[i] = this.iIndexes[i]; } else { data.pAug[i] = this.iIndexes[i]; }
-		}
-	}
+	}	}
 
 	public void LoadData(GameData data) {
 		for (int i = 0; i < 6; i++) {
 			if (bArisen) { this.Dropdowns[i].value = data.aAug[i]; }
 			else { this.Dropdowns[i].value = data.pAug[i]; }
 			DropdownItemSelected(i);
-		}
-	}
+	}	}
 }

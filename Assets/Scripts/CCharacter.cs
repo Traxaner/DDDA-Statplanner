@@ -18,10 +18,12 @@ public class CCharacter : MonoBehaviour, IDataPersistance {
 	private string sVocation;
 	private bool bArisen;
 
+	//Checking wether or not this Character is the Arisen using Tags
 	private void Start() {
 		if (this.CompareTag("Arisen")) { bArisen = true; } else { bArisen = false; }
 	}
 
+	//Constantly Updating all variables that are shown
 	void FixedUpdate() {
 		Vocation.text = sVocation;
 		hpDisplay.text = iHp.ToString();
@@ -34,6 +36,7 @@ public class CCharacter : MonoBehaviour, IDataPersistance {
 	}
 
 	//Getters
+	#region 
 	public int GetHp() { return iHp; }
 	public int GetSp() { return iSp; }
 	public int GetLvl() { return iLvl; }
@@ -45,8 +48,9 @@ public class CCharacter : MonoBehaviour, IDataPersistance {
 	public int GetICount1() { return iCount1; }
 	public int GetICount2() { return iCount2; }
 	public string GetVocation() { return sVocation; }
-
+	#endregion
 	//Setters
+	#region
 	public void SetHp(int iHP) { this.iHp += iHP; }
 	public void SetSp(int iSP) { this.iSp += iSP; }
 	public void SetLvl(int iLvl) {
@@ -62,13 +66,15 @@ public class CCharacter : MonoBehaviour, IDataPersistance {
 	public void SetICount1(int iCount1) { this.iCount1 = iCount1; }
 	public void SetICount2(int iCount2) { this.iCount2 = iCount2; }
 	public void SetVocation(string sVocation) { this.sVocation = sVocation; }
-
+	#endregion
+	
+	//Writing the variable to save, here the name, to the gamedata
 	public void SaveData(GameData data) {
 		if (bArisen) { data.aName = CName.GetComponentInChildren<TextMeshProUGUI>().text; }
 		else { data.pName = CName.GetComponentInChildren<TextMeshProUGUI>().text; }
 	}
 
+	//retrieving the saved variable, here the name, from the gamedata
 	public void LoadData(GameData data) {
 		if (bArisen) { CName.text = data.aName; } else { CName.text = data.pName; }
-	}
-}
+}	}

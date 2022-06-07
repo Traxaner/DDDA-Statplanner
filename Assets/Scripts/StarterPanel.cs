@@ -52,7 +52,7 @@ public class StarterPanel : MonoBehaviour, IDataPersistance {
 			iDE = 70;
 			iMA = 70;
 			iMD = 70;
-		}else {
+		}else if (tMage.isOn) {
 			iHP = 410;
 			iAT = 60;
 			iDE = 60;

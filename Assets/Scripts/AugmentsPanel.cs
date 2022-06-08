@@ -20,7 +20,8 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 	//Anything else
 	[SerializeField] private TextMeshProUGUI SBoost;
 	[SerializeField] private TextMeshProUGUI MBoost;
-	[SerializeField] private CCharacter chara;	
+	[SerializeField] private CCharacter chara;
+	[SerializeField] private EqPanel butWhy;
 	private float fSBoost = 1, fMBoost = 1;
 	private int[] iIndexes = new int[7];
 	private bool bArisen;
@@ -215,6 +216,9 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 				case (57):
 					if (bArisen && Check(57)) { chara.SetSp(-100); }
 					break;
+				case (62):
+					if (bArisen && Check(62)) { butWhy.SetAll(-15); }
+					break;
 			}
 		iIndexes[iDdown] = iIndexes[6];
 		//Applying Stats and Boosts
@@ -275,6 +279,9 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 					break;
 				case (57):
 					if (bArisen && Check(57)) { chara.SetSp(100); }
+					break;
+				case (62):
+					if (bArisen && Check(62)) { butWhy.SetAll(15); }
 					break;
 			}
 		UpdateVisuals();

@@ -175,11 +175,13 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 			iSave = new int[33];
 		}
 		PanelsUpdate();
-		TheLists();
 		Pain();
 	}
 
+	//Private Methods
 	private void Pain() {
+		//Setup
+		#region
 		//Fighter
 		#region
 		FDD1[0] = FS1.GetComponent<TMP_Dropdown>();
@@ -264,77 +266,82 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 		SoDDC[4] = SoS5.GetComponent<DropDownController>();
 		SoDDC[5] = SoS6.GetComponent<DropDownController>();
 		#endregion
-		//Assassin
-		#region
-		ADD1[0] = AS1.GetComponent<TMP_Dropdown>();
-		ADD1[1] = AS2.GetComponent<TMP_Dropdown>();
-		ADD1[2] = AS3.GetComponent<TMP_Dropdown>();
-		ADD2[0] = AS4.GetComponent<TMP_Dropdown>();
-		ADD2[1] = AS5.GetComponent<TMP_Dropdown>();
-		ADD2[2] = AS6.GetComponent<TMP_Dropdown>();
-		ADD3[0] = AS7.GetComponent<TMP_Dropdown>();
-		ADD3[1] = AS8.GetComponent<TMP_Dropdown>();
-		ADD3[2] = AS9.GetComponent<TMP_Dropdown>();
-		ADD4[0] = AS10.GetComponent<TMP_Dropdown>();
-		ADD4[1] = AS11.GetComponent<TMP_Dropdown>();
-		ADD4[2] = AS12.GetComponent<TMP_Dropdown>();
-		ADDC1[0] = AS1.GetComponent<DropDownController>();
-		ADDC1[1] = AS2.GetComponent<DropDownController>();
-		ADDC1[2] = AS3.GetComponent<DropDownController>();
-		ADDC2[0] =AS4.GetComponent<DropDownController>();
-		ADDC2[1] = AS5.GetComponent<DropDownController>();
-		ADDC2[2] =AS6.GetComponent<DropDownController>();
-		ADDC3[0] = AS7.GetComponent<DropDownController>();
-		ADDC3[1] = AS8.GetComponent<DropDownController>();
-		ADDC3[2] = AS9.GetComponent<DropDownController>();
-		ADDC4[0] =AS10.GetComponent<DropDownController>();
-		ADDC4[1] = AS11.GetComponent<DropDownController>();
-		ADDC4[2] =AS12.GetComponent<DropDownController>();
+		if (bArisen) {
+			//Assassin
+			#region
+			ADD1[0] = AS1.GetComponent<TMP_Dropdown>();
+			ADD1[1] = AS2.GetComponent<TMP_Dropdown>();
+			ADD1[2] = AS3.GetComponent<TMP_Dropdown>();
+			ADD2[0] = AS4.GetComponent<TMP_Dropdown>();
+			ADD2[1] = AS5.GetComponent<TMP_Dropdown>();
+			ADD2[2] = AS6.GetComponent<TMP_Dropdown>();
+			ADD3[0] = AS7.GetComponent<TMP_Dropdown>();
+			ADD3[1] = AS8.GetComponent<TMP_Dropdown>();
+			ADD3[2] = AS9.GetComponent<TMP_Dropdown>();
+			ADD4[0] = AS10.GetComponent<TMP_Dropdown>();
+			ADD4[1] = AS11.GetComponent<TMP_Dropdown>();
+			ADD4[2] = AS12.GetComponent<TMP_Dropdown>();
+			ADDC1[0] = AS1.GetComponent<DropDownController>();
+			ADDC1[1] = AS2.GetComponent<DropDownController>();
+			ADDC1[2] = AS3.GetComponent<DropDownController>();
+			ADDC2[0] = AS4.GetComponent<DropDownController>();
+			ADDC2[1] = AS5.GetComponent<DropDownController>();
+			ADDC2[2] = AS6.GetComponent<DropDownController>();
+			ADDC3[0] = AS7.GetComponent<DropDownController>();
+			ADDC3[1] = AS8.GetComponent<DropDownController>();
+			ADDC3[2] = AS9.GetComponent<DropDownController>();
+			ADDC4[0] = AS10.GetComponent<DropDownController>();
+			ADDC4[1] = AS11.GetComponent<DropDownController>();
+			ADDC4[2] = AS12.GetComponent<DropDownController>();
+			#endregion
+			//Magick Archer
+			#region
+			MADD1[0] = MAS1.GetComponent<TMP_Dropdown>();
+			MADD1[1] = MAS2.GetComponent<TMP_Dropdown>();
+			MADD1[2] = MAS3.GetComponent<TMP_Dropdown>();
+			MADD2[0] = MAS4.GetComponent<TMP_Dropdown>();
+			MADD2[1] = MAS5.GetComponent<TMP_Dropdown>();
+			MADD2[2] = MAS6.GetComponent<TMP_Dropdown>();
+			MADD3[0] = MAS7.GetComponent<TMP_Dropdown>();
+			MADD3[1] = MAS8.GetComponent<TMP_Dropdown>();
+			MADD3[2] = MAS9.GetComponent<TMP_Dropdown>();
+			MADDC1[0] = MAS1.GetComponent<DropDownController>();
+			MADDC1[1] = MAS2.GetComponent<DropDownController>();
+			MADDC1[2] = MAS3.GetComponent<DropDownController>();
+			MADDC2[0] = MAS4.GetComponent<DropDownController>();
+			MADDC2[1] = MAS5.GetComponent<DropDownController>();
+			MADDC2[2] = MAS6.GetComponent<DropDownController>();
+			MADDC3[0] = MAS7.GetComponent<DropDownController>();
+			MADDC3[1] = MAS8.GetComponent<DropDownController>();
+			MADDC3[2] = MAS9.GetComponent<DropDownController>();
+			#endregion
+			//Mystic Knight
+			#region
+			MKDD1[0] = MKS1.GetComponent<TMP_Dropdown>();
+			MKDD1[1] = MKS2.GetComponent<TMP_Dropdown>();
+			MKDD1[2] = MKS3.GetComponent<TMP_Dropdown>();
+			MKDD2[0] = MKS4.GetComponent<TMP_Dropdown>();
+			MKDD2[1] = MKS5.GetComponent<TMP_Dropdown>();
+			MKDD2[2] = MKS6.GetComponent<TMP_Dropdown>();
+			MKDD3[0] = MKS7.GetComponent<TMP_Dropdown>();
+			MKDD3[1] = MKS8.GetComponent<TMP_Dropdown>();
+			MKDD3[2] = MKS9.GetComponent<TMP_Dropdown>();
+			MKDDC1[0] = MKS1.GetComponent<DropDownController>();
+			MKDDC1[1] = MKS2.GetComponent<DropDownController>();
+			MKDDC1[2] = MKS3.GetComponent<DropDownController>();
+			MKDDC2[0] = MKS4.GetComponent<DropDownController>();
+			MKDDC2[1] = MKS5.GetComponent<DropDownController>();
+			MKDDC2[2] = MKS6.GetComponent<DropDownController>();
+			MKDDC3[0] = MKS7.GetComponent<DropDownController>();
+			MKDDC3[1] = MKS8.GetComponent<DropDownController>();
+			MKDDC3[2] = MKS9.GetComponent<DropDownController>();
+			#endregion
+		}
 		#endregion
-		//Magick Archer
-		#region
-		MADD1[0] = MAS1.GetComponent<TMP_Dropdown>();
-		MADD1[1] = MAS2.GetComponent<TMP_Dropdown>();
-		MADD1[2] = MAS3.GetComponent<TMP_Dropdown>();
-		MADD2[0] = MAS4.GetComponent<TMP_Dropdown>();
-		MADD2[1] = MAS5.GetComponent<TMP_Dropdown>();
-		MADD2[2] = MAS6.GetComponent<TMP_Dropdown>();
-		MADD3[0] = MAS7.GetComponent<TMP_Dropdown>();
-		MADD3[1] = MAS8.GetComponent<TMP_Dropdown>();
-		MADD3[2] = MAS9.GetComponent<TMP_Dropdown>();
-		MADDC1[0] = MAS1.GetComponent<DropDownController>();
-		MADDC1[1] = MAS2.GetComponent<DropDownController>();
-		MADDC1[2] = MAS3.GetComponent<DropDownController>();
-		MADDC2[0] = MAS4.GetComponent<DropDownController>();
-		MADDC2[1] = MAS5.GetComponent<DropDownController>();
-		MADDC2[2] = MAS6.GetComponent<DropDownController>();
-		MADDC3[0] = MAS7.GetComponent<DropDownController>();
-		MADDC3[1] = MAS8.GetComponent<DropDownController>();
-		MADDC3[2] = MAS9.GetComponent<DropDownController>();
-		#endregion
-		//Mystic Knight
-		#region
-		MKDD1[0] = MKS1.GetComponent<TMP_Dropdown>();
-		MKDD1[1] = MKS2.GetComponent<TMP_Dropdown>();
-		MKDD1[2] = MKS3.GetComponent<TMP_Dropdown>();
-		MKDD2[0] = MKS4.GetComponent<TMP_Dropdown>();
-		MKDD2[1] = MKS5.GetComponent<TMP_Dropdown>();
-		MKDD2[2] = MKS6.GetComponent<TMP_Dropdown>();
-		MKDD3[0] = MKS7.GetComponent<TMP_Dropdown>();
-		MKDD3[1] = MKS8.GetComponent<TMP_Dropdown>();
-		MKDD3[2] = MKS9.GetComponent<TMP_Dropdown>();
-		MKDDC1[0] = MKS1.GetComponent<DropDownController>();
-		MKDDC1[1] = MKS2.GetComponent<DropDownController>();
-		MKDDC1[2] = MKS3.GetComponent<DropDownController>();
-		MKDDC2[0] = MKS4.GetComponent<DropDownController>();
-		MKDDC2[1] = MKS5.GetComponent<DropDownController>();
-		MKDDC2[2] = MKS6.GetComponent<DropDownController>();
-		MKDDC3[0] = MKS7.GetComponent<DropDownController>();
-		MKDDC3[1] = MKS8.GetComponent<DropDownController>();
-		MKDDC3[2] = MKS9.GetComponent<DropDownController>();
-		#endregion
-
+		TheLists();
 		for (int i = 0; i < 6; i++) {
+			//Clearing and empty option
+			#region
 			//Mage
 			#region
 			MDD[i].options.Clear();
@@ -378,73 +385,200 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 					RDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = lbow });
 				}
 				#endregion
-				//Assassin
-				#region
-				ADD1[i].options.Clear();
-				ADD2[i].options.Clear();
-				ADD3[i].options.Clear();
-				ADD4[i].options.Clear();
-				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				#endregion
-				//Magick Archer
-				#region
-				MADD1[i].options.Clear();
-				MADD2[i].options.Clear();
-				MADD3[i].options.Clear();
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				MADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				foreach (string mbow in mbow) {
-					MADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = mbow });
-				}
-				#endregion
-				//Mystic Knight
-				#region
-				MKDD1[i].options.Clear();
-				MKDD2[i].options.Clear();
-				MKDD3[i].options.Clear();
-				MKDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				MKDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				MKDD3[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-				foreach (string mshield in mshield) {
-					MKDD3[i].options.Add(new TMP_Dropdown.OptionData() { text = mshield });
+				if (bArisen) {
+					//Assassin
+					#region
+					ADD1[i].options.Clear();
+					ADD2[i].options.Clear();
+					ADD3[i].options.Clear();
+					ADD4[i].options.Clear();
+					ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					#endregion
+					//Magick Archer
+					#region
+					MADD1[i].options.Clear();
+					MADD2[i].options.Clear();
+					MADD3[i].options.Clear();
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					MADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					foreach (string mbow in mbow) {
+						MADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = mbow });
+					}
+					#endregion
+					//Mystic Knight
+					#region
+					MKDD1[i].options.Clear();
+					MKDD2[i].options.Clear();
+					MKDD3[i].options.Clear();
+					MKDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					MKDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					MKDD3[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
+					foreach (string mshield in mshield) {
+						MKDD3[i].options.Add(new TMP_Dropdown.OptionData() { text = mshield });
+					}
+					#endregion
 				}
 				#endregion
 				//Applying the not unique Basic Lists
+				#region
 				//Sword
 				foreach (string sword in sword) {
 					FDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = sword });
-					ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = sword });
-					MKDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = sword });
-				}
+					if (bArisen) {
+						ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = sword });
+						MKDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = sword });
+				}	}
 				//Shield
 				foreach (string shield in shield) {
 					FDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = shield });
-					ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = shield });
-				}
+					if (bArisen) {
+						ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = shield });
+				}	}
 				//Dagger
 				foreach (string dagger in dagger) {
 					SDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = dagger });
 					RDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = dagger });
-					ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = dagger });
-					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = dagger });
-				}
+					if (bArisen) {
+						ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = dagger });
+						MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = dagger });
+				}	}
 				//Shortbow
 				foreach (string sbow in sbow) {
 					SDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = sbow });
-					ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = sbow });
-			}	}
+					if (bArisen) {
+						ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = sbow });
+				}	}
+			}
 			//Spells
 			foreach (string spells in spells) {
 				MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = spells });
 				SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = spells });
-				if (i > 3) { break; }
-				MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = spells });
-				MKDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = spells });
-	}	}	}
+				if (i < 3 && bArisen) {
+					MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = spells });
+					MKDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = spells });
+			}	}	
+		}
+		#endregion
+		//All the Vocation specific skills of shared areas
+		#region
+		for (int i = 0; i < 6; i++) {
+			//Sorcerer and Mage
+			#region
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Fire Buff" });
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Ice Buff" });
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Thunder Buff" });
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Holy Buff" });
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Dark Buff" });
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Blearing" });
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Silentium" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Fire Buff" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Ice Buff" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Thunder Buff" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Holy Buff" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Dark Buff" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Blearing" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Silentium" });
+			#endregion
+			//Mage only
+			#region
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Anodyne" });
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Halidom" });
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Grapnel" });
+			MDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Spellscreen" });
+			#endregion
+			//Sorcerer only
+			#region
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Miasma" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Lassitude" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Necromancy" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Voidspell" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Exequy" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Petrification" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Bolide" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Gicel" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Fulmination" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Seism" });
+			SoDD[i].options.Add(new TMP_Dropdown.OptionData() { text = "Mealstrom" });
+			#endregion
+			if (i < 3) {
+				//Fighter
+				#region
+				//Sword
+				FDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Up Lash" });
+				FDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Skewer" });
+				FDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Hindsight Attack" });
+				FDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Steel Will" });
+				FDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Dragon's Maw" });
+				//Shield
+				FDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Cymbal Onslaught" });
+				FDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sheltered Assault" });
+				FDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Defense" });
+				#endregion
+				//Strider
+				#region
+				//Dagger
+				SDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Implicate" });
+				SDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Splitter" });
+				SDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Mad Dash" });
+				SDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Master Thief" });
+				SDD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Leaping Stone" });
+				//Shortbow
+				SDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Arrow Rain" });
+				SDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Atrillery Dart" });
+				SDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sonic Bomb Arrow" });
+				#endregion
+				//Assassin
+				#region
+				//Sword
+				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Intimate Gambit" });
+				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Remote Bomb" });
+				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Clairvoyance" });
+				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Windmill" });
+				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Gouge" });
+				//Dagger
+				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Evasive Kick" });
+				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Masterfull Kill" });
+				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Snake Bite" });
+				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Gale Harness" });
+				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Invisibility" });
+				//Shortbow
+				ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = "Piercing Dart" });
+				ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = "Snipe" });
+				ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = "Torpor Arrow" });
+				//Shield
+				ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = "Swift Castle" });
+				ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = "Enhanced Response" });
+				ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = "Showdown" });
+				#endregion
+				//Magick Archer
+				#region
+				//Dagger
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sunflare" });
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Scension" });
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Shadowsshackle" });
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Magick Rebalancer" });
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Burning Body" });
+				//Spell
+				MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Perdition" });
+				#endregion
+				//Mystic Knight
+				#region
+				//Sword/Mace
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sky Rapture" });
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Ruinous Sigil" });
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Vortex Sigil" });
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Great Cannon" });
+				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Stone Forest" });
+				//Spell
+				MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sopor" });
+				#endregion
+		}	}
+		#endregion
+	}
 
 	private void TheLists() {
 		//sword
@@ -542,6 +676,145 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 		#endregion
 	}
 
+	private void SL(char c) {
+		int i = 0;
+		if (c == 's') {
+			iSave[i++] = FDD1[0].value;
+			iSave[i++] = FDD1[1].value;
+			iSave[i++] = FDD1[2].value;
+			iSave[i++] = FDD2[0].value;
+			iSave[i++] = FDD2[1].value;
+			iSave[i++] = FDD2[2].value;
+			iSave[i++] = SDD1[0].value;
+			iSave[i++] = SDD1[1].value;
+			iSave[i++] = SDD1[2].value;
+			iSave[i++] = SDD2[0].value;
+			iSave[i++] = SDD2[1].value;
+			iSave[i++] = SDD2[2].value;
+			iSave[i++] = MDD[0].value;
+			iSave[i++] = MDD[1].value;
+			iSave[i++] = MDD[2].value;
+			iSave[i++] = MDD[3].value;
+			iSave[i++] = MDD[4].value;
+			iSave[i++] = MDD[5].value;
+			iSave[i++] = WDD[0].value;
+			iSave[i++] = WDD[1].value;
+			iSave[i++] = WDD[2].value;
+			iSave[i++] = RDD1[0].value;
+			iSave[i++] = RDD1[1].value;
+			iSave[i++] = RDD1[2].value;
+			iSave[i++] = RDD2[0].value;
+			iSave[i++] = RDD2[1].value;
+			iSave[i++] = RDD2[2].value;
+			iSave[i++] = SoDD[0].value;
+			iSave[i++] = SoDD[1].value;
+			iSave[i++] = SoDD[2].value;
+			iSave[i++] = SoDD[3].value;
+			iSave[i++] = SoDD[4].value;
+			iSave[i++] = SoDD[5].value;
+			if (bArisen) {
+				iSave[i++] = ADD1[0].value;
+				iSave[i++] = ADD1[1].value;
+				iSave[i++] = ADD1[2].value;
+				iSave[i++] = ADD2[0].value;
+				iSave[i++] = ADD2[1].value;
+				iSave[i++] = ADD2[2].value;
+				iSave[i++] = ADD3[0].value;
+				iSave[i++] = ADD3[1].value;
+				iSave[i++] = ADD3[2].value;
+				iSave[i++] = ADD4[0].value;
+				iSave[i++] = ADD4[1].value;
+				iSave[i++] = ADD4[2].value;
+				iSave[i++] = MADD1[0].value;
+				iSave[i++] = MADD1[1].value;
+				iSave[i++] = MADD1[2].value;
+				iSave[i++] = MADD2[0].value;
+				iSave[i++] = MADD2[1].value;
+				iSave[i++] = MADD2[2].value;
+				iSave[i++] = MADD3[0].value;
+				iSave[i++] = MADD3[1].value;
+				iSave[i++] = MADD3[2].value;
+				iSave[i++] = MKDD1[0].value;
+				iSave[i++] = MKDD1[1].value;
+				iSave[i++] = MKDD1[2].value;
+				iSave[i++] = MKDD2[0].value;
+				iSave[i++] = MKDD2[1].value;
+				iSave[i++] = MKDD2[2].value;
+				iSave[i++] = MKDD3[0].value;
+				iSave[i++] = MKDD3[1].value;
+				iSave[i++] = MKDD3[2].value;
+			}
+		} else {
+			FDD1[0].value = iSave[i++];
+			FDD1[1].value = iSave[i++];
+			FDD1[2].value = iSave[i++];
+			FDD2[0].value = iSave[i++];
+			FDD2[1].value = iSave[i++];
+			FDD2[2].value = iSave[i++];
+			SDD1[0].value = iSave[i++];
+			SDD1[1].value = iSave[i++];
+			SDD1[2].value = iSave[i++];
+			SDD2[0].value = iSave[i++];
+			SDD2[1].value = iSave[i++];
+			SDD2[2].value = iSave[i++];
+			MDD[0].value = iSave[i++];
+			MDD[1].value = iSave[i++];
+			MDD[2].value = iSave[i++];
+			MDD[3].value = iSave[i++];
+			MDD[4].value = iSave[i++];
+			MDD[5].value = iSave[i++];
+			WDD[0].value = iSave[i++];
+			WDD[1].value = iSave[i++];
+			WDD[2].value = iSave[i++];
+			RDD1[0].value = iSave[i++];
+			RDD1[1].value = iSave[i++];
+			RDD1[2].value = iSave[i++];
+			RDD2[0].value = iSave[i++];
+			RDD2[1].value = iSave[i++];
+			RDD2[2].value = iSave[i++];
+			SoDD[0].value = iSave[i++];
+			SoDD[1].value = iSave[i++];
+			SoDD[2].value = iSave[i++];
+			SoDD[3].value = iSave[i++];
+			SoDD[4].value = iSave[i++];
+			SoDD[5].value = iSave[i++];
+			if (bArisen) {
+				ADD1[0].value = iSave[i++];
+				ADD1[1].value = iSave[i++];
+				ADD1[2].value = iSave[i++];
+				ADD2[0].value = iSave[i++];
+				ADD2[1].value	= iSave[i++];
+				ADD2[2].value = iSave[i++];
+				ADD3[0].value = iSave[i++];
+				ADD3[1].value = iSave[i++];
+				ADD3[2].value = iSave[i++];
+				ADD4[0].value = iSave[i++];
+				ADD4[1].value = iSave[i++];
+				ADD4[2].value = iSave[i++];
+				MADD1[0].value = iSave[i++];
+				MADD1[1].value = iSave[i++];
+				MADD1[2].value = iSave[i++];
+				MADD2[0].value = iSave[i++];
+				MADD2[1].value = iSave[i++];
+				MADD2[2].value = iSave[i++];
+				MADD3[0].value = iSave[i++];
+				MADD3[1].value = iSave[i++];
+				MADD3[2].value = iSave[i++];
+				MKDD1[0].value = iSave[i++];
+				MKDD1[1].value = iSave[i++];
+				MKDD1[2].value = iSave[i++];
+				MKDD2[0].value = iSave[i++];
+				MKDD2[1].value = iSave[i++];
+				MKDD2[2].value = iSave[i++];
+				MKDD3[0].value = iSave[i++];
+				MKDD3[1].value = iSave[i++];
+				MKDD3[2].value = iSave[i++];
+			}
+		}
+		Debug.Log(i);
+	}
+
+	//Public Methods
 	public void PanelsUpdate() {
 		sVocation = chara.GetVocation();
 		if (pVocation.Equals(sVocation)) { return; } else { pVocation = sVocation; }
@@ -586,6 +859,7 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 	}
 
 	public void SaveData(GameData data) {
+		SL('s');
 		if (bArisen) {
 			for(int i = 0; i < 63; i++) { data.aSkills[i] = iSave[i]; }
 		} else {
@@ -593,6 +867,11 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 	}	}
 
 	public void LoadData(GameData data) {
-		throw new System.NotImplementedException();
+		if (bArisen) {
+			for (int i = 0; i < 63; i++) { iSave[i] = data.aSkills[i]; }
+		} else {
+			for (int i = 0; i < 33; i++) { iSave[i] = data.pSkills[i]; }
+		}
+		SL('l');
 	}
 }

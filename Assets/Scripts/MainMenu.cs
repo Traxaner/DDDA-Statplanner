@@ -60,12 +60,11 @@ public class MainMenu : MonoBehaviour {
 //						information.text = "Here you can select all the\nequipment pieces you want to have";
 						break;
 					case 5:
-						information.text = "TODO";
-//						information.text = "Here you can select your skills\nbased on chosen weapons";
+						information.text = "Only Skills that are inherently different,\nnot their variants, are shown";
 						break;
 					case 6:
 						iMessage = 2;
-						information.text = "You can change \"Saving to\" into\n\"Loading from\" by pressing on it";
+						information.text = "You first select a file and then press\n\"Save\", \"Load\" or \"Delete\"";
 						break;
 				}
 				break;

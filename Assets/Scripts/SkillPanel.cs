@@ -35,7 +35,7 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 	List<string> mshield= new List<string>();
 	#endregion
 
-	//Pain and Suffering 1
+	//Pain
 	//Fighter
 	#region
 	private DropDownController[] FDDC1 = new DropDownController[3];
@@ -164,6 +164,8 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 	[Foldout("Mystic Knight")] [SerializeField] private GameObject MKS8;
 	[Foldout("Mystic Knight")] [SerializeField] private GameObject MKS9;
 	#endregion
+	//Suffering
+	private int iCurent;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -176,6 +178,8 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 		}
 		PanelsUpdate();
 		Pain();
+		Suffering();
+		Pain2();
 	}
 
 	//Private Methods
@@ -580,6 +584,182 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 		#endregion
 	}
 
+	//To not clutter Start()
+	private void Pain2() {
+		FDD1[0].onValueChanged.AddListener(delegate { Suffering2(0); });
+		FDD1[1].onValueChanged.AddListener(delegate { Suffering2(1); });
+		FDD1[2].onValueChanged.AddListener(delegate { Suffering2(2); });
+		FDD2[0].onValueChanged.AddListener(delegate { Suffering2(3); });
+		FDD2[1].onValueChanged.AddListener(delegate { Suffering2(4); });
+		FDD2[2].onValueChanged.AddListener(delegate { Suffering2(5); });
+		SDD1[0].onValueChanged.AddListener(delegate { Suffering2(6); });
+		SDD1[1].onValueChanged.AddListener(delegate { Suffering2(7); });
+		SDD1[2].onValueChanged.AddListener(delegate { Suffering2(8); });
+		SDD2[0].onValueChanged.AddListener(delegate { Suffering2(9); });
+		SDD2[1].onValueChanged.AddListener(delegate { Suffering2(10); });
+		SDD2[2].onValueChanged.AddListener(delegate { Suffering2(11); });
+		MDD[0].onValueChanged.AddListener(delegate { Suffering2(12); });
+		MDD[1].onValueChanged.AddListener(delegate { Suffering2(13); });
+		MDD[2].onValueChanged.AddListener(delegate { Suffering2(14); });
+		MDD[3].onValueChanged.AddListener(delegate { Suffering2(15); });
+		MDD[4].onValueChanged.AddListener(delegate { Suffering2(16); });
+		MDD[5].onValueChanged.AddListener(delegate { Suffering2(17); });
+		WDD[0].onValueChanged.AddListener(delegate { Suffering2(18); });
+		WDD[1].onValueChanged.AddListener(delegate { Suffering2(19); });
+		WDD[2].onValueChanged.AddListener(delegate { Suffering2(20); });
+		RDD1[0].onValueChanged.AddListener(delegate { Suffering2(21); });
+		RDD1[1].onValueChanged.AddListener(delegate { Suffering2(22); });
+		RDD1[2].onValueChanged.AddListener(delegate { Suffering2(23); });
+		RDD2[0].onValueChanged.AddListener(delegate { Suffering2(24); });
+		RDD2[1].onValueChanged.AddListener(delegate { Suffering2(25); });
+		RDD2[2].onValueChanged.AddListener(delegate { Suffering2(26); });
+		SoDD[0].onValueChanged.AddListener(delegate { Suffering2(27); });
+		SoDD[1].onValueChanged.AddListener(delegate { Suffering2(28); });
+		SoDD[2].onValueChanged.AddListener(delegate { Suffering2(29); });
+		SoDD[3].onValueChanged.AddListener(delegate { Suffering2(30); });
+		SoDD[4].onValueChanged.AddListener(delegate { Suffering2(31); });
+		SoDD[5].onValueChanged.AddListener(delegate { Suffering2(32); });
+		if (!bArisen) { return; }
+		ADD1[0].onValueChanged.AddListener(delegate { Suffering2(33); });
+		ADD1[1].onValueChanged.AddListener(delegate { Suffering2(34); });
+		ADD1[2].onValueChanged.AddListener(delegate { Suffering2(35); });
+		ADD2[0].onValueChanged.AddListener(delegate { Suffering2(36); });
+		ADD2[1].onValueChanged.AddListener(delegate { Suffering2(37); });
+		ADD2[2].onValueChanged.AddListener(delegate { Suffering2(38); });
+		ADD3[0].onValueChanged.AddListener(delegate { Suffering2(39); });
+		ADD3[1].onValueChanged.AddListener(delegate { Suffering2(40); });
+		ADD3[2].onValueChanged.AddListener(delegate { Suffering2(41); });
+		ADD4[0].onValueChanged.AddListener(delegate { Suffering2(42); });
+		ADD4[1].onValueChanged.AddListener(delegate { Suffering2(43); });
+		ADD4[2].onValueChanged.AddListener(delegate { Suffering2(44); });
+		MADD1[0].onValueChanged.AddListener(delegate { Suffering2(45); });
+		MADD1[1].onValueChanged.AddListener(delegate { Suffering2(46); });
+		MADD1[2].onValueChanged.AddListener(delegate { Suffering2(47); });
+		MADD2[0].onValueChanged.AddListener(delegate { Suffering2(48); });
+		MADD2[1].onValueChanged.AddListener(delegate { Suffering2(49); });
+		MADD2[2].onValueChanged.AddListener(delegate { Suffering2(50); });
+		MADD3[0].onValueChanged.AddListener(delegate { Suffering2(51); });
+		MADD3[1].onValueChanged.AddListener(delegate { Suffering2(52); });
+		MADD3[2].onValueChanged.AddListener(delegate { Suffering2(53); });
+		MKDD1[0].onValueChanged.AddListener(delegate { Suffering2(54); });
+		MKDD1[1].onValueChanged.AddListener(delegate { Suffering2(55); });
+		MKDD1[2].onValueChanged.AddListener(delegate { Suffering2(56); });
+		MKDD2[0].onValueChanged.AddListener(delegate { Suffering2(57); });
+		MKDD2[1].onValueChanged.AddListener(delegate { Suffering2(58); });
+		MKDD2[2].onValueChanged.AddListener(delegate { Suffering2(59); });
+		MKDD3[0].onValueChanged.AddListener(delegate { Suffering2(60); });
+		MKDD3[1].onValueChanged.AddListener(delegate { Suffering2(61); });
+		MKDD3[2].onValueChanged.AddListener(delegate { Suffering2(62); });
+	}
+
+	private void Suffering(int l = 100) {
+		SetCurent(l);
+		//Change the right Dropdownlimitations
+		switch (iCurent) {
+			case 0:
+				FDDC1[0].indexesToDisable[l % 3] = iSave[l];
+				FDDC1[1].indexesToDisable[l % 3] = iSave[l];
+				FDDC1[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 1:
+				FDDC2[0].indexesToDisable[l % 3] = iSave[l];
+				FDDC2[1].indexesToDisable[l % 3] = iSave[l];
+				FDDC2[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 2:
+				SDDC1[0].indexesToDisable[l % 3] = iSave[l];
+				SDDC1[1].indexesToDisable[l % 3] = iSave[l];
+				SDDC1[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 3:
+				SDDC2[0].indexesToDisable[l % 3] = iSave[l];
+				SDDC2[1].indexesToDisable[l % 3] = iSave[l];
+				SDDC2[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 4:
+				MDDC[0].indexesToDisable[l % 6] = iSave[l];
+				MDDC[1].indexesToDisable[l % 6] = iSave[l];
+				MDDC[2].indexesToDisable[l % 6] = iSave[l];
+				MDDC[3].indexesToDisable[l % 6] = iSave[l];
+				MDDC[4].indexesToDisable[l % 6] = iSave[l];
+				MDDC[5].indexesToDisable[l % 6] = iSave[l];
+				break;
+			case 5:
+				WDDC[0].indexesToDisable[l % 3] = iSave[l];
+				WDDC[1].indexesToDisable[l % 3] = iSave[l];
+				WDDC[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 6:
+				RDDC1[0].indexesToDisable[l % 3] = iSave[l];
+				RDDC1[1].indexesToDisable[l % 3] = iSave[l];
+				RDDC1[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 7:
+				RDDC2[0].indexesToDisable[l % 3] = iSave[l];
+				RDDC2[1].indexesToDisable[l % 3] = iSave[l];
+				RDDC2[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 8:
+				SoDDC[0].indexesToDisable[(l - 3) % 6] = iSave[l];
+				SoDDC[1].indexesToDisable[(l - 3) % 6] = iSave[l];
+				SoDDC[2].indexesToDisable[(l - 3) % 6] = iSave[l];
+				SoDDC[3].indexesToDisable[(l - 3) % 6] = iSave[l];
+				SoDDC[4].indexesToDisable[(l - 3) % 6] = iSave[l];
+				SoDDC[5].indexesToDisable[(l - 3) % 6] = iSave[l];
+				break;
+			case 9:
+				ADDC1[0].indexesToDisable[l % 3] = iSave[l];
+				ADDC1[1].indexesToDisable[l % 3] = iSave[l];
+				ADDC1[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 10:
+				ADDC2[0].indexesToDisable[l % 3] = iSave[l];
+				ADDC2[1].indexesToDisable[l % 3] = iSave[l];
+				ADDC2[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 11:
+				ADDC3[0].indexesToDisable[l % 3] = iSave[l];
+				ADDC3[1].indexesToDisable[l % 3] = iSave[l];
+				ADDC3[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 12:
+				ADDC4[0].indexesToDisable[l % 3] = iSave[l];
+				ADDC4[1].indexesToDisable[l % 3] = iSave[l];
+				ADDC4[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 13:
+				MADDC1[0].indexesToDisable[l % 3] = iSave[l];
+				MADDC1[1].indexesToDisable[l % 3] = iSave[l];
+				MADDC1[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 14:
+				MADDC2[0].indexesToDisable[l % 3] = iSave[l];
+				MADDC2[1].indexesToDisable[l % 3] = iSave[l];
+				MADDC2[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 15:
+				MADDC3[0].indexesToDisable[l % 3] = iSave[l];
+				MADDC3[1].indexesToDisable[l % 3] = iSave[l];
+				MADDC3[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 16:
+				MKDDC1[0].indexesToDisable[l % 3] = iSave[l];
+				MKDDC1[1].indexesToDisable[l % 3] = iSave[l];
+				MKDDC1[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 17:
+				MKDDC2[0].indexesToDisable[l % 3] = iSave[l];
+				MKDDC2[1].indexesToDisable[l % 3] = iSave[l];
+				MKDDC2[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+			case 18:
+				MKDDC3[0].indexesToDisable[l % 3] = iSave[l];
+				MKDDC3[1].indexesToDisable[l % 3] = iSave[l];
+				MKDDC3[2].indexesToDisable[l % 3] = iSave[l];
+				break;
+		}
+	}
+
 	private void TheLists() {
 		//sword
 		#region
@@ -679,139 +859,272 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 	private void SL(char c) {
 		int i = 0;
 		if (c == 's') {
-			iSave[i++] = FDD1[0].value;
-			iSave[i++] = FDD1[1].value;
-			iSave[i++] = FDD1[2].value;
-			iSave[i++] = FDD2[0].value;
-			iSave[i++] = FDD2[1].value;
-			iSave[i++] = FDD2[2].value;
-			iSave[i++] = SDD1[0].value;
-			iSave[i++] = SDD1[1].value;
-			iSave[i++] = SDD1[2].value;
-			iSave[i++] = SDD2[0].value;
-			iSave[i++] = SDD2[1].value;
-			iSave[i++] = SDD2[2].value;
-			iSave[i++] = MDD[0].value;
-			iSave[i++] = MDD[1].value;
-			iSave[i++] = MDD[2].value;
-			iSave[i++] = MDD[3].value;
-			iSave[i++] = MDD[4].value;
-			iSave[i++] = MDD[5].value;
-			iSave[i++] = WDD[0].value;
-			iSave[i++] = WDD[1].value;
-			iSave[i++] = WDD[2].value;
-			iSave[i++] = RDD1[0].value;
-			iSave[i++] = RDD1[1].value;
-			iSave[i++] = RDD1[2].value;
-			iSave[i++] = RDD2[0].value;
-			iSave[i++] = RDD2[1].value;
-			iSave[i++] = RDD2[2].value;
-			iSave[i++] = SoDD[0].value;
-			iSave[i++] = SoDD[1].value;
-			iSave[i++] = SoDD[2].value;
-			iSave[i++] = SoDD[3].value;
-			iSave[i++] = SoDD[4].value;
-			iSave[i++] = SoDD[5].value;
+			iSave[i] = FDD1[0].value;
+			Suffering(i++);
+			iSave[i] = FDD1[1].value;
+			Suffering(i++);
+			iSave[i] = FDD1[2].value;
+			Suffering(i++);
+			iSave[i] = FDD2[0].value;
+			Suffering(i++);
+			iSave[i] = FDD2[1].value;
+			Suffering(i++);
+			iSave[i] = FDD2[2].value;
+			Suffering(i++);
+			iSave[i] = SDD1[0].value;
+			Suffering(i++);
+			iSave[i] = SDD1[1].value;
+			Suffering(i++);
+			iSave[i] = SDD1[2].value;
+			Suffering(i++);
+			iSave[i] = SDD2[0].value;
+			Suffering(i++);
+			iSave[i] = SDD2[1].value;
+			Suffering(i++);
+			iSave[i] = SDD2[2].value;
+			Suffering(i++);
+			iSave[i] = MDD[0].value;
+			Suffering(i++);
+			iSave[i] = MDD[1].value;
+			Suffering(i++);
+			iSave[i] = MDD[2].value;
+			Suffering(i++);
+			iSave[i] = MDD[3].value;
+			Suffering(i++);
+			iSave[i] = MDD[4].value;
+			Suffering(i++);
+			iSave[i] = MDD[5].value;
+			Suffering(i++);
+			iSave[i] = WDD[0].value;
+			Suffering(i++);
+			iSave[i] = WDD[1].value;
+			Suffering(i++);
+			iSave[i] = WDD[2].value;
+			Suffering(i++);
+			iSave[i] = RDD1[0].value;
+			Suffering(i++);
+			iSave[i] = RDD1[1].value;
+			Suffering(i++);
+			iSave[i] = RDD1[2].value;
+			Suffering(i++);
+			iSave[i] = RDD2[0].value;
+			Suffering(i++);
+			iSave[i] = RDD2[1].value;
+			Suffering(i++);
+			iSave[i] = RDD2[2].value;
+			Suffering(i++);
+			iSave[i] = SoDD[0].value;
+			Suffering(i++);
+			iSave[i] = SoDD[1].value;
+			Suffering(i++);
+			iSave[i] = SoDD[2].value;
+			Suffering(i++);
+			iSave[i] = SoDD[3].value;
+			Suffering(i++);
+			iSave[i] = SoDD[4].value;
+			Suffering(i++);
+			iSave[i] = SoDD[5].value;
+			Suffering(i++);
 			if (bArisen) {
-				iSave[i++] = ADD1[0].value;
-				iSave[i++] = ADD1[1].value;
-				iSave[i++] = ADD1[2].value;
-				iSave[i++] = ADD2[0].value;
-				iSave[i++] = ADD2[1].value;
-				iSave[i++] = ADD2[2].value;
-				iSave[i++] = ADD3[0].value;
-				iSave[i++] = ADD3[1].value;
-				iSave[i++] = ADD3[2].value;
-				iSave[i++] = ADD4[0].value;
-				iSave[i++] = ADD4[1].value;
-				iSave[i++] = ADD4[2].value;
-				iSave[i++] = MADD1[0].value;
-				iSave[i++] = MADD1[1].value;
-				iSave[i++] = MADD1[2].value;
-				iSave[i++] = MADD2[0].value;
-				iSave[i++] = MADD2[1].value;
-				iSave[i++] = MADD2[2].value;
-				iSave[i++] = MADD3[0].value;
-				iSave[i++] = MADD3[1].value;
-				iSave[i++] = MADD3[2].value;
-				iSave[i++] = MKDD1[0].value;
-				iSave[i++] = MKDD1[1].value;
-				iSave[i++] = MKDD1[2].value;
-				iSave[i++] = MKDD2[0].value;
-				iSave[i++] = MKDD2[1].value;
-				iSave[i++] = MKDD2[2].value;
-				iSave[i++] = MKDD3[0].value;
-				iSave[i++] = MKDD3[1].value;
-				iSave[i++] = MKDD3[2].value;
+				iSave[i] = ADD1[0].value;
+				Suffering(i++);
+				iSave[i] = ADD1[1].value;
+				Suffering(i++);
+				iSave[i] = ADD1[2].value;
+				Suffering(i++);
+				iSave[i] = ADD2[0].value;
+				Suffering(i++);
+				iSave[i] = ADD2[1].value;
+				Suffering(i++);
+				iSave[i] = ADD2[2].value;
+				Suffering(i++);
+				iSave[i] = ADD3[0].value;
+				Suffering(i++);
+				iSave[i] = ADD3[1].value;
+				Suffering(i++);
+				iSave[i] = ADD3[2].value;
+				Suffering(i++);
+				iSave[i] = ADD4[0].value;
+				Suffering(i++);
+				iSave[i] = ADD4[1].value;
+				Suffering(i++);
+				iSave[i] = ADD4[2].value;
+				Suffering(i++);
+				iSave[i] = MADD1[0].value;
+				Suffering(i++);
+				iSave[i] = MADD1[1].value;
+				Suffering(i++);
+				iSave[i] = MADD1[2].value;
+				Suffering(i++);
+				iSave[i] = MADD2[0].value;
+				Suffering(i++);
+				iSave[i] = MADD2[1].value;
+				Suffering(i++);
+				iSave[i] = MADD2[2].value;
+				Suffering(i++);
+				iSave[i] = MADD3[0].value;
+				Suffering(i++);
+				iSave[i] = MADD3[1].value;
+				Suffering(i++);
+				iSave[i] = MADD3[2].value;
+				Suffering(i++);
+				iSave[i] = MKDD1[0].value;
+				Suffering(i++);
+				iSave[i] = MKDD1[1].value;
+				Suffering(i++);
+				iSave[i] = MKDD1[2].value;
+				Suffering(i++);
+				iSave[i] = MKDD2[0].value;
+				Suffering(i++);
+				iSave[i] = MKDD2[1].value;
+				Suffering(i++);
+				iSave[i] = MKDD2[2].value;
+				Suffering(i++);
+				iSave[i] = MKDD3[0].value;
+				Suffering(i++);
+				iSave[i] = MKDD3[1].value;
+				Suffering(i++);
+				iSave[i] = MKDD3[2].value;
+				Suffering(i++);
 			}
 		} else {
-			FDD1[0].value = iSave[i++];
-			FDD1[1].value = iSave[i++];
-			FDD1[2].value = iSave[i++];
-			FDD2[0].value = iSave[i++];
-			FDD2[1].value = iSave[i++];
-			FDD2[2].value = iSave[i++];
-			SDD1[0].value = iSave[i++];
-			SDD1[1].value = iSave[i++];
-			SDD1[2].value = iSave[i++];
-			SDD2[0].value = iSave[i++];
-			SDD2[1].value = iSave[i++];
-			SDD2[2].value = iSave[i++];
-			MDD[0].value = iSave[i++];
-			MDD[1].value = iSave[i++];
-			MDD[2].value = iSave[i++];
-			MDD[3].value = iSave[i++];
-			MDD[4].value = iSave[i++];
-			MDD[5].value = iSave[i++];
-			WDD[0].value = iSave[i++];
-			WDD[1].value = iSave[i++];
-			WDD[2].value = iSave[i++];
-			RDD1[0].value = iSave[i++];
-			RDD1[1].value = iSave[i++];
-			RDD1[2].value = iSave[i++];
-			RDD2[0].value = iSave[i++];
-			RDD2[1].value = iSave[i++];
-			RDD2[2].value = iSave[i++];
-			SoDD[0].value = iSave[i++];
-			SoDD[1].value = iSave[i++];
-			SoDD[2].value = iSave[i++];
-			SoDD[3].value = iSave[i++];
-			SoDD[4].value = iSave[i++];
-			SoDD[5].value = iSave[i++];
+			FDD1[0].value = iSave[i];
+			Suffering(i++);
+			FDD1[1].value = iSave[i];
+			Suffering(i++);
+			FDD1[2].value = iSave[i];
+			Suffering(i++);
+			FDD2[0].value = iSave[i];
+			Suffering(i++);
+			FDD2[1].value = iSave[i];
+			Suffering(i++);
+			FDD2[2].value = iSave[i];
+			Suffering(i++);
+			SDD1[0].value = iSave[i];
+			Suffering(i++);
+			SDD1[1].value = iSave[i];
+			Suffering(i++);
+			SDD1[2].value = iSave[i];
+			Suffering(i++);
+			SDD2[0].value = iSave[i];
+			Suffering(i++);
+			SDD2[1].value = iSave[i];
+			Suffering(i++);
+			SDD2[2].value = iSave[i];
+			Suffering(i++);
+			MDD[0].value = iSave[i];
+			Suffering(i++);
+			MDD[1].value = iSave[i];
+			Suffering(i++);
+			MDD[2].value = iSave[i];
+			Suffering(i++);
+			MDD[3].value = iSave[i];
+			Suffering(i++);
+			MDD[4].value = iSave[i];
+			Suffering(i++);
+			MDD[5].value = iSave[i];
+			Suffering(i++);
+			WDD[0].value = iSave[i];
+			Suffering(i++);
+			WDD[1].value = iSave[i];
+			Suffering(i++);
+			WDD[2].value = iSave[i];
+			Suffering(i++);
+			RDD1[0].value = iSave[i];
+			Suffering(i++);
+			RDD1[1].value = iSave[i];
+			Suffering(i++);
+			RDD1[2].value = iSave[i];
+			Suffering(i++);
+			RDD2[0].value = iSave[i];
+			Suffering(i++);
+			RDD2[1].value = iSave[i];
+			Suffering(i++);
+			RDD2[2].value = iSave[i];
+			Suffering(i++);
+			SoDD[0].value = iSave[i];
+			Suffering(i++);
+			SoDD[1].value = iSave[i];
+			Suffering(i++);
+			SoDD[2].value = iSave[i];
+			Suffering(i++);
+			SoDD[3].value = iSave[i];
+			Suffering(i++);
+			SoDD[4].value = iSave[i];
+			Suffering(i++);
+			SoDD[5].value = iSave[i];
+			Suffering(i++);
 			if (bArisen) {
-				ADD1[0].value = iSave[i++];
-				ADD1[1].value = iSave[i++];
-				ADD1[2].value = iSave[i++];
-				ADD2[0].value = iSave[i++];
-				ADD2[1].value	= iSave[i++];
-				ADD2[2].value = iSave[i++];
-				ADD3[0].value = iSave[i++];
-				ADD3[1].value = iSave[i++];
-				ADD3[2].value = iSave[i++];
-				ADD4[0].value = iSave[i++];
-				ADD4[1].value = iSave[i++];
-				ADD4[2].value = iSave[i++];
-				MADD1[0].value = iSave[i++];
-				MADD1[1].value = iSave[i++];
-				MADD1[2].value = iSave[i++];
-				MADD2[0].value = iSave[i++];
-				MADD2[1].value = iSave[i++];
-				MADD2[2].value = iSave[i++];
-				MADD3[0].value = iSave[i++];
-				MADD3[1].value = iSave[i++];
-				MADD3[2].value = iSave[i++];
-				MKDD1[0].value = iSave[i++];
-				MKDD1[1].value = iSave[i++];
-				MKDD1[2].value = iSave[i++];
-				MKDD2[0].value = iSave[i++];
-				MKDD2[1].value = iSave[i++];
-				MKDD2[2].value = iSave[i++];
-				MKDD3[0].value = iSave[i++];
-				MKDD3[1].value = iSave[i++];
-				MKDD3[2].value = iSave[i++];
+				ADD1[0].value = iSave[i];
+				Suffering(i++);
+				ADD1[1].value = iSave[i];
+				Suffering(i++);
+				ADD1[2].value = iSave[i];
+				Suffering(i++);
+				ADD2[0].value = iSave[i];
+				Suffering(i++);
+				ADD2[1].value	= iSave[i];
+				Suffering(i++);
+				ADD2[2].value = iSave[i];
+				Suffering(i++);
+				ADD3[0].value = iSave[i];
+				Suffering(i++);
+				ADD3[1].value = iSave[i];
+				Suffering(i++);
+				ADD3[2].value = iSave[i];
+				Suffering(i++);
+				ADD4[0].value = iSave[i];
+				Suffering(i++);
+				ADD4[1].value = iSave[i];
+				Suffering(i++);
+				ADD4[2].value = iSave[i];
+				Suffering(i++);
+				MADD1[0].value = iSave[i];
+				Suffering(i++);
+				MADD1[1].value = iSave[i];
+				Suffering(i++);
+				MADD1[2].value = iSave[i];
+				Suffering(i++);
+				MADD2[0].value = iSave[i];
+				Suffering(i++);
+				MADD2[1].value = iSave[i];
+				Suffering(i++);
+				MADD2[2].value = iSave[i];
+				Suffering(i++);
+				MADD3[0].value = iSave[i];
+				Suffering(i++);
+				MADD3[1].value = iSave[i];
+				Suffering(i++);
+				MADD3[2].value = iSave[i];
+				Suffering(i++);
+				MKDD1[0].value = iSave[i];
+				Suffering(i++);
+				MKDD1[1].value = iSave[i];
+				Suffering(i++);
+				MKDD1[2].value = iSave[i];
+				Suffering(i++);
+				MKDD2[0].value = iSave[i];
+				Suffering(i++);
+				MKDD2[1].value = iSave[i];
+				Suffering(i++);
+				MKDD2[2].value = iSave[i];
+				Suffering(i++);
+				MKDD3[0].value = iSave[i];
+				Suffering(i++);
+				MKDD3[1].value = iSave[i];
+				Suffering(i++);
+				MKDD3[2].value = iSave[i];
+				Suffering(i++);
 			}
 		}
-		Debug.Log(i);
+	}
+
+	//Since it gets used on multiple Functions
+	private void SetCurent(int l) {
+		iCurent = l / 3;
+		if (iCurent > 4 && iCurent < 10) {
+			iCurent--;
+		} else if (iCurent > 9) { iCurent -= 2; }
 	}
 
 	//Public Methods
@@ -854,6 +1167,152 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 				break;
 			case "M. Knight":
 				MKinght.SetActive(true);
+				break;
+		}
+	}
+
+	public void Suffering2(int l) {
+		SetCurent(l);
+		int i;
+		switch (iCurent) {
+			case 0:
+				for (i = 0; i < 3; i++) {
+					FDDC1[i].indexesToDisable[0] = FDD1[0].value;
+					FDDC1[i].indexesToDisable[1] = FDD1[1].value;
+					FDDC1[i].indexesToDisable[2] = FDD1[2].value;
+				}
+				break;
+			case 1:
+				for (i = 0; i < 3; i++) {
+					FDDC2[i].indexesToDisable[0] = FDD2[0].value;
+					FDDC2[i].indexesToDisable[1] = FDD2[1].value;
+					FDDC2[i].indexesToDisable[2] = FDD2[2].value;
+				}
+				break;
+			case 2:
+				for (i = 0; i < 3; i++) {
+					SDDC1[i].indexesToDisable[0] = SDD1[0].value;
+					SDDC1[i].indexesToDisable[1] = SDD1[1].value;
+					SDDC1[i].indexesToDisable[2] = SDD1[2].value;
+				}
+				break;
+			case 3:
+				for (i = 0; i < 3; i++) {
+					SDDC2[i].indexesToDisable[0] = SDD2[0].value;
+					SDDC2[i].indexesToDisable[1] = SDD2[1].value;
+					SDDC2[i].indexesToDisable[2] = SDD2[2].value;
+				}
+				break;
+			case 4:
+				for (i = 0; i < 6; i++) {
+					MDDC[i].indexesToDisable[0] = MDD[0].value;
+					MDDC[i].indexesToDisable[1] = MDD[1].value;
+					MDDC[i].indexesToDisable[2] = MDD[2].value;
+					MDDC[i].indexesToDisable[3] = MDD[3].value;
+					MDDC[i].indexesToDisable[4] = MDD[4].value;
+					MDDC[i].indexesToDisable[5] = MDD[5].value;
+				}
+				break;
+			case 5:
+				for (i = 0; i < 3; i++) {
+					WDDC[i].indexesToDisable[0] = WDD[0].value;
+					WDDC[i].indexesToDisable[1] = WDD[1].value;
+					WDDC[i].indexesToDisable[2] = WDD[2].value;
+				}
+				break;
+			case 6:
+				for (i = 0; i < 3; i++) {
+					RDDC1[i].indexesToDisable[0] = RDD1[0].value;
+					RDDC1[i].indexesToDisable[1] = RDD1[1].value;
+					RDDC1[i].indexesToDisable[2] = RDD1[2].value;
+				}
+				break;
+			case 7:
+				for (i = 0; i < 3; i++) {
+					RDDC2[i].indexesToDisable[0] = RDD2[0].value;
+					RDDC2[i].indexesToDisable[1] = RDD2[1].value;
+					RDDC2[i].indexesToDisable[2] = RDD2[2].value;
+				}
+				break;
+			case 8:
+				for (i = 0; i < 6; i++) {
+					SoDDC[i].indexesToDisable[0] = SoDD[0].value;
+					SoDDC[i].indexesToDisable[1] = SoDD[1].value;
+					SoDDC[i].indexesToDisable[2] = SoDD[2].value;
+					SoDDC[i].indexesToDisable[3] = SoDD[3].value;
+					SoDDC[i].indexesToDisable[4] = SoDD[4].value;
+					SoDDC[i].indexesToDisable[5] = SoDD[5].value;
+				}
+				break;
+			case 9:
+				for (i = 0; i < 3; i++) {
+					ADDC1[i].indexesToDisable[0] = ADD1[0].value;
+					ADDC1[i].indexesToDisable[1] = ADD1[1].value;
+					ADDC1[i].indexesToDisable[2] = ADD1[2].value;
+				}
+				break;
+			case 10:
+				for (i = 0; i < 3; i++) {
+					ADDC2[i].indexesToDisable[0] = ADD2[0].value;
+					ADDC2[i].indexesToDisable[1] = ADD2[1].value;
+					ADDC2[i].indexesToDisable[2] = ADD2[2].value;
+				}
+				break;
+			case 11:
+				for (i = 0; i < 3; i++) {
+					ADDC3[i].indexesToDisable[0] = ADD3[0].value;
+					ADDC3[i].indexesToDisable[1] = ADD3[1].value;
+					ADDC3[i].indexesToDisable[2] = ADD3[2].value;
+				}
+				break;
+			case 12:
+				for (i = 0; i < 3; i++) {
+					ADDC4[i].indexesToDisable[0] = ADD4[0].value;
+					ADDC4[i].indexesToDisable[1] = ADD4[1].value;
+					ADDC4[i].indexesToDisable[2] = ADD4[2].value;
+				}
+				break;
+			case 13:
+				for (i = 0; i < 3; i++) {
+					MADDC1[i].indexesToDisable[0] = MADD1[0].value;
+					MADDC1[i].indexesToDisable[1] = MADD1[1].value;
+					MADDC1[i].indexesToDisable[2] = MADD1[2].value;
+				}
+				break;
+			case 14:
+				for (i = 0; i < 3; i++) {
+					MADDC2[i].indexesToDisable[0] = MADD2[0].value;
+					MADDC2[i].indexesToDisable[1] = MADD2[1].value;
+					MADDC2[i].indexesToDisable[2] = MADD2[2].value;
+				}
+				break;
+			case 15:
+				for (i = 0; i < 3; i++) {
+					MADDC3[i].indexesToDisable[0] = MADD3[0].value;
+					MADDC3[i].indexesToDisable[1] = MADD3[1].value;
+					MADDC3[i].indexesToDisable[2] = MADD3[2].value;
+				}
+				break;
+			case 16:
+				for (i = 0; i < 3; i++) {
+					MKDDC1[i].indexesToDisable[0] = MKDD1[0].value;
+					MKDDC1[i].indexesToDisable[1] = MKDD1[1].value;
+					MKDDC1[i].indexesToDisable[2] = MKDD1[2].value;
+				}
+				break;
+			case 17:
+				for (i = 0; i < 3; i++) {
+					MKDDC2[i].indexesToDisable[0] = MKDD2[0].value;
+					MKDDC2[i].indexesToDisable[1] = MKDD2[1].value;
+					MKDDC2[i].indexesToDisable[2] = MKDD2[2].value;
+				}
+				break;
+			case 18:
+				for (i = 0; i < 3; i++) {
+					MKDDC3[i].indexesToDisable[0] = MKDD3[0].value;
+					MKDDC3[i].indexesToDisable[1] = MKDD3[1].value;
+					MKDDC3[i].indexesToDisable[2] = MKDD3[2].value;
+				}
 				break;
 		}
 	}

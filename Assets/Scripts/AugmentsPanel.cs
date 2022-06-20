@@ -7,6 +7,7 @@ using TMPro;
 public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 
 	//Objects just for the Dropdown Selections
+	#region
 	private DropDownController[] DDownCon = new DropDownController[6];
 	private TMP_Dropdown[] Dropdowns = new TMP_Dropdown[6];
 	[SerializeField] private GameObject ADd1;
@@ -16,6 +17,7 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 	[SerializeField] private GameObject ADd5;
 	[SerializeField] private GameObject ADd6;
 	List<string> Augment = new List<string>();
+	#endregion
 
 	//Anything else
 	[SerializeField] private TextMeshProUGUI SBoost;
@@ -150,7 +152,7 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 	}
 
 	//Preventing Doubleselection and Calculating Stats/Boosts
-	void DropdownItemSelected(int iDdown) {
+	public void DropdownItemSelected(int iDdown) {
 		iIndexes[6] = Dropdowns[iDdown].value;
 		//Preventing Doubleselection
 		for (int i = 0; i < 6; i++) {

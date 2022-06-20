@@ -535,52 +535,53 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 				SDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Atrillery Dart" });
 				SDD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sonic Bomb Arrow" });
 				#endregion
-				//Assassin
-				#region
-				//Sword
-				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Intimate Gambit" });
-				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Remote Bomb" });
-				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Clairvoyance" });
-				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Windmill" });
-				ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Gouge" });
-				//Dagger
-				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Evasive Kick" });
-				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Masterfull Kill" });
-				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Snake Bite" });
-				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Gale Harness" });
-				ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Invisibility" });
-				//Shortbow
-				ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = "Piercing Dart" });
-				ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = "Snipe" });
-				ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = "Torpor Arrow" });
-				//Shield
-				ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = "Swift Castle" });
-				ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = "Enhanced Response" });
-				ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = "Showdown" });
-				#endregion
-				//Magick Archer
-				#region
-				//Dagger
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sunflare" });
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Scension" });
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Shadowsshackle" });
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Magick Rebalancer" });
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Burning Body" });
-				//Spell
-				MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Perdition" });
-				#endregion
-				//Mystic Knight
-				#region
-				//Sword/Mace
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sky Rapture" });
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Ruinous Sigil" });
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Vortex Sigil" });
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Great Cannon" });
-				MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Stone Forest" });
-				//Spell
-				MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sopor" });
-				#endregion
-		}	}
+				if (bArisen) {
+					//Assassin
+					#region
+					//Sword
+					ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Intimate Gambit" });
+					ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Remote Bomb" });
+					ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Clairvoyance" });
+					ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Windmill" });
+					ADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Gouge" });
+					//Dagger
+					ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Evasive Kick" });
+					ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Masterfull Kill" });
+					ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Snake Bite" });
+					ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Gale Harness" });
+					ADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Invisibility" });
+					//Shortbow
+					ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = "Piercing Dart" });
+					ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = "Snipe" });
+					ADD3[i].options.Add(new TMP_Dropdown.OptionData() { text = "Torpor Arrow" });
+					//Shield
+					ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = "Swift Castle" });
+					ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = "Enhanced Response" });
+					ADD4[i].options.Add(new TMP_Dropdown.OptionData() { text = "Showdown" });
+					#endregion
+					//Magick Archer
+					#region
+					//Dagger
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sunflare" });
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Scension" });
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Shadowsshackle" });
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Magick Rebalancer" });
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Burning Body" });
+					//Spell
+					MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Perdition" });
+					#endregion
+					//Mystic Knight
+					#region
+					//Sword/Mace
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sky Rapture" });
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Ruinous Sigil" });
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Vortex Sigil" });
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Great Cannon" });
+					MADD1[i].options.Add(new TMP_Dropdown.OptionData() { text = "Stone Forest" });
+					//Spell
+					MADD2[i].options.Add(new TMP_Dropdown.OptionData() { text = "Sopor" });
+					#endregion
+		}	}	}
 		#endregion
 	}
 
@@ -1137,9 +1138,11 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 		Warrior.SetActive(false);
 		Ranger.SetActive(false);
 		Sorcerer.SetActive(false);
-		Assassin.SetActive(false);
-		MArcher.SetActive(false);
-		MKinght.SetActive(false);
+		if (bArisen) {
+			Assassin.SetActive(false);
+			MArcher.SetActive(false);
+			MKinght.SetActive(false);
+		}
 		switch (sVocation) {
 			case "Fighter":
 				Fighter.SetActive(true);

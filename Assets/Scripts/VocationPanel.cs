@@ -1,14 +1,22 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using Homebrew;
 using TMPro;
 
 public class VocationPanel : MonoBehaviour {
-	[SerializeField] private CCharacter chara;
-	[SerializeField] private VocationTools tools;
-	[SerializeField] private TextMeshProUGUI lvl1, lvl2;
+	//ID
+	[SerializeField] private string id;
+	[ContextMenu("Generate guid for id")]
+	private void GenerateGUID() {
+		id = System.Guid.NewGuid().ToString();
+	}
 
-	[SerializeField] private int iHPGr1, iSPGr1, iATGr1, iDEGr1, iMAGr1, iMDGr1, iHPGr2, iSPGr2, iATGr2, iDEGr2, iMAGr2, iMDGr2;
+	[Foldout("Setup")] [SerializeField] private CCharacter chara;
+	[Foldout("Setup")] [SerializeField] private VocationTools tools;
+	[Foldout("Setup")] [SerializeField] private TextMeshProUGUI lvl1, lvl2;
+
+	[Foldout("Stats")] [SerializeField] private int iHPGr1, iSPGr1, iATGr1, iDEGr1, iMAGr1, iMDGr1, iHPGr2, iSPGr2, iATGr2, iDEGr2, iMAGr2, iMDGr2;
 	private int iMode, iLevel, iSteps, iCount1, iCount2, iCDis1 = 0, iCDis2 = 0;
 
 	private void UpdateInfo() {

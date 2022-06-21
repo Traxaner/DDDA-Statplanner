@@ -1,12 +1,20 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using Homebrew;
 using TMPro;
 
 public class VocationS : MonoBehaviour {
-	public CCharacter chara;
+	//ID
+	[SerializeField] private string id;
+	[ContextMenu("Generate guid for id")]
+	private void GenerateGUID() {
+		id = System.Guid.NewGuid().ToString();
+	}
+
+	[SerializeField] private CCharacter chara;
 	[SerializeField] private TextMeshProUGUI lvl;
-	[SerializeField] private int iHPGr, iSPGr, iATGr, iDEGr, iMAGr, iMDGr;
+	[Foldout("Stats")] [SerializeField] private int iHPGr, iSPGr, iATGr, iDEGr, iMAGr, iMDGr;
 	private int iLevel, iCount, iCDis = 0;
 
 	private void UpdateInfo() {

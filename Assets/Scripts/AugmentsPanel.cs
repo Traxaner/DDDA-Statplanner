@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
+using Homebrew;
 using TMPro;
 
 public class AugmentsPanel : MonoBehaviour, IDataPersistance {
@@ -10,12 +11,7 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 	#region
 	private DropDownController[] DDownCon = new DropDownController[6];
 	private TMP_Dropdown[] Dropdowns = new TMP_Dropdown[6];
-	[SerializeField] private GameObject ADd1;
-	[SerializeField] private GameObject ADd2;
-	[SerializeField] private GameObject ADd3;
-	[SerializeField] private GameObject ADd4;
-	[SerializeField] private GameObject ADd5;
-	[SerializeField] private GameObject ADd6;
+	[Foldout("Dropdowns")] [SerializeField] private GameObject ADd1, ADd2, ADd3, ADd4, ADd5, ADd6;
 	List<string> Augment = new List<string>();
 	#endregion
 

@@ -2,15 +2,16 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
+using Homebrew;
 using TMPro;
 
 public class MainMenu : MonoBehaviour {
 
-	[SerializeField] private GameObject aPanel, aSPanel, aVPanel,aAPanel,aEPanel,aSkPanel;
-	[SerializeField] private GameObject pPanel, pSPanel, pVPanel,pAPanel,pEPanel,pSkPanel;
-	[SerializeField] private GameObject mainMenu, menuMode, saveMode, VPTools;
-	[SerializeField] private TextMeshProUGUI information;
-	[SerializeField] private Button SAV;
+	[Foldout("Arisen")] [SerializeField] private GameObject aPanel, aSPanel, aVPanel,aAPanel,aEPanel,aSkPanel;
+	[Foldout("Pawn")] [SerializeField] private GameObject pPanel, pSPanel, pVPanel,pAPanel,pEPanel,pSkPanel;
+	[Foldout("Menu")] [SerializeField] private GameObject mainMenu, menuMode, saveMode, VPTools;
+	[Foldout("Menu")] [SerializeField] private TextMeshProUGUI information;
+	[Foldout("Menu")] [SerializeField] private Button SAV;
 
 	private float fTimer, fPos0, fPos1, fPos2, fPosY;
 	private int iState = 0, iMessage = 0, cPos = 0;
@@ -56,8 +57,7 @@ public class MainMenu : MonoBehaviour {
 						information.text = "Here you can pick 6 augments\nfrom all available Vocations";
 						break;
 					case 4:
-						information.text = "TODO";
-//						information.text = "Here you can select all the\nequipment pieces you want to have";
+						information.text = "No fullsets or RNG rings, just the\nequipment with deblitation resistances";
 						break;
 					case 5:
 						information.text = "Only Skills that are inherently different,\nnot their variants, are shown";

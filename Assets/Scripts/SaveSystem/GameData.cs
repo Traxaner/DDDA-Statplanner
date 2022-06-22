@@ -1,11 +1,8 @@
-using System.Collections.Generic;
-using System.Collections;
-using UnityEngine;
-
 [System.Serializable]
 public class GameData {
 	//CCharacter
 	public string aName, pName;
+	public int aL, aC0, aC1, aC2, pL, pC0, pC1, pC2;
 	//Weight
 	public int aWeight, pWeight;
 	//StarterPanel
@@ -20,8 +17,9 @@ public class GameData {
 	public GameData() {
 		aName = "Arisen";
 		pName = "Main Pawn";
+		aC0 = aC1 = aC2 = pC0 = pC1 = pC2 = 0;
 		aWeight = pWeight = 75;
-		aVoc = aSVoc = 1;
+		aL = pL = aVoc = aSVoc = 1;
 		pVoc = pSVoc = 2;
 		aAug = pAug = new int[6];
 		aSkills = new int[63];

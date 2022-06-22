@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.Collections;
-using UnityEngine.UI;
 using UnityEngine;
 using Homebrew;
 using TMPro;

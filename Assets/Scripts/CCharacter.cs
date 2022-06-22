@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -70,11 +68,34 @@ public class CCharacter : MonoBehaviour, IDataPersistance {
 	
 	//Writing the variable to save, here the name, to the gamedata
 	public void SaveData(GameData data) {
-		if (bArisen) { data.aName = CName.GetComponentInChildren<TextMeshProUGUI>().text; }
-		else { data.pName = CName.GetComponentInChildren<TextMeshProUGUI>().text; }
+		if (bArisen) {
+			data.aName = CName.GetComponentInChildren<TextMeshProUGUI>().text;
+			data.aC0 = GetICount0();
+			data.aC1 = GetICount1();
+			data.aC2 = GetICount2();
+			data.aL = GetLvl();
+		} else {
+			data.pName = CName.GetComponentInChildren<TextMeshProUGUI>().text;
+			data.pC0 = GetICount0();
+			data.pC1 = GetICount1();
+			data.pC2 = GetICount2();
+			data.pL = GetLvl();
+		}
 	}
 
 	//retrieving the saved variable, here the name, from the gamedata
 	public void LoadData(GameData data) {
-		if (bArisen) { CName.text = data.aName; } else { CName.text = data.pName; }
-}	}
+		if (bArisen) {
+			CName.text = data.aName;
+			SetICount0(data.aC0);
+			SetICount1(data.aC1);
+			SetICount2(data.aC2);
+			SetLvl(data.aL);
+		} else {
+			CName.text = data.pName;
+			SetICount0(data.pC0);
+			SetICount1(data.pC1);
+			SetICount2(data.pC2);
+			SetLvl(data.pL);
+	}	}
+}

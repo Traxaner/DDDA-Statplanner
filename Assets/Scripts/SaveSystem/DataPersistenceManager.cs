@@ -20,6 +20,8 @@ public class DataPersistenceManager : MonoBehaviour {
 	private void Start() {
 		this.dataPersistanceObjects = FindAllDataPersistenceObjects();
 		NewData();
+		SaveData();
+		LoadData();
 	}
 
 	private List<IDataPersistance> FindAllDataPersistenceObjects() {

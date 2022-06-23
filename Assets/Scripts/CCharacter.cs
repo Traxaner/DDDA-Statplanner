@@ -48,7 +48,7 @@ public class CCharacter : MonoBehaviour, IDataPersistance {
 	public int GetICount0() { return iCount0; }
 	public int GetICount1() { return iCount1; }
 	public int GetICount2() { return iCount2; }
-	private bool GetGender() { return bFemale; }
+	public bool GetGender() { return bFemale; }
 	public string GetVocation() { return sVocation; }
 	#endregion
 	//Setters

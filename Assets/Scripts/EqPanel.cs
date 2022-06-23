@@ -34,7 +34,7 @@ public class EqPanel : MonoBehaviour {
 	[Foldout("Equipment")] [SerializeField] public GameObject aArmor;
 	[Foldout("Equipment")] [SerializeField] public GameObject lClothing;
 	[Foldout("Equipment")] [SerializeField] public GameObject lArmor;
-	[Foldout("Equipment")] [SerializeField] public GameObject cloak;
+	[Foldout("Equipment")] [SerializeField] public TMP_Dropdown cloak;
 	//Rings get special treatment
 	private TMP_Dropdown[] Rings = new TMP_Dropdown[2];
 	[Foldout("Equipment")] [SerializeField] private TMP_Dropdown Ring1;
@@ -82,8 +82,7 @@ public class EqPanel : MonoBehaviour {
 		Equipment = new TMP_Dropdown[]{
 			hArmor.GetComponent<TMP_Dropdown>(),tClothing.GetComponent<TMP_Dropdown>(),
 			tArmor.GetComponent<TMP_Dropdown>(),aArmor.GetComponent<TMP_Dropdown>(),
-			lClothing.GetComponent<TMP_Dropdown>(),lArmor.GetComponent<TMP_Dropdown>(),
-			cloak.GetComponent<TMP_Dropdown>()
+			lClothing.GetComponent<TMP_Dropdown>(),lArmor.GetComponent<TMP_Dropdown>(), cloak
 		};
 		//Getting the Dropdowns
 		for(int i = 0; i < 7; i++) {
@@ -220,6 +219,55 @@ public class EqPanel : MonoBehaviour {
 	public void SetAll(int iPercent) {
 		for(int i = 0; i < 13; i++) {
 			SetDebilitationRes(iPercent, i);
+		}
+	}
+
+	public void OnPanelDisplay() {
+		//help
+		switch (chara.GetVocation()) {
+			case "Warrior":
+			case "M. Knight":
+				// Dragonscale Arm
+			case "Fighter":
+				break;
+			case "Ranger":
+				//Twilight Manicae
+			case "Strider":
+				//Crested Armguards
+				//Grisly Bracers
+				break;
+			case "M.Archer":
+				//copy uncommented from strider and sorc
+				break;
+			case "Assassin":
+				//Copy Ranger
+				//Blessed Sleeves
+				//scale Armguard
+				break;
+			case "Sorcerer":
+			case "Mage":
+				//no burnished bracers
+				//no black leather gloves
+				//no darkened Gloves
+				//no Assassin's armguards
+				//no Lion's spire
+				//no masters bracers
+				//no scarlet handcovers
+				//no assailants bracers
+				//no emissiary Bracers
+				//no Iron manicae
+				//no Red Leather Gloves
+				//no Navy Leather Gloves
+				//no Arm Crest
+				//no iron bracers
+				//no bandits glove
+				//no lether gloves
+				//no hand covers
+				//no novice Bracers
+				break;
+		}
+		if (chara.GetGender()) {
+			//Dissable all the female only options
 		}
 	}
 

@@ -1,6 +1,7 @@
 [System.Serializable]
 public class GameData {
 	//CCharacter
+	public bool aSex, pSex;
 	public string aName, pName;
 	public int aL, aC0, aC1, aC2, pL, pC0, pC1, pC2;
 	//Weight

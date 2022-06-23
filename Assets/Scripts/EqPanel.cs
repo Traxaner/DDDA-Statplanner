@@ -99,6 +99,13 @@ public class EqPanel : MonoBehaviour {
 
 	//Putting the Lists to use
 	private void EquipmentSetup2() {
+		//Cloaks
+		#region
+		foreach (string Cloak in Cloak) {
+				Equipment[6].options.Add(new TMP_Dropdown.OptionData() { text = Cloak });
+		}
+		Equipment[6].onValueChanged.AddListener(delegate { SwitchCloak(); });
+		#endregion
 		//Rings
 		#region
 		foreach (string Ringz in Ringz) {
@@ -111,6 +118,46 @@ public class EqPanel : MonoBehaviour {
 	}
 
 	private void ListsOfPainAndSuffering() {
+		//Cloaks
+		#region
+		Cloak.Add("Adept's Mantle");
+		Cloak.Add("Adventurer's Cloak");
+		Cloak.Add("Alchemickal Cloak");
+		Cloak.Add("Ancient Cape");
+		Cloak.Add("BBI3 Cloak");
+		Cloak.Add("Beastly Mantle");
+		Cloak.Add("Conquerer's Mantle");
+		Cloak.Add("Dignified Cape");
+		Cloak.Add("Direwolf Cape");
+		Cloak.Add("Divine Embrace");
+		Cloak.Add("Dragon Knight's Cloak");
+		Cloak.Add("Ebon Neck Wrap");
+		Cloak.Add("Farewell Cloak");
+		Cloak.Add("Feather Cape");
+		Cloak.Add("Feral Cape");
+		Cloak.Add("Gryphic Cloak");
+		Cloak.Add("Harpy Cloak");
+		Cloak.Add("Heresy Cloak");
+		Cloak.Add("Hero's Cape");
+		Cloak.Add("Knight's Mantle");
+		Cloak.Add("Leather Cape");
+		Cloak.Add("Lordly Cloak");
+		Cloak.Add("Mahagony Cape");
+		Cloak.Add("Monomi Neck Wrap");
+		Cloak.Add("Nebula Cape");
+		Cloak.Add("Nomad's Cloak");
+		Cloak.Add("Paladin's Mantle");
+		Cloak.Add("Pauldron");
+		Cloak.Add("Royal Mantle");
+		Cloak.Add("Scarlet Cape");
+		Cloak.Add("Scholar's Cape");
+		Cloak.Add("Shed Cape");
+		Cloak.Add("Shoulder Cape");
+		Cloak.Add("Sovereign's Mantle");
+		Cloak.Add("Tattered Mantle");
+		Cloak.Add("Violet Neck Wrap");
+		Cloak.Add("Wyrm Hunt Mantle");
+		#endregion
 		//Rings
 		#region
 		Ringz.Add("Baleful Nails");
@@ -178,6 +225,309 @@ public class EqPanel : MonoBehaviour {
 
 	//Functions for switching equipmentpieces
 	#region
+	private void SwitchCloak() {
+		//Remove
+		switch (iCurrent[6]-1) {
+			case 0:
+				SetDebilitationRes(-56, 3);
+				SetDebilitationRes(-56, 7);
+				break;
+			case 1:
+				SetDebilitationRes(-35, 6);
+				break;
+			case 2:
+				SetDebilitationRes(-40, 6);
+				break;
+			case 3:
+				SetDebilitationRes(-45, 8);
+				SetDebilitationRes(-40, 10);
+				SetDebilitationRes(-40, 12);
+				break;
+			case 4:
+				SetDebilitationRes(-100, 1);
+				break;
+			case 5:
+				SetDebilitationRes(-32, 5);
+				SetDebilitationRes(-32, 6);
+				SetDebilitationRes(-32, 2);
+				break;
+			case 6:
+				SetDebilitationRes(-32, 0);
+				SetDebilitationRes(-32, 4);
+				SetDebilitationRes(-32, 8);
+				break;
+			case 7:
+				SetDebilitationRes(-45, 0);
+				break;
+			case 8:
+				SetDebilitationRes(-35, 5);
+				break;
+			case 9:
+				SetDebilitationRes(-56, 0);
+				SetDebilitationRes(-56, 8);
+				SetDebilitationRes(-40, 9);
+				SetDebilitationRes(-40, 11);
+				break;
+			case 10:
+				SetDebilitationRes(-48, 4);
+				SetDebilitationRes(-45, 9);
+				break;
+			case 11:
+				SetDebilitationRes(-35, 7);
+				break;
+			case 12:
+				SetDebilitationRes(-36, 6);
+				SetDebilitationRes(-36, 9);
+				SetDebilitationRes(-36, 10);
+				break;
+			case 13:
+				SetDebilitationRes(-35, 3);
+				break;
+			case 14:
+				SetDebilitationRes(-45, 5);
+				break;
+			case 15:
+				SetDebilitationRes(-40, 7);
+				break;
+			case 16:
+				SetDebilitationRes(-40, 2);
+				break;
+			case 17:
+				SetDebilitationRes(-40, 8);
+				SetDebilitationRes(-32, 0);
+				break;
+			case 18:
+				SetDebilitationRes(-40, 4);
+				SetDebilitationRes(-32, 8);
+				break;
+			case 19:
+				SetDebilitationRes(-84, 8);
+				SetDebilitationRes(-42, 0);
+				break;
+			case 20:
+				SetDebilitationRes(-36, 6);
+				SetDebilitationRes(-36, 10);
+				SetDebilitationRes(-36, 12);
+				break;
+			case 21:
+				SetDebilitationRes(-48, 10);
+				SetDebilitationRes(-45, 7);
+				break;
+			case 22:
+				SetDebilitationRes(-36, 10);
+				SetDebilitationRes(-36, 12);
+				SetDebilitationRes(-24, 9);
+				SetDebilitationRes(-24, 11);
+				break;
+			case 23:
+				SetDebilitationRes(-35, 2);
+				break;
+			case 24:
+				SetDebilitationRes(-40, 7);
+				SetDebilitationRes(-32, 6);
+				break;
+			case 25:
+				SetDebilitationRes(-56, 1);
+				break;
+			case 26:
+				SetDebilitationRes(-56, 5);
+				SetDebilitationRes(-56, 6);
+				break;
+			case 27:
+				SetDebilitationRes(-64, 1);
+				SetDebilitationRes(-40, 8);
+				break;
+			case 28:
+				SetDebilitationRes(-40, 4);
+				break;
+			case 29:
+				SetDebilitationRes(-45, 8);
+				break;
+			case 30:
+				SetDebilitationRes(-40, 5);
+				break;
+			case 31:
+				chara.SetHp(-30);
+				break;
+			case 32:
+				SetDebilitationRes(-48, 11);
+				SetDebilitationRes(-48, 12);
+				break;
+			case 33:
+				chara.SetSp(-30);
+				break;
+			case 34:
+				chara.SetAtk(-10);
+				SetDebilitationRes(-56, 1);
+				SetDebilitationRes(-56, 4);
+				break;
+			case 35:
+				SetAll(-15);
+				SetDebilitationRes(15, 9);
+				SetDebilitationRes(15, 10);
+				SetDebilitationRes(15, 11);
+				SetDebilitationRes(15, 12);
+				break;
+			case 36:
+				SetDebilitationRes(-40, 4);
+				break;
+			case 37:
+				SetDebilitationRes(-60, 7);
+				SetDebilitationRes(-60, 4);
+				break;
+		}
+		iCurrent[6] = Equipment[6].value;
+		//Add
+		switch (iCurrent[6] - 1) {
+			case 0:
+				SetDebilitationRes(56, 3);
+				SetDebilitationRes(56, 7);
+				break;
+			case 1:
+				SetDebilitationRes(35, 6);
+				break;
+			case 2:
+				SetDebilitationRes(40, 6);
+				break;
+			case 3:
+				SetDebilitationRes(45, 8);
+				SetDebilitationRes(40, 10);
+				SetDebilitationRes(40, 12);
+				break;
+			case 4:
+				SetDebilitationRes(100, 1);
+				break;
+			case 5:
+				SetDebilitationRes(32, 5);
+				SetDebilitationRes(32, 6);
+				SetDebilitationRes(32, 2);
+				break;
+			case 6:
+				SetDebilitationRes(32, 0);
+				SetDebilitationRes(32, 4);
+				SetDebilitationRes(32, 8);
+				break;
+			case 7:
+				SetDebilitationRes(45, 0);
+				break;
+			case 8:
+				SetDebilitationRes(35, 5);
+				break;
+			case 9:
+				SetDebilitationRes(56, 0);
+				SetDebilitationRes(56, 8);
+				SetDebilitationRes(40, 9);
+				SetDebilitationRes(40, 11);
+				break;
+			case 10:
+				SetDebilitationRes(48, 4);
+				SetDebilitationRes(45, 9);
+				break;
+			case 11:
+				SetDebilitationRes(35, 7);
+				break;
+			case 12:
+				SetDebilitationRes(36, 6);
+				SetDebilitationRes(36, 9);
+				SetDebilitationRes(36, 10);
+				break;
+			case 13:
+				SetDebilitationRes(35, 3);
+				break;
+			case 14:
+				SetDebilitationRes(45, 5);
+				break;
+			case 15:
+				SetDebilitationRes(40, 7);
+				break;
+			case 16:
+				SetDebilitationRes(40, 2);
+				break;
+			case 17:
+				SetDebilitationRes(40, 8);
+				SetDebilitationRes(32, 0);
+				break;
+			case 18:
+				SetDebilitationRes(40, 4);
+				SetDebilitationRes(32, 8);
+				break;
+			case 19:
+				SetDebilitationRes(84, 8);
+				SetDebilitationRes(42, 0);
+				break;
+			case 20:
+				SetDebilitationRes(36, 6);
+				SetDebilitationRes(36, 10);
+				SetDebilitationRes(36, 12);
+				break;
+			case 21:
+				SetDebilitationRes(48, 10);
+				SetDebilitationRes(45, 7);
+				break;
+			case 22:
+				SetDebilitationRes(36, 10);
+				SetDebilitationRes(36, 12);
+				SetDebilitationRes(24, 9);
+				SetDebilitationRes(24, 11);
+				break;
+			case 23:
+				SetDebilitationRes(35, 2);
+				break;
+			case 24:
+				SetDebilitationRes(40, 7);
+				SetDebilitationRes(32, 6);
+				break;
+			case 25:
+				SetDebilitationRes(56, 1);
+				break;
+			case 26:
+				SetDebilitationRes(56, 5);
+				SetDebilitationRes(56, 6);
+				break;
+			case 27:
+				SetDebilitationRes(64, 1);
+				SetDebilitationRes(40, 8);
+				break;
+			case 28:
+				SetDebilitationRes(40, 4);
+				break;
+			case 29:
+				SetDebilitationRes(45, 8);
+				break;
+			case 30:
+				SetDebilitationRes(40, 5);
+				break;
+			case 31:
+				chara.SetHp(30);
+				break;
+			case 32:
+				SetDebilitationRes(48, 11);
+				SetDebilitationRes(48, 12);
+				break;
+			case 33:
+				chara.SetSp(30);
+				break;
+			case 34:
+				chara.SetAtk(10);
+				SetDebilitationRes(56, 1);
+				SetDebilitationRes(56, 4);
+				break;
+			case 35:
+				SetAll(15);
+				SetDebilitationRes(-15, 9);
+				SetDebilitationRes(-15, 10);
+				SetDebilitationRes(-15, 11);
+				SetDebilitationRes(-15, 12);
+				break;
+			case 36:
+				SetDebilitationRes(40, 4);
+				break;
+			case 37:
+				SetDebilitationRes(60, 7);
+				SetDebilitationRes(60, 4);
+				break;
+		}
+	}
 	private void SwitchRing(int iRing) {
 		//Subtract here
 		switch (iCurrent[iRing + 7]-1) {

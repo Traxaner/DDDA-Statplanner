@@ -27,6 +27,7 @@ public class EqPanel : MonoBehaviour {
 	#endregion
 	//Dropdowns of pain and suffering
 	#region
+	private DropDownController[] EDD;
 	private TMP_Dropdown[] Equipment;
 	[Foldout("Equipment")] [SerializeField] public GameObject hArmor;
 	[Foldout("Equipment")] [SerializeField] public GameObject tClothing;
@@ -84,6 +85,11 @@ public class EqPanel : MonoBehaviour {
 			tArmor.GetComponent<TMP_Dropdown>(),aArmor.GetComponent<TMP_Dropdown>(),
 			lClothing.GetComponent<TMP_Dropdown>(),lArmor.GetComponent<TMP_Dropdown>(), cloak
 		};
+		EDD = new DropDownController[] {
+			hArmor.GetComponent<DropDownController>(),tClothing.GetComponent<DropDownController>(),
+			tArmor.GetComponent<DropDownController>(),aArmor.GetComponent<DropDownController>(),
+			lClothing.GetComponent<DropDownController>(),lArmor.GetComponent<DropDownController>()
+		};
 		//Getting the Dropdowns
 		for(int i = 0; i < 7; i++) {
 			//Clearing Dropdowns
@@ -98,6 +104,48 @@ public class EqPanel : MonoBehaviour {
 
 	//Putting the Lists to use
 	private void EquipmentSetup2() {
+		//Headarmor
+		#region
+		foreach (string Head in Head) {
+			Equipment[0].options.Add(new TMP_Dropdown.OptionData() { text = Head });
+		}
+		Equipment[0].onValueChanged.AddListener(delegate { SwitchHead(); });
+		#endregion
+		//Chestclothing
+		#region
+		foreach (string TCloth in TCloth) {
+			Equipment[1].options.Add(new TMP_Dropdown.OptionData() { text = TCloth });
+		}
+		Equipment[1].onValueChanged.AddListener(delegate { SwitchTClothing(); });
+		#endregion
+		//Chestarmor
+		#region
+		foreach (string Chest in Chest) {
+			Equipment[2].options.Add(new TMP_Dropdown.OptionData() { text = Chest });
+		}
+		Equipment[2].onValueChanged.AddListener(delegate { SwitchChest(); });
+		#endregion
+		//Armarmor
+		#region
+		foreach (string Arms in Arms) {
+			Equipment[3].options.Add(new TMP_Dropdown.OptionData() { text = Arms });
+		}
+		Equipment[3].onValueChanged.AddListener(delegate { SwitchArms(); });
+		#endregion
+		//Legclothing
+		#region
+		foreach (string LCloth in LCloth) {
+			Equipment[4].options.Add(new TMP_Dropdown.OptionData() { text = LCloth });
+		}
+		Equipment[4].onValueChanged.AddListener(delegate { SwitchLClothing(); });
+		#endregion
+		//Legarmor
+		#region
+		foreach (string Legs in Legs) {
+				Equipment[5].options.Add(new TMP_Dropdown.OptionData() { text = Legs });
+		}
+		Equipment[5].onValueChanged.AddListener(delegate { SwitchLegs(); });
+		#endregion
 		//Cloaks
 		#region
 		foreach (string Cloak in Cloak) {
@@ -117,6 +165,87 @@ public class EqPanel : MonoBehaviour {
 	}
 
 	private void ListsOfPainAndSuffering() {
+		//Chest Clothing
+		#region
+		TCloth.Add("Abyssinal Outfit");
+		TCloth.Add("Alchemick Vest");
+		TCloth.Add("Assembled Vest");
+		TCloth.Add("Bandages");
+		TCloth.Add("Blessed Vest");
+		TCloth.Add("Bilaut");
+		TCloth.Add("Braided Shirt");
+		TCloth.Add("Brigandine Jerkin");
+		TCloth.Add("Cassardi Shirt");
+		TCloth.Add("Chain Mail");
+		TCloth.Add("Chainmail Bracers");
+		TCloth.Add("Cotton Tunic");
+		TCloth.Add("Crimson Jerkin");
+		TCloth.Add("Doublet");
+		TCloth.Add("Dragonleather Vest");
+		//only figtherbased [16]
+		TCloth.Add("Faded Vest");
+		TCloth.Add("Fine Cassardi Shirt");
+		TCloth.Add("Forest Tunic");
+		TCloth.Add("Gambeson");
+		TCloth.Add("Hard Leather Plate");
+		TCloth.Add("Hemp Shirt");
+		TCloth.Add("Hunter's Shirt");
+		//only Figtherbased [23]
+		TCloth.Add("Iron Vest");
+		TCloth.Add("Lady's Corset");
+		TCloth.Add("Leather Chestguard");
+		TCloth.Add("Light Outfit");
+		TCloth.Add("Linen Shirt");
+		TCloth.Add("Maiden's Camisole");
+		TCloth.Add("Marshal's Bracers");
+		TCloth.Add("Noblewomen's Corset");
+		TCloth.Add("Patterned Gamberson");
+		//Only Figtherbased [32]
+		TCloth.Add("Plated Coat");
+		TCloth.Add("Quilted Jerkin");
+		TCloth.Add("Riveted Coat");
+		TCloth.Add("Silver Chestplate");
+		TCloth.Add("Silver Cuircas");
+		//only fighterbased [37]
+		TCloth.Add("Silver Vest");
+		TCloth.Add("Traveler's Shirt");
+		TCloth.Add("Trooper Outfit");
+		TCloth.Add("Tunic");
+		#endregion
+		//Leg Clothing
+		#region
+		LCloth.Add("Alchemickal Hosen");
+		LCloth.Add("Bandit Stalkers");
+		LCloth.Add("Black Gaiters");
+		LCloth.Add("Braided Hosen");
+		LCloth.Add("Brown Laced Leggings");
+		LCloth.Add("Brown Leathers");
+		LCloth.Add("Cassardi Trousers");
+		LCloth.Add("Cotton Hosen");
+		LCloth.Add("Delta Guard");
+		LCloth.Add("Denim Hosen");
+		LCloth.Add("Evening Tights");
+		LCloth.Add("Fine Cassadri Hosen");
+		LCloth.Add("Full Chain Hosen");
+		LCloth.Add("Half Chain Hosen");
+		LCloth.Add("Hemp Hosen");
+		LCloth.Add("Huntsman's Trousers");
+		LCloth.Add("Iron Bandings");
+		LCloth.Add("Laborer's Breeches");
+		LCloth.Add("Laced Leggings");
+		LCloth.Add("Leather Bandings");
+		LCloth.Add("Seeker Thights");
+		LCloth.Add("Short Pants");
+		LCloth.Add("Silk Lingerie");
+		LCloth.Add("Silk Tights");
+		LCloth.Add("Silver Hosen");
+		LCloth.Add("Traveler's Tights");
+		LCloth.Add("Twisted Leathers");
+		LCloth.Add("Urban Hosen");
+		LCloth.Add("White Stockings");
+		LCloth.Add("Worker's Pants");
+		LCloth.Add("Yellow Gaiters");
+		#endregion
 		//Cloaks
 		#region
 		Cloak.Add("Adept's Mantle");
@@ -224,55 +353,421 @@ public class EqPanel : MonoBehaviour {
 
 	public void OnPanelDisplay() {
 		//help
-		switch (chara.GetVocation()) {
-			case "Warrior":
-			case "M. Knight":
-				// Dragonscale Arm
-			case "Fighter":
-				break;
-			case "Ranger":
-				//Twilight Manicae
-			case "Strider":
-				//Crested Armguards
-				//Grisly Bracers
-				break;
-			case "M.Archer":
-				//copy uncommented from strider and sorc
-				break;
-			case "Assassin":
-				//Copy Ranger
-				//Blessed Sleeves
-				//scale Armguard
-				break;
-			case "Sorcerer":
-			case "Mage":
-				//no burnished bracers
-				//no black leather gloves
-				//no darkened Gloves
-				//no Assassin's armguards
-				//no Lion's spire
-				//no masters bracers
-				//no scarlet handcovers
-				//no assailants bracers
-				//no emissiary Bracers
-				//no Iron manicae
-				//no Red Leather Gloves
-				//no Navy Leather Gloves
-				//no Arm Crest
-				//no iron bracers
-				//no bandits glove
-				//no lether gloves
-				//no hand covers
-				//no novice Bracers
-				break;
+		//Mage or Sorcerer
+		if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Mage")) {
+			//Chest Clothing
+			#region
+			EDD[1].EnableOption(3, false);
+			EDD[1].EnableOption(10, false);
+			EDD[1].EnableOption(11, false);
+			EDD[1].EnableOption(15, false);
+			EDD[1].EnableOption(29, false);
+			EDD[1].EnableOption(34, false);
+			EDD[1].EnableOption(36, false);
+			EDD[1].EnableOption(39, false);
+			#endregion
+			//Leg Clothing
+			#region
+			EDD[4].EnableOption(12, false);
+			EDD[4].EnableOption(13, false);
+			EDD[4].EnableOption(16, false);
+			EDD[4].EnableOption(24, false);
+			#endregion
+		} else {
+			//Chest Clothing
+			#region
+			EDD[1].EnableOption(3, true);
+			EDD[1].EnableOption(10, true);
+			EDD[1].EnableOption(11, true);
+			EDD[1].EnableOption(15, true);
+			EDD[1].EnableOption(29, true);
+			EDD[1].EnableOption(34, true);
+			EDD[1].EnableOption(36, true);
+			EDD[1].EnableOption(39, true);
+			#endregion
+			//Leg Clothing
+			#region
+			EDD[4].EnableOption(12, true);
+			EDD[4].EnableOption(13, true);
+			EDD[4].EnableOption(16, true);
+			EDD[4].EnableOption(24, true);
+			#endregion
 		}
-		if (chara.GetGender()) {
+		//Only Magick Vocation TCloth[6]
+
+		if (!chara.GetGender()) {
 			//Dissable all the female only options
+			#region
+			//Chest Clothing
+			EDD[1].EnableOption(24, false);
+			EDD[1].EnableOption(28, false);
+			EDD[1].EnableOption(30, false);
+			//Leg Clothing
+			EDD[4].EnableOption(9, false);
+			EDD[4].EnableOption(22, false);
+			EDD[4].EnableOption(28, false);
+			//Maiden's Petticoat
+			//Berserkin
+			//Flame Skirt
+			//Framae Plate
+			//Sultry Cowl
+			//Sultry Pareo
+			//Summery Cowl
+			//Summery Pareo
+			#endregion
+		} else {
+			//Enable all the female only options
+			#region
+			//Chest Clothing
+			EDD[1].EnableOption(24, true);
+			EDD[1].EnableOption(28, true);
+			EDD[1].EnableOption(30, true);
+			//Leg Clothing
+			EDD[4].EnableOption(9, true);
+			EDD[4].EnableOption(22, true);
+			EDD[4].EnableOption(28, true);
+			#endregion
 		}
 	}
 
 	//Functions for switching equipmentpieces
 	#region
+	private void SwitchHead() {
+	}
+	private void SwitchTClothing() {
+		switch (iCurrent[1]) {
+			case 1:
+				SetDebilitationRes(-36, 0);
+				SetDebilitationRes(-33, 8);
+				break;
+			case 2:
+				SetDebilitationRes(-35, 6);
+				break;
+			case 3:
+				SetDebilitationRes(-24, 6);
+				break;
+			case 4:
+				SetDebilitationRes(-15, 5);
+				SetDebilitationRes(-15, 11);
+				break;
+			case 5:
+				SetDebilitationRes(-24, 8);
+				break;
+			case 6:
+				SetDebilitationRes(-20, 3);
+				break;
+			case 7:
+				SetDebilitationRes(-35, 11);
+				break;
+			case 8:
+				SetDebilitationRes(-30, 2);
+				break;
+			case 11:
+				chara.SetAtk(-3);
+				SetDebilitationRes(-28, 4);
+				break;
+			case 13:
+				SetDebilitationRes(-30, 7);
+				break;
+			case 15:
+				SetDebilitationRes(-36, 8);
+				break;
+			case 22:
+				SetDebilitationRes(-40, 4);
+				break;
+			case 23:
+				SetDebilitationRes(-21, 2);
+				break;
+			case 24:
+				SetDebilitationRes(-30, 3);
+				break;
+			case 25:
+				SetDebilitationRes(-20, 5);
+				break;
+			case 27:
+				SetDebilitationRes(-15, 2);
+				break;
+			case 28:
+				SetDebilitationRes(-40, 0);
+				break;
+			case 29:
+				chara.SetAtk(-5);
+				SetDebilitationRes(-25, 4);
+				break;
+			case 30:
+				SetDebilitationRes(-24, 3);
+				SetDebilitationRes(-24, 8);
+				break;
+			case 31:
+				SetDebilitationRes(-24, 2);
+				SetDebilitationRes(-24, 4);
+				SetDebilitationRes(-6, 9);
+				break;
+			case 32:
+				SetDebilitationRes(-35, 7);
+				break;
+			case 35:
+				SetDebilitationRes(-20, 8);
+				break;
+			case 36:
+				SetDebilitationRes(-21, 8);
+				break;
+			case 37:
+				SetDebilitationRes(-32, 1);
+				break;
+			case 39:
+				SetDebilitationRes(-35, 5);
+				break;
+		}
+		iCurrent[1] = Equipment[1].value;
+		switch (iCurrent[1]) {
+			case 1:
+				SetDebilitationRes(36, 0);
+				SetDebilitationRes(33, 8);
+				break;
+			case 2:
+				SetDebilitationRes(35, 6);
+				break;
+			case 3:
+				SetDebilitationRes(24, 6);
+				break;
+			case 4:
+				SetDebilitationRes(15, 5);
+				SetDebilitationRes(15, 11);
+				break;
+			case 5:
+				SetDebilitationRes(24, 8);
+				break;
+			case 6:
+				SetDebilitationRes(20, 3);
+				break;
+			case 7:
+				SetDebilitationRes(35, 11);
+				break;
+			case 8:
+				SetDebilitationRes(30, 2);
+				break;
+			case 11:
+				chara.SetAtk(3);
+				SetDebilitationRes(28, 4);
+				break;
+			case 13:
+				SetDebilitationRes(30, 7);
+				break;
+			case 15:
+				SetDebilitationRes(36, 8);
+				break;
+			case 22:
+				SetDebilitationRes(40, 4);
+				break;
+			case 23:
+				SetDebilitationRes(21, 2);
+				break;
+			case 24:
+				SetDebilitationRes(30, 3);
+				break;
+			case 25:
+				SetDebilitationRes(20, 5);
+				break;
+			case 27:
+				SetDebilitationRes(15, 2);
+				break;
+			case 28:
+				SetDebilitationRes(40, 0);
+				break;
+			case 29:
+				chara.SetAtk(5);
+				SetDebilitationRes(25, 4);
+				break;
+			case 30:
+				SetDebilitationRes(24, 3);
+				SetDebilitationRes(24, 8);
+				break;
+			case 31:
+				SetDebilitationRes(24, 2);
+				SetDebilitationRes(24, 4);
+				SetDebilitationRes(6, 9);
+				break;
+			case 32:
+				SetDebilitationRes(35, 7);
+				break;
+			case 35:
+				SetDebilitationRes(20, 8);
+				break;
+			case 36:
+				SetDebilitationRes(21, 8);
+				break;
+			case 37:
+				SetDebilitationRes(32, 1);
+				break;
+			case 39:
+				SetDebilitationRes(35, 5);
+				break;
+		}
+	}
+	private void SwitchChest() {
+	}
+	private void SwitchArms() {
+	}
+	private void SwitchLClothing() {
+		switch (iCurrent[4]) {
+			case 1:
+				SetDebilitationRes(-30, 6);
+				break;
+			case 2:
+				SetDebilitationRes(-30, 4);
+				break;
+			case 3:
+				SetDebilitationRes(-25, 7);
+				break;
+			case 4:
+				SetDebilitationRes(-30, 11);
+				break;
+			case 5:
+				SetDebilitationRes(-25, 5);
+				break;
+			case 6:
+				SetDebilitationRes(-30, 6);
+				break;
+			case 9:
+				SetDebilitationRes(-45, 0);
+				SetDebilitationRes(-45, 1);
+				break;
+			case 10:
+				SetDebilitationRes(-20, 5);
+				break;
+			case 11:
+				SetDebilitationRes(-35, 2);
+				break;
+			case 16:
+				SetDebilitationRes(-35, 4);
+				break;
+			case 17:
+				SetDebilitationRes(-30, 2);
+				break;
+			case 18:
+				SetDebilitationRes(-25, 4);
+				SetDebilitationRes(-20, 2);
+				break;
+			case 19:
+				SetDebilitationRes(-16, 5);
+				break;
+			case 20:
+				SetDebilitationRes(-30, 5);
+				SetDebilitationRes(-24, 4);
+				break;
+			case 21:
+				SetDebilitationRes(-20, 4);
+				break;
+			case 23:
+				SetDebilitationRes(-45, 10);
+				SetDebilitationRes(-45, 12);
+				break;
+			case 24:
+				SetDebilitationRes(-45, 3);
+				SetDebilitationRes(-45, 4);
+				break;
+			case 25:
+				SetDebilitationRes(-18, 8);
+				break;
+			case 26:
+				SetDebilitationRes(-24, 9);
+				SetDebilitationRes(-15, 4);
+				break;
+			case 28:
+				SetDebilitationRes(-35, 0);
+				break;
+			case 29:
+				SetDebilitationRes(-35, 7);
+				break;
+			case 30:
+				SetDebilitationRes(-30, 3);
+				break;
+			case 31:
+				SetDebilitationRes(-16, 2);
+				break;
+		}
+		iCurrent[4] = Equipment[4].value;
+		switch (iCurrent[4]) {
+			case 1:
+				SetDebilitationRes(30, 6);
+				break;
+			case 2:
+				SetDebilitationRes(30, 4);
+				break;
+			case 3:
+				SetDebilitationRes(25, 7);
+				break;
+			case 4:
+				SetDebilitationRes(30, 11);
+				break;
+			case 5:
+				SetDebilitationRes(25, 5);
+				break;
+			case 6:
+				SetDebilitationRes(30, 6);
+				break;
+			case 9:
+				SetDebilitationRes(45, 0);
+				SetDebilitationRes(45, 1);
+				break;
+			case 10:
+				SetDebilitationRes(20, 5);
+				break;
+			case 11:
+				SetDebilitationRes(35, 2);
+				break;
+			case 16:
+				SetDebilitationRes(35, 4);
+				break;
+			case 17:
+				SetDebilitationRes(30, 2);
+				break;
+			case 18:
+				SetDebilitationRes(25, 4);
+				SetDebilitationRes(20, 2);
+				break;
+			case 19:
+				SetDebilitationRes(16, 5);
+				break;
+			case 20:
+				SetDebilitationRes(30, 5);
+				SetDebilitationRes(24, 4);
+				break;
+			case 21:
+				SetDebilitationRes(20, 4);
+				break;
+			case 23:
+				SetDebilitationRes(45, 10);
+				SetDebilitationRes(45, 12);
+				break;
+			case 24:
+				SetDebilitationRes(45, 3);
+				SetDebilitationRes(45, 4);
+				break;
+			case 25:
+				SetDebilitationRes(18, 8);
+				break;
+			case 26:
+				SetDebilitationRes(24, 9);
+				SetDebilitationRes(15, 4);
+				break;
+			case 28:
+				SetDebilitationRes(35, 0);
+				break;
+			case 29:
+				SetDebilitationRes(35, 7);
+				break;
+			case 30:
+				SetDebilitationRes(30, 3);
+				break;
+			case 31:
+				SetDebilitationRes(16, 2);
+				break;
+		}
+	}
+	private void SwitchLegs() {
+	}
 	private void SwitchCloak() {
 		//Remove
 		switch (iCurrent[6]-1) {

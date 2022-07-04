@@ -167,135 +167,85 @@ public class EqPanel : MonoBehaviour {
 	private void ListsOfPainAndSuffering() {
 		//Head Armor
 		#region
-		//Head[1] Mage,Sorc,M. Archer
 		Head.Add("Adept's Hat");
 		Head.Add("Ancient Circlet");
-		//Head[3] Magick based
 		Head.Add("Archwizard's Helm");
-		//Head[4] Strider based
 		Head.Add("Assassin's Mask");
-		//Head[5] Magick based
 		Head.Add("Autumn Hood");
 		Head.Add("Bandit's Mask");
-		//Head[7] Warrior, M. Knight
 		Head.Add("Babarian Chief's Helm");
-		//Head[8] Fighter, Warrior, M. Knight
 		Head.Add("Barreled Helm");
 		Head.Add("Black Eyeglasses");
-		//Head[10] Fighter, Warrior, M. Knight
 		Head.Add("Bronze Sallet");
-		//Head[11] Fighter, Warrior, M. Knight
 		Head.Add("BBI3 Heavy Armor");
-		//Head[12] Strider, Ranger, Assassin, M.Archer
 		Head.Add("BBI3 Light Armor");
-		//Head[13] Mage, Sorc, M. Archer
 		Head.Add("BBI3 Robes");
-		//Head[14] Fighter based
 		Head.Add("Chain Coif");
-		//Head[15] Fighter, Warrior, M. Knight
 		Head.Add("Chaos Helm");
-		//Head[16] Fighter, Warrior, M. Knight
 		Head.Add("Chimeric Armet");
 		Head.Add("Circlet");
 		Head.Add("Clerical Cap");
-		//Head[19] Strider based
 		Head.Add("Coupled Headgear");
-		//Head[20] Fighter, Warrior, M. Knight
 		Head.Add("Crimson Armet");
-		//Head[21] Mage based
 		Head.Add("Crowned Hood");
-		//Head[22] Warrior, M. Knight
 		Head.Add("Cyclops Veil");
-		//Head[23] Sorc, M. Archer
 		Head.Add("Diadem");
-		//Head[24] Warrior, Ranger, M. Archer, M. Knight
 		Head.Add("Direwolf Veil");
 		Head.Add("Dragon Band");
-		//Head[26] Fighter, Warrior, M. Knight
 		Head.Add("Dragon Knight's Helm");
 		Head.Add("Dragonroar");
 		Head.Add("Dragonseye Band");
 		Head.Add("Dragonpulse Circlet");
 		Head.Add("Dragonwing Circlet");
 		Head.Add("Emissiary Hood");
-		//Head[32] Mage based
 		Head.Add("Faerie Hood");
 		Head.Add("Farewell Hood");
-		//Head[34] Strider, Ranger, Assassin
 		Head.Add("Farseer's Cap");
-		//Head[35] Mage based
 		Head.Add("Feather Hood");
 		Head.Add("Gold Eyeglasses");
-		//Head[37] Strider based
 		Head.Add("Golden Lion Helm");
 		Head.Add("Gossip's Mask");
-		//Head[39] Fighter, Warrior, M. Knight
 		Head.Add("Grissly Skull");
-		//Head[40] Fighter, Warrior, M. Knight
 		Head.Add("Griphic Helm");
 		Head.Add("Guardian's Hood");
-		//Head [42] Mage based
 		Head.Add("Heresy Hood");
-		//Head[43] Fighter, Warrior, M. Knight
 		Head.Add("Hero's Hood");
-		//Head[44] Fighter, Warrior, M. Knight
 		Head.Add("Horned Helm");
-		//Head[45] Fighter based
 		Head.Add("Immortal's Helm");
 		Head.Add("Incognito Mask");
-		//Head[47] Strider based
 		Head.Add("Iron Headgear");
-		//Head[48] Fighter, Warrior, M. Knight
 		Head.Add("Iron Helm");
 		Head.Add("Jester's Cap");
 		Head.Add("Laurel Circlet");
 		Head.Add("Leather Cap");
 		Head.Add("Leather Circlet");
-		//Head[53] Strider based
 		Head.Add("Leather Hood");
-		//Head[54] Strider based
 		Head.Add("Lion-Lord's Helm");
-		//Head[55] Warrior, Ranger, M. Archer, M. Knight
 		Head.Add("Lupine Veil");
-		//Head[57] Warrior, M. Knight
 		Head.Add("Meloirean Cyclops Veil");
-		//Head[58] Fighter, Warrior, M. Knight
 		Head.Add("Meloirean Helm");
 		Head.Add("Minstrel Band");
 		Head.Add("Misteltoe Circlet");
-		//Head[61] Strider based
 		Head.Add("Monomi Mask");
-		//Head[62] Fighter, Warrior, M. Knight
 		Head.Add("Persecutor's Mask");
 		Head.Add("Red Eyeglasses");
 		Head.Add("Red Cap");
-		//Head[65] Strider based
 		Head.Add("Red Leather Hood");
 		Head.Add("Ruminator's Monocle");
-		//Head[67] Mage based
 		Head.Add("Sage's hood");
 		Head.Add("Silver Eyeglasses");
-		//Head[69] Strider based
 		Head.Add("Shulker's Mask");
-		//Head[70] Fighter, Warrior, M. Knight
 		Head.Add("Steel Sallet");
-		//Head[71] Female
 		Head.Add("Sultry Cowl");
-		//Head[72] Female
 		Head.Add("Summery Cowl");
 		Head.Add("Tiara of Enlightenment");
-		//Head[74] Fighter Warrior M. Knight
 		Head.Add("Tormenter's Mask");
 		Head.Add("Traveler's Hood");
-		//Head[76] Mage Based
 		Head.Add("Twilight Hood");
-		//Head[77] Ranger Assassin
 		Head.Add("Twilight Mask");
 		Head.Add("Ur-Dragon Masks");
-		//Head[79] Mage based
 		Head.Add("Verdant Hood");
 		Head.Add("White Cap");
-		//Head[81] Mage based
 		Head.Add("Wizard's Helm");
 		Head.Add("Wyrmfire Wizard");
 		#endregion
@@ -482,20 +432,76 @@ public class EqPanel : MonoBehaviour {
 	}
 
 	public void OnPanelDisplay() {
-		//help
-		bool bOverride = false;
 		//Fighter based
 		#region
 		if (chara.GetVocation().Equals("Fighter") || chara.GetVocation().Equals("Warrior")||
 			 chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("M. Knight")) {
-			bOverride = true;
-			//Warrior and M.Knight
+			//Heavy Armor
 			#region
-			if (chara.GetVocation().Equals("Warrior")||chara.GetVocation().Equals("M. Knight")) {
-				//EDD[0].EnableOption(, true);
+			if (!chara.GetVocation().Equals("Assassin")) {
+				//Head
+				#region
+				EDD[0].EnableOption(8, true);
+				EDD[0].EnableOption(10, true);
+				EDD[0].EnableOption(11, true);
+				EDD[0].EnableOption(15, true);
+				EDD[0].EnableOption(16, true);
+				EDD[0].EnableOption(20, true);
+				EDD[0].EnableOption(26, true);
+				EDD[0].EnableOption(39, true);
+				EDD[0].EnableOption(40, true);
+				EDD[0].EnableOption(43, true);
+				EDD[0].EnableOption(44, true);
+				EDD[0].EnableOption(48, true);
+				EDD[0].EnableOption(58, true);
+				EDD[0].EnableOption(62, true);
+				EDD[0].EnableOption(70, true);
+				EDD[0].EnableOption(74, true);
+				#endregion
 			} else {
-
+				//Head
+				#region
+				EDD[0].EnableOption(8, false);
+				EDD[0].EnableOption(10, false);
+				EDD[0].EnableOption(11, false);
+				EDD[0].EnableOption(15, false);
+				EDD[0].EnableOption(16, false);
+				EDD[0].EnableOption(20, false);
+				EDD[0].EnableOption(26, false);
+				EDD[0].EnableOption(39, false);
+				EDD[0].EnableOption(40, false);
+				EDD[0].EnableOption(43, false);
+				EDD[0].EnableOption(44, false);
+				EDD[0].EnableOption(48, false);
+				EDD[0].EnableOption(58, false);
+				EDD[0].EnableOption(62, false);
+				EDD[0].EnableOption(70, false);
+				EDD[0].EnableOption(74, false);
+				#endregion
 			}
+			#endregion
+			//Warrior/M. Knight
+			#region
+			if (chara.GetVocation().Equals("Warrior")|| chara.GetVocation().Equals("M. Knight")) {
+				//Head
+				#region
+				EDD[0].EnableOption(7, true);
+				EDD[0].EnableOption(22, true);
+				EDD[0].EnableOption(57, true);
+				#endregion
+			} else {
+				//Head
+				#region
+				EDD[0].EnableOption(7, false);
+				EDD[0].EnableOption(22, false);
+				EDD[0].EnableOption(57, false);
+				#endregion
+			}
+			#endregion
+			//Head Armor
+			#region
+			EDD[0].EnableOption(14, true);
+			EDD[0].EnableOption(45, true);
 			#endregion
 			//Chest Clothing
 			#region
@@ -504,8 +510,31 @@ public class EqPanel : MonoBehaviour {
 			EDD[1].EnableOption(32, true);
 			EDD[1].EnableOption(37, true);
 			#endregion
-
 		} else {
+			//Head Armor
+			#region
+			EDD[0].EnableOption(7, false);
+			EDD[0].EnableOption(8, false);
+			EDD[0].EnableOption(10, false);
+			EDD[0].EnableOption(11, false);
+			EDD[0].EnableOption(14, false);
+			EDD[0].EnableOption(15, false);
+			EDD[0].EnableOption(16, false);
+			EDD[0].EnableOption(20, false);
+			EDD[0].EnableOption(22, false);
+			EDD[0].EnableOption(26, false);
+			EDD[0].EnableOption(39, false);
+			EDD[0].EnableOption(40, false);
+			EDD[0].EnableOption(43, false);
+			EDD[0].EnableOption(44, false);
+			EDD[0].EnableOption(45, false);
+			EDD[0].EnableOption(48, false);
+			EDD[0].EnableOption(57, false);
+			EDD[0].EnableOption(58, false);
+			EDD[0].EnableOption(62, false);
+			EDD[0].EnableOption(70, false);
+			EDD[0].EnableOption(74, false);
+			#endregion
 			//Chest Clothing
 			#region
 			EDD[1].EnableOption(16, false);
@@ -518,74 +547,193 @@ public class EqPanel : MonoBehaviour {
 		#endregion
 		//Strider based
 		#region
+		if(chara.GetVocation().Equals("Strider") || chara.GetVocation().Equals("Ranger") ||
+			chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("M. Archer")) {
+			//No Magick Archer
+			#region
+			if (!chara.GetVocation().Equals("M. Archer")) {
+				//Head
+				EDD[0].EnableOption(34, true);
+			} else {
+				//Head
+				EDD[0].EnableOption(34, false);
+			}
+			#endregion
+			//More Specialized things
+			#region
+			if (chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("Ranger")) {
+				//Head
+				EDD[0].EnableOption(77, true);
+			} else {
+				//Head
+				EDD[0].EnableOption(77, false);
+			}
+			#endregion
+			//Head Armor
+			#region
+			EDD[0].EnableOption(4, true);
+			EDD[0].EnableOption(12, true);
+			EDD[0].EnableOption(19, true);
+			EDD[0].EnableOption(37, true);
+			EDD[0].EnableOption(47, true);
+			EDD[0].EnableOption(53, true);
+			EDD[0].EnableOption(54, true);
+			EDD[0].EnableOption(61, true);
+			EDD[0].EnableOption(65, true);
+			EDD[0].EnableOption(69, true);
+			#endregion
+		} else {
+			//Head Armor
+			#region
+			EDD[0].EnableOption(4, false);
+			EDD[0].EnableOption(12, false);
+			EDD[0].EnableOption(19, false);
+			EDD[0].EnableOption(34, false);
+			EDD[0].EnableOption(37, false);
+			EDD[0].EnableOption(47, false);
+			EDD[0].EnableOption(53, false);
+			EDD[0].EnableOption(54, false);
+			EDD[0].EnableOption(61, false);
+			EDD[0].EnableOption(65, false);
+			EDD[0].EnableOption(69, false);
+			EDD[0].EnableOption(77, false);
+			#endregion
+		}
 		#endregion
 		//Mage based
 		#region
 		//Mage|Sorcerer
-		if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer")) {
-			bOverride = true;
-			//Mage only
+		if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer")||
+			 chara.GetVocation().Equals("M. Archer") || chara.GetVocation().Equals("M. Knight")) {
+			//Not for Mage/Sorc
 			#region
-			if (chara.GetVocation().Equals("Mage")) {
-
+			if (!chara.GetVocation().Equals("Mage") || !chara.GetVocation().Equals("Sorcerer")) {
+				//Chest Clothing
+				#region
+				EDD[1].EnableOption(3, false);
+				EDD[1].EnableOption(10, false);
+				EDD[1].EnableOption(11, false);
+				EDD[1].EnableOption(15, false);
+				EDD[1].EnableOption(29, false);
+				EDD[1].EnableOption(34, false);
+				EDD[1].EnableOption(36, false);
+				EDD[1].EnableOption(39, false);
+				#endregion
+				//Leg Clothing
+				#region
+				EDD[4].EnableOption(12, false);
+				EDD[4].EnableOption(13, false);
+				EDD[4].EnableOption(16, false);
+				EDD[4].EnableOption(24, false);
+				#endregion
 			} else {
-
+				//Chest Clothing
+				#region
+				EDD[1].EnableOption(3, true);
+				EDD[1].EnableOption(10, true);
+				EDD[1].EnableOption(11, true);
+				EDD[1].EnableOption(15, true);
+				EDD[1].EnableOption(29, true);
+				EDD[1].EnableOption(34, true);
+				EDD[1].EnableOption(36, true);
+				EDD[1].EnableOption(39, true);
+				#endregion
+				//Leg Clothing
+				#region
+				EDD[4].EnableOption(12, true);
+				EDD[4].EnableOption(13, true);
+				EDD[4].EnableOption(16, true);
+				EDD[4].EnableOption(24, true);
+				#endregion
 			}
 			#endregion
-			//Chest Clothing
+			//No Mystic Knight
 			#region
-			EDD[1].EnableOption(3, false);
+			if(!chara.GetVocation().Equals("M. Knight")) {
+				//Head
+				#region
+				EDD[0].EnableOption(1, true);
+				EDD[0].EnableOption(13, true);
+				#endregion
+			} else {
+				//Head
+				#region
+				EDD[0].EnableOption(1, false);
+				EDD[0].EnableOption(13, false);
+				#endregion
+			}
+			#endregion
+			//Just Sorc/M. Archer
+			#region
+			if (chara.GetVocation().Equals("Sorcerer")|| chara.GetVocation().Equals("M. Archer")) {
+				//Head
+				EDD[0].EnableOption(23, true);
+			} else {
+				//Head
+				EDD[0].EnableOption(23, false);
+			}
+			#endregion
+			//Head Armor
+			#region
+			EDD[0].EnableOption(3, true);
+			EDD[0].EnableOption(5, true);
+			EDD[0].EnableOption(21, true);
+			EDD[0].EnableOption(32, true);
+			EDD[0].EnableOption(35, true);
+			EDD[0].EnableOption(42, true);
+			EDD[0].EnableOption(67, true);
+			EDD[0].EnableOption(76, true);
+			EDD[0].EnableOption(79, true);
+			EDD[0].EnableOption(81, true);
+			#endregion
+			//Chest Clothing
 			EDD[1].EnableOption(6, true);
-			EDD[1].EnableOption(10, false);
-			EDD[1].EnableOption(11, false);
-			EDD[1].EnableOption(15, false);
-			EDD[1].EnableOption(29, false);
-			EDD[1].EnableOption(34, false);
-			EDD[1].EnableOption(36, false);
-			EDD[1].EnableOption(39, false);
-			#endregion
-			//Leg Clothing
-			#region
-			EDD[4].EnableOption(12, false);
-			EDD[4].EnableOption(13, false);
-			EDD[4].EnableOption(16, false);
-			EDD[4].EnableOption(24, false);
-			#endregion
 		} else {
-			//Chest Clothing
+			//Head Armor
 			#region
-			EDD[1].EnableOption(3, true);
+			EDD[0].EnableOption(1, false);
+			EDD[0].EnableOption(3, false);
+			EDD[0].EnableOption(5, false);
+			EDD[0].EnableOption(13, false);
+			EDD[0].EnableOption(21, false);
+			EDD[0].EnableOption(23, false);
+			EDD[0].EnableOption(32, false);
+			EDD[0].EnableOption(35, false);
+			EDD[0].EnableOption(42, false);
+			EDD[0].EnableOption(67, false);
+			EDD[0].EnableOption(76, false);
+			EDD[0].EnableOption(79, false);
+			EDD[0].EnableOption(81, false);
+			#endregion
+			//Chest Clothing
 			EDD[1].EnableOption(6, false);
-			EDD[1].EnableOption(10, true);
-			EDD[1].EnableOption(11, true);
-			EDD[1].EnableOption(15, true);
-			EDD[1].EnableOption(29, true);
-			EDD[1].EnableOption(34, true);
-			EDD[1].EnableOption(36, true);
-			EDD[1].EnableOption(39, true);
-			#endregion
-			//Leg Clothing
-			#region
-			EDD[4].EnableOption(12, true);
-			EDD[4].EnableOption(13, true);
-			EDD[4].EnableOption(16, true);
-			EDD[4].EnableOption(24, true);
-			#endregion
-		}
-		//Mystic Knight and Magick Archer Magick stuff
-		if (chara.GetVocation().Equals("M. Archer") || chara.GetVocation().Equals("M. Knight")) {
-			//Chest Clothing
-			EDD[1].EnableOption(6, true);
-		} else {
-			//Chest Clothing
-			if (!bOverride) {
-				EDD[1].EnableOption(6, false);
-			} else { bOverride = false; }
 		}
 		#endregion
-		if (!chara.GetGender()) {
+		//Special Snowflakes
+		#region
+		if(chara.GetVocation().Equals("Warrior") || chara.GetVocation().Equals("Ranger") ||
+			chara.GetVocation().Equals("M.Archer") || chara.GetVocation().Equals("M.Knight")) {
+			//Head
+			#region
+			EDD[0].EnableOption(24, true);
+			EDD[0].EnableOption(55, true);
+			#endregion
+		} else {
+			//Head
+			#region
+			EDD[0].EnableOption(24, false);
+			EDD[0].EnableOption(55, false);
+			#endregion
+		}
+		#endregion
+		//Gender
+		#region
+			if (!chara.GetGender()) {
 			//Dissable all the female only options
 			#region
+			//Head Armor
+			EDD[0].EnableOption(71, false);
+			EDD[0].EnableOption(72, false);
 			//Chest Clothing
 			EDD[1].EnableOption(24, false);
 			EDD[1].EnableOption(28, false);
@@ -598,14 +746,15 @@ public class EqPanel : MonoBehaviour {
 			//Berserkin
 			//Flame Skirt
 			//Framae Plate
-			//Sultry Cowl
 			//Sultry Pareo
-			//Summery Cowl
 			//Summery Pareo
 			#endregion
 		} else {
 			//Enable all the female only options
 			#region
+			//Head Armor
+			EDD[0].EnableOption(71, true);
+			EDD[0].EnableOption(72, true);
 			//Chest Clothing
 			EDD[1].EnableOption(24, true);
 			EDD[1].EnableOption(28, true);
@@ -616,6 +765,7 @@ public class EqPanel : MonoBehaviour {
 			EDD[4].EnableOption(28, true);
 			#endregion
 		}
+		#endregion
 	}
 
 	//Functions for switching equipmentpieces

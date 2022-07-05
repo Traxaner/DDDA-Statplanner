@@ -292,6 +292,161 @@ public class EqPanel : MonoBehaviour {
 		TCloth.Add("Trooper Outfit");
 		TCloth.Add("Tunic");
 		#endregion
+		//Chest Armor
+		#region
+		Chest.Add("Abyssinal Coat");
+		//Chest[2] Mage Sorc M. Archer
+		Chest.Add("Adept's Robe");
+		//Chest[3] Mage based
+		Chest.Add("Ancient Robe");
+		//Chest[4] Mage based
+		Chest.Add("Animistic Robe");
+		//Chest[5] Strider based
+		Chest.Add("Archer's Culottes");
+		Chest.Add("Asura Armor");
+		//Chest[7] Strider based
+		Chest.Add("BBI3 Coat of Shadow");
+		//Chest[8] Strider based
+		Chest.Add("BBI3 Coat of Oblivion");
+		//Chest[9] Fighter Warrior M. Knight
+		Chest.Add("BBI3 Heavy Armor");
+		//Chest[10] Mage Sorc M. Archer
+		Chest.Add("BBI3 Robes");
+		//Chest[11] Female Sorc M. Archer
+		Chest.Add("Berserkin");
+		//Chest[12] No Mage/Sorc
+		Chest.Add("Bone Armor");
+		//Chest[13] No Mage/Sorc
+		Chest.Add("Bone Plate Armor");
+		//Chest[14] Heavy
+		Chest.Add("Bronze Cuirass");
+		//Chest[15] Strider based
+		Chest.Add("Bronze Lorica");
+		//Chest[16] Mage Sorc M. Archer
+		Chest.Add("Cardinal Surcoat");
+		//Chest[17] Heavy
+		Chest.Add("Celestial Armor");
+		//Chest[18] Heavy
+		Chest.Add("Chaos Armor");
+		//Chest[19] No Mage/Sorc
+		Chest.Add("Chestguard");
+		//Chest[20] Heavy
+		Chest.Add("Chimeric Half Plate");
+		//Chest[21] Heavy
+		Chest.Add("Crimson Plate");
+		//Chest[22] Mage Sorc M. Archer
+		Chest.Add("Crimson Robe");
+		Chest.Add("Cursed King's Belt");
+		//Chest[24] Mage Sorc M. Archer
+		Chest.Add("Dalmatica");
+		//Chest[25] Ranger Assassin
+		Chest.Add("Dark Lorica");
+		//Chest[26] Heavy
+		Chest.Add("Divine Surcoat");
+		//Chest[27] Strider based
+		Chest.Add("Emissary Armor");
+		//Chest[28] Strider based
+		Chest.Add("Flutter Padding");
+		//Chest[29] Female
+		Chest.Add("Framae Plate");
+		Chest.Add("Golden Belt");
+		//Chest[31] Strider based
+		Chest.Add("Golden Lion Padding");
+		//Chest[32] Heavy
+		Chest.Add("Grand Surcoat");
+		//Chest[33] Heavy
+		Chest.Add("Grisly Bone Armor");
+		//Chest[34] Heavy
+		Chest.Add("Griphic Armor");
+		//Chest[35] Mage based
+		Chest.Add("Healer's Robe");
+		//Chest[36] Mage based
+		Chest.Add("Heresy Armor");
+		//Chest[37] Heavy
+		Chest.Add("Hero's Surcoat");
+		//Chest[38] Fighter based
+		Chest.Add("Hide Armor");
+		//Chest[39] Strider based
+		Chest.Add("Hunter's Jacket");
+		//Chest[40] Heavy
+		Chest.Add("Immortal's Coat");
+		//Chest[41] Strider based
+		Chest.Add("Iron Lorica");
+		//Chest[42] Strider based
+		Chest.Add("Lamellar Jacket");
+		//Chest[43] No Mage/Sorc
+		Chest.Add("Leather Belts");
+		//Chest[44] No Mage/Sorc
+		Chest.Add("Leather Jacket");
+		//Chest[45] Strider based
+		Chest.Add("Leather Protector");
+		//Chest[46] Fighter based
+		Chest.Add("Leather Waistwrap");
+		//Chest[47] Mage Sorc M. Archer
+		Chest.Add("Magician's Surcoat");
+		//Chest[48] Female
+		Chest.Add("Maiden's Petticoat");
+		//Chest[49] Mage Sorc M. Archer
+		Chest.Add("Matte Robe");
+		//Chest[50] Heavy
+		Chest.Add("Meloirean Plate");
+		//Chest[51] Mage Sorc M. Archer
+		Chest.Add("Missionary's Robe");
+		//Chest[52] Strider based
+		Chest.Add("Monomi Coat");
+		Chest.Add("Mummer's Wear");
+		//Chest[54] Mage Sorc M. Archer
+		Chest.Add("Novice's Coat");
+		//Chest[55] Strider based
+		Chest.Add("Padded Armor");
+		Chest.Add("Plebian Shirt");
+		//Chest[57] Mage based
+		Chest.Add("Recluse's Robe");
+		//Chest[58] Warrior M. Knight
+		Chest.Add("Red Dragon Scale");
+		//Chest[59] Strider based
+		Chest.Add("Red Leather Armor");
+		//Chest[60] Strider based
+		Chest.Add("Rex Lion Padding");
+		//Chest[61] Mage Sorc M. Archer
+		Chest.Add("Robe of Enlightenment");
+		//Chest[62] Heavy
+		Chest.Add("Royal Surcaot");
+		//Chest[63] Mage Sorc M. Archer
+		Chest.Add("Sage's Robe");
+		//Chest[64] Fighter based
+		Chest.Add("Scale Coat");
+		//Chest[65] Mage Sorc M. Archer
+		Chest.Add("Scholar's Coat");
+		//Chest[66] Heavy
+		Chest.Add("Sectional Armor");
+		//Chest[67] Heavy
+		Chest.Add("Sectional Iron Plate");
+		//Chest[68] Mage Sorc M. Archer
+		Chest.Add("Shabby Robe");
+		//Chest[69] No Mage/Sorc
+		Chest.Add("Skull Belt");
+		//Chest[70] Heavy
+		Chest.Add("Solar Armor");
+		//Chest[71] Heavy
+		Chest.Add("Steel Cuircass");
+		//Chest[72] Female
+		Chest.Add("Sultry Pareo");
+		//Chest[73] Female
+		Chest.Add("Summery Pareo");
+		//Chest[74] Heavy
+		Chest.Add("Surcaot");
+		//Chest[75] Mage Sorc M. Archer
+		Chest.Add("Traveler's Vest");
+		//Chest[76] Strider based
+		Chest.Add("Trophy Jacket");
+		Chest.Add("Vagabond Armor");
+		//Chest[78] Mage based
+		Chest.Add("Votary's Robe");
+		Chest.Add("Wavering Cloth");
+		//Chest[80] No Mage/Sorc
+		Chest.Add("Weak Guard");
+		#endregion
 		//Leg Clothing
 		#region
 		LCloth.Add("Alchemickal Hosen");
@@ -738,6 +893,8 @@ public class EqPanel : MonoBehaviour {
 			EDD[1].EnableOption(24, false);
 			EDD[1].EnableOption(28, false);
 			EDD[1].EnableOption(30, false);
+			//Chest Armor
+
 			//Leg Clothing
 			EDD[4].EnableOption(9, false);
 			EDD[4].EnableOption(22, false);
@@ -1615,6 +1772,679 @@ public class EqPanel : MonoBehaviour {
 		}
 	}
 	private void SwitchChest() {
+		switch (iCurrent[2]) {
+			case 1:
+				SetDebilitationRes(-84, 3);
+				SetDebilitationRes(-84, 6);
+				SetDebilitationRes(-84, 8);
+				break;
+			case 2:
+				SetDebilitationRes(-60, 1);
+				SetDebilitationRes(-60, 3);
+				SetDebilitationRes(-60, 10);
+				break;
+			case 3:
+				SetDebilitationRes(-48, 0);
+				SetDebilitationRes(-48, 1);
+				SetDebilitationRes(-48, 3);
+				SetDebilitationRes(-48, 4);
+				SetDebilitationRes(-48, 5);
+				SetDebilitationRes(-48, 8);
+				SetDebilitationRes(-18, 2);
+				SetDebilitationRes(-18, 6);
+				break;
+			case 4:
+				SetDebilitationRes(-66, 10);
+				SetDebilitationRes(-52, 6);
+				SetDebilitationRes(-50, 8);
+				break;
+			case 5:
+				SetDebilitationRes(-70, 7);
+				SetDebilitationRes(-57, 4);
+				break;
+			case 7:
+				SetDebilitationRes(-100, 3);
+				SetDebilitationRes(-100, 4);
+				SetDebilitationRes(-5, 9);
+				SetDebilitationRes(-5, 10);
+				SetDebilitationRes(-5, 11);
+				SetDebilitationRes(-5, 12);
+				break;
+			case 8:
+				SetDebilitationRes(-100, 3);
+				SetDebilitationRes(-100, 4);
+				SetDebilitationRes(-10, 9);
+				SetDebilitationRes(-10, 10);
+				SetDebilitationRes(-10, 11);
+				SetDebilitationRes(-10, 12);
+				break;
+			case 9:
+				SetDebilitationRes(-100, 2);
+				SetDebilitationRes(-100, 9);
+				SetDebilitationRes(-60, 12);
+				break;
+			case 10:
+				SetDebilitationRes(-100, 3);
+				SetDebilitationRes(-100, 7);
+				SetDebilitationRes(-100, 8);
+				break;
+			case 11:
+				SetDebilitationRes(-92, 3);
+				SetDebilitationRes(-84, 10);
+				SetDebilitationRes(-84, 12);
+				break;
+			case 12:
+				SetDebilitationRes(-65, 8);
+				SetDebilitationRes(-63, 11);
+				break;
+			case 13:
+				SetDebilitationRes(-48, 11);
+				SetDebilitationRes(-35, 8);
+				break;
+			case 14:
+				SetDebilitationRes(-33, 4);
+				break;
+			case 15:
+				SetDebilitationRes(-45, 2);
+				break;
+			case 16:
+				SetDebilitationRes(-72, 2);
+				SetDebilitationRes(-33, 0);
+				break;
+			case 17:
+				SetDebilitationRes(-60, 6);
+				SetDebilitationRes(-60, 7);
+				SetDebilitationRes(-60, 8);
+				break;
+			case 18:
+				SetDebilitationRes(-40, 7);
+				SetDebilitationRes(-36, 0);
+				break;
+			case 19:
+				SetDebilitationRes(-28, 6);
+				break;
+			case 20:
+				chara.SetAtk(-3);
+				chara.SetMAtk(-2);
+				SetDebilitationRes(-40, 6);
+				SetDebilitationRes(-36, 2);
+				break;
+			case 21:
+				SetDebilitationRes(-45, 7);
+				SetDebilitationRes(-39, 9);
+				break;
+			case 22:
+				SetDebilitationRes(-60, 5);
+				SetDebilitationRes(-56, 4);
+				break;
+			case 23:
+				SetDebilitationRes(-60, 5);
+				SetDebilitationRes(-60, 9);
+				SetDebilitationRes(-60, 10);
+				break;
+			case 24:
+				SetDebilitationRes(-48, 5);
+				SetDebilitationRes(-36, 8);
+				SetDebilitationRes(-32, 10);
+				break;
+			case 25:
+				SetDebilitationRes(-56, 5);
+				SetDebilitationRes(-48, 7);
+				SetDebilitationRes(-39, 8);
+				break;
+			case 26:
+				SetDebilitationRes(-70, 8);
+				break;
+			case 27:
+				SetDebilitationRes(-40, 5);
+				SetDebilitationRes(-36, 4);
+				break;
+			case 28:
+				SetDebilitationRes(-70, 6);
+				SetDebilitationRes(-45, 8);
+				break;
+			case 29:
+				SetDebilitationRes(-38, 5);
+				SetDebilitationRes(-27, 4);
+				break;
+			case 30:
+				chara.SetAtk(-20);
+				SetDebilitationRes(-100, 9);
+				SetDebilitationRes(-94, 4);
+				SetDebilitationRes(-80, 10);
+				SetDebilitationRes(-72, 0);
+				break;
+			case 31:
+				SetDebilitationRes(-44, 4);
+				SetDebilitationRes(-26, 0);
+				break;
+			case 32:
+				SetDebilitationRes(-60, 4);
+				SetDebilitationRes(-48, 7);
+				break;
+			case 33:
+				SetDebilitationRes(-32, 8);
+				SetDebilitationRes(-28, 6);
+				SetDebilitationRes(-24, 2);
+				break;
+			case 34:
+				SetDebilitationRes(-44, 5);
+				break;
+			case 35:
+				SetDebilitationRes(-50, 2);
+				break;
+			case 36:
+				SetDebilitationRes(-40, 8);
+				SetDebilitationRes(-36, 0);
+				break;
+			case 37:
+				SetDebilitationRes(-40, 4);
+				SetDebilitationRes(-36, 8);
+				break;
+			case 38:
+				SetDebilitationRes(-42, 6);
+				break;
+			case 39:
+				SetDebilitationRes(-55, 7);
+				break;
+			case 40:
+				SetDebilitationRes(-60, 0);
+				SetDebilitationRes(-60, 2);
+				break;
+			case 41:
+				SetDebilitationRes(-55, 2);
+				SetDebilitationRes(-21, 4);
+				break;
+			case 42:
+				SetDebilitationRes(-55, 5);
+				SetDebilitationRes(-24, 0);
+				break;
+			case 43:
+				SetDebilitationRes(-36, 5);
+				break;
+			case 44:
+			case 46:
+				SetDebilitationRes(-32, 5);
+				break;
+			case 45:
+				SetDebilitationRes(-35, 5);
+				break;
+			case 47:
+				SetDebilitationRes(-70, 2);
+				break;
+			case 48:
+				SetDebilitationRes(-80, 0);
+				break;
+			case 49:
+				SetDebilitationRes(-55, 6);
+				SetDebilitationRes(-52, 0);
+				break;
+			case 50:
+				SetDebilitationRes(-68, 0);
+				SetDebilitationRes(-44, 4);
+				break;
+			case 51:
+				SetDebilitationRes(-40, 7);
+				SetDebilitationRes(-30, 3);
+				break;
+			case 52:
+				SetDebilitationRes(-40, 6);
+				SetDebilitationRes(-36, 7);
+				break;
+			case 53:
+				SetDebilitationRes(-80, 1);
+				SetDebilitationRes(-60, 2);
+				SetDebilitationRes(-56, 5);
+				SetDebilitationRes(-54, 7);
+				SetDebilitationRes(-52, 4);
+				break;
+			case 54:
+				SetDebilitationRes(-50, 6);
+				SetDebilitationRes(-50, 10);
+				break;
+			case 55:
+				SetDebilitationRes(-48, 6);
+				break;
+			case 56:
+				SetDebilitationRes(-100, 1);
+				break;
+			case 57:
+				SetDebilitationRes(-99, 7);
+				SetDebilitationRes(-90, 10);
+				SetDebilitationRes(-90, 12);
+				break;
+			case 58:
+				SetDebilitationRes(-72, 4);
+				SetDebilitationRes(-56, 0);
+				SetDebilitationRes(-32, 8);
+				break;
+			case 59:
+				SetDebilitationRes(-65, 5);
+				break;
+			case 60:
+				SetDebilitationRes(-65, 4);
+				SetDebilitationRes(-45, 9);
+				break;
+			case 61:
+				SetDebilitationRes(-24, 1);
+				SetDebilitationRes(-20, 2);
+				SetDebilitationRes(-20, 5);
+				SetDebilitationRes(-20, 6);
+				SetDebilitationRes(-20, 7);
+				break;
+			case 62:
+				SetDebilitationRes(-84, 5);
+				SetDebilitationRes(-54, 12);
+				SetDebilitationRes(-44, 7);
+				break;
+			case 63:
+				SetDebilitationRes(-69, 12);
+				SetDebilitationRes(-68, 3);
+				SetDebilitationRes(-36, 7);
+				break;
+			case 64:
+				SetDebilitationRes(-72, 6);
+				SetDebilitationRes(-45, 5);
+				SetDebilitationRes(-36, 7);
+				break;
+			case 65:
+				SetDebilitationRes(-45, 5);
+				SetDebilitationRes(-36, 3);
+				break;
+			case 66:
+				SetDebilitationRes(-24, 2);
+				break;
+			case 67:
+				SetDebilitationRes(-40, 2);
+				break;
+			case 68:
+				SetDebilitationRes(-48, 6);
+				SetDebilitationRes(-27, 2);
+				break;
+			case 69:
+				SetDebilitationRes(-24, 6);
+				break;
+			case 70:
+				SetDebilitationRes(-51, 7);
+				break;
+			case 71:
+				SetDebilitationRes(-51, 10);
+				SetDebilitationRes(-18, 0);
+				break;
+			case 72:
+				SetDebilitationRes(-64, 2);
+				SetDebilitationRes(-45, 0);
+				break;
+			case 73:
+				SetDebilitationRes(-55, 8);
+				SetDebilitationRes(-48, 2);
+				break;
+			case 74:
+				SetDebilitationRes(-40, 4);
+				break;
+			case 75:
+				SetDebilitationRes(-35, 3);
+				SetDebilitationRes(-35, 7);
+				break;
+			case 76:
+				chara.SetMAtk(-20);
+				SetDebilitationRes(-60, 11);
+				SetDebilitationRes(-60, 12);
+				break;
+			case 77:
+				SetDebilitationRes(-56, 12);
+				SetDebilitationRes(-50, 2);
+				break;
+			case 78:
+				SetDebilitationRes(-60, 0);
+				SetDebilitationRes(-60, 2);
+				SetDebilitationRes(-60, 6);
+				break;
+			case 79:
+				SetDebilitationRes(-45, 0);
+				SetDebilitationRes(-45, 4);
+				break;
+			case 80:
+				SetDebilitationRes(-45, 4);
+				break;
+		}
+		iCurrent[2] = Equipment[2].value;
+		switch (iCurrent[2]) {
+			case 1:
+				SetDebilitationRes(84, 3);
+				SetDebilitationRes(84, 6);
+				SetDebilitationRes(84, 8);
+				break;
+			case 2:
+				SetDebilitationRes(60, 1);
+				SetDebilitationRes(60, 3);
+				SetDebilitationRes(60, 10);
+				break;
+			case 3:
+				SetDebilitationRes(48, 0);
+				SetDebilitationRes(48, 1);
+				SetDebilitationRes(48, 3);
+				SetDebilitationRes(48, 4);
+				SetDebilitationRes(48, 5);
+				SetDebilitationRes(48, 8);
+				SetDebilitationRes(18, 2);
+				SetDebilitationRes(18, 6);
+				break;
+			case 4:
+				SetDebilitationRes(66, 10);
+				SetDebilitationRes(52, 6);
+				SetDebilitationRes(50, 8);
+				break;
+			case 5:
+				SetDebilitationRes(70, 7);
+				SetDebilitationRes(57, 4);
+				break;
+			case 7:
+				SetDebilitationRes(100, 3);
+				SetDebilitationRes(100, 4);
+				SetDebilitationRes(5, 9);
+				SetDebilitationRes(5, 10);
+				SetDebilitationRes(5, 11);
+				SetDebilitationRes(5, 12);
+				break;
+			case 8:
+				SetDebilitationRes(100, 3);
+				SetDebilitationRes(100, 4);
+				SetDebilitationRes(10, 9);
+				SetDebilitationRes(10, 10);
+				SetDebilitationRes(10, 11);
+				SetDebilitationRes(10, 12);
+				break;
+			case 9:
+				SetDebilitationRes(100, 2);
+				SetDebilitationRes(100, 9);
+				SetDebilitationRes(60, 12);
+				break;
+			case 10:
+				SetDebilitationRes(100, 3);
+				SetDebilitationRes(100, 7);
+				SetDebilitationRes(100, 8);
+				break;
+			case 11:
+				SetDebilitationRes(92, 3);
+				SetDebilitationRes(84, 10);
+				SetDebilitationRes(84, 12);
+				break;
+			case 12:
+				SetDebilitationRes(65, 8);
+				SetDebilitationRes(63, 11);
+				break;
+			case 13:
+				SetDebilitationRes(48, 11);
+				SetDebilitationRes(35, 8);
+				break;
+			case 14:
+				SetDebilitationRes(33, 4);
+				break;
+			case 15:
+				SetDebilitationRes(45, 2);
+				break;
+			case 16:
+				SetDebilitationRes(72, 2);
+				SetDebilitationRes(33, 0);
+				break;
+			case 17:
+				SetDebilitationRes(60, 6);
+				SetDebilitationRes(60, 7);
+				SetDebilitationRes(60, 8);
+				break;
+			case 18:
+				SetDebilitationRes(40, 7);
+				SetDebilitationRes(36, 0);
+				break;
+			case 19:
+				SetDebilitationRes(28, 6);
+				break;
+			case 20:
+				chara.SetAtk(3);
+				chara.SetMAtk(2);
+				SetDebilitationRes(40, 6);
+				SetDebilitationRes(36, 2);
+				break;
+			case 21:
+				SetDebilitationRes(45, 7);
+				SetDebilitationRes(39, 9);
+				break;
+			case 22:
+				SetDebilitationRes(60, 5);
+				SetDebilitationRes(56, 4);
+				break;
+			case 23:
+				SetDebilitationRes(60, 5);
+				SetDebilitationRes(60, 9);
+				SetDebilitationRes(60, 10);
+				break;
+			case 24:
+				SetDebilitationRes(48, 5);
+				SetDebilitationRes(36, 8);
+				SetDebilitationRes(32, 10);
+				break;
+			case 25:
+				SetDebilitationRes(56, 5);
+				SetDebilitationRes(48, 7);
+				SetDebilitationRes(39, 8);
+				break;
+			case 26:
+				SetDebilitationRes(70, 8);
+				break;
+			case 27:
+				SetDebilitationRes(40, 5);
+				SetDebilitationRes(36, 4);
+				break;
+			case 28:
+				SetDebilitationRes(70, 6);
+				SetDebilitationRes(45, 8);
+				break;
+			case 29:
+				SetDebilitationRes(38, 5);
+				SetDebilitationRes(27, 4);
+				break;
+			case 30:
+				chara.SetAtk(20);
+				SetDebilitationRes(100, 9);
+				SetDebilitationRes(94, 4);
+				SetDebilitationRes(80, 10);
+				SetDebilitationRes(72, 0);
+				break;
+			case 31:
+				SetDebilitationRes(44, 4);
+				SetDebilitationRes(26, 0);
+				break;
+			case 32:
+				SetDebilitationRes(60, 4);
+				SetDebilitationRes(48, 7);
+				break;
+			case 33:
+				SetDebilitationRes(32, 8);
+				SetDebilitationRes(28, 6);
+				SetDebilitationRes(24, 2);
+				break;
+			case 34:
+				SetDebilitationRes(44, 5);
+				break;
+			case 35:
+				SetDebilitationRes(50, 2);
+				break;
+			case 36:
+				SetDebilitationRes(40, 8);
+				SetDebilitationRes(36, 0);
+				break;
+			case 37:
+				SetDebilitationRes(40, 4);
+				SetDebilitationRes(36, 8);
+				break;
+			case 38:
+				SetDebilitationRes(42, 6);
+				break;
+			case 39:
+				SetDebilitationRes(55, 7);
+				break;
+			case 40:
+				SetDebilitationRes(60, 0);
+				SetDebilitationRes(60, 2);
+				break;
+			case 41:
+				SetDebilitationRes(55, 2);
+				SetDebilitationRes(21, 4);
+				break;
+			case 42:
+				SetDebilitationRes(55, 5);
+				SetDebilitationRes(24, 0);
+				break;
+			case 43:
+				SetDebilitationRes(36, 5);
+				break;
+			case 44:
+			case 46:
+				SetDebilitationRes(32, 5);
+				break;
+			case 45:
+				SetDebilitationRes(35, 5);
+				break;
+			case 47:
+				SetDebilitationRes(70, 2);
+				break;
+			case 48:
+				SetDebilitationRes(80, 0);
+				break;
+			case 49:
+				SetDebilitationRes(55, 6);
+				SetDebilitationRes(52, 0);
+				break;
+			case 50:
+				SetDebilitationRes(68, 0);
+				SetDebilitationRes(44, 4);
+				break;
+			case 51:
+				SetDebilitationRes(40, 7);
+				SetDebilitationRes(30, 3);
+				break;
+			case 52:
+				SetDebilitationRes(40, 6);
+				SetDebilitationRes(36, 7);
+				break;
+			case 53:
+				SetDebilitationRes(80, 1);
+				SetDebilitationRes(60, 2);
+				SetDebilitationRes(56, 5);
+				SetDebilitationRes(54, 7);
+				SetDebilitationRes(52, 4);
+				break;
+			case 54:
+				SetDebilitationRes(50, 6);
+				SetDebilitationRes(50, 10);
+				break;
+			case 55:
+				SetDebilitationRes(48, 6);
+				break;
+			case 56:
+				SetDebilitationRes(100, 1);
+				break;
+			case 57:
+				SetDebilitationRes(99, 7);
+				SetDebilitationRes(90, 10);
+				SetDebilitationRes(90, 12);
+				break;
+			case 58:
+				SetDebilitationRes(72, 4);
+				SetDebilitationRes(56, 0);
+				SetDebilitationRes(32, 8);
+				break;
+			case 59:
+				SetDebilitationRes(65, 5);
+				break;
+			case 60:
+				SetDebilitationRes(65, 4);
+				SetDebilitationRes(45, 9);
+				break;
+			case 61:
+				SetDebilitationRes(24, 1);
+				SetDebilitationRes(20, 2);
+				SetDebilitationRes(20, 5);
+				SetDebilitationRes(20, 6);
+				SetDebilitationRes(20, 7);
+				break;
+			case 62:
+				SetDebilitationRes(84, 5);
+				SetDebilitationRes(54, 12);
+				SetDebilitationRes(44, 7);
+				break;
+			case 63:
+				SetDebilitationRes(69, 12);
+				SetDebilitationRes(68, 3);
+				SetDebilitationRes(36, 7);
+				break;
+			case 64:
+				SetDebilitationRes(72, 6);
+				SetDebilitationRes(45, 5);
+				SetDebilitationRes(36, 7);
+				break;
+			case 65:
+				SetDebilitationRes(45, 5);
+				SetDebilitationRes(36, 3);
+				break;
+			case 66:
+				SetDebilitationRes(24, 2);
+				break;
+			case 67:
+				SetDebilitationRes(40, 2);
+				break;
+			case 68:
+				SetDebilitationRes(48, 6);
+				SetDebilitationRes(27, 2);
+				break;
+			case 69:
+				SetDebilitationRes(24, 6);
+				break;
+			case 70:
+				SetDebilitationRes(51, 7);
+				break;
+			case 71:
+				SetDebilitationRes(51, 10);
+				SetDebilitationRes(18, 0);
+				break;
+			case 72:
+				SetDebilitationRes(64, 2);
+				SetDebilitationRes(45, 0);
+				break;
+			case 73:
+				SetDebilitationRes(55, 8);
+				SetDebilitationRes(48, 2);
+				break;
+			case 74:
+				SetDebilitationRes(40, 4);
+				break;
+			case 75:
+				SetDebilitationRes(35, 3);
+				SetDebilitationRes(35, 7);
+				break;
+			case 76:
+				chara.SetMAtk(20);
+				SetDebilitationRes(60, 11);
+				SetDebilitationRes(60, 12);
+				break;
+			case 77:
+				SetDebilitationRes(56, 12);
+				SetDebilitationRes(50, 2);
+				break;
+			case 78:
+				SetDebilitationRes(60, 0);
+				SetDebilitationRes(60, 2);
+				SetDebilitationRes(60, 6);
+				break;
+			case 79:
+				SetDebilitationRes(45, 0);
+				SetDebilitationRes(45, 4);
+				break;
+			case 80:
+				SetDebilitationRes(45, 4);
+				break;
+		}
 	}
 	private void SwitchArms() {
 	}

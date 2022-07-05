@@ -295,156 +295,84 @@ public class EqPanel : MonoBehaviour {
 		//Chest Armor
 		#region
 		Chest.Add("Abyssinal Coat");
-		//Chest[2] Mage Sorc M. Archer
 		Chest.Add("Adept's Robe");
-		//Chest[3] Mage based
 		Chest.Add("Ancient Robe");
-		//Chest[4] Mage based
 		Chest.Add("Animistic Robe");
-		//Chest[5] Strider based
 		Chest.Add("Archer's Culottes");
 		Chest.Add("Asura Armor");
-		//Chest[7] Strider based
 		Chest.Add("BBI3 Coat of Shadow");
-		//Chest[8] Strider based
 		Chest.Add("BBI3 Coat of Oblivion");
-		//Chest[9] Fighter Warrior M. Knight
 		Chest.Add("BBI3 Heavy Armor");
-		//Chest[10] Mage Sorc M. Archer
 		Chest.Add("BBI3 Robes");
-		//Chest[11] Female Sorc M. Archer
 		Chest.Add("Berserkin");
-		//Chest[12] No Mage/Sorc
 		Chest.Add("Bone Armor");
-		//Chest[13] No Mage/Sorc
 		Chest.Add("Bone Plate Armor");
-		//Chest[14] Heavy
 		Chest.Add("Bronze Cuirass");
-		//Chest[15] Strider based
 		Chest.Add("Bronze Lorica");
-		//Chest[16] Mage Sorc M. Archer
 		Chest.Add("Cardinal Surcoat");
-		//Chest[17] Heavy
 		Chest.Add("Celestial Armor");
-		//Chest[18] Heavy
 		Chest.Add("Chaos Armor");
-		//Chest[19] No Mage/Sorc
 		Chest.Add("Chestguard");
-		//Chest[20] Heavy
 		Chest.Add("Chimeric Half Plate");
-		//Chest[21] Heavy
 		Chest.Add("Crimson Plate");
-		//Chest[22] Mage Sorc M. Archer
 		Chest.Add("Crimson Robe");
 		Chest.Add("Cursed King's Belt");
-		//Chest[24] Mage Sorc M. Archer
 		Chest.Add("Dalmatica");
-		//Chest[25] Ranger Assassin
 		Chest.Add("Dark Lorica");
-		//Chest[26] Heavy
 		Chest.Add("Divine Surcoat");
-		//Chest[27] Strider based
 		Chest.Add("Emissary Armor");
-		//Chest[28] Strider based
 		Chest.Add("Flutter Padding");
-		//Chest[29] Female
 		Chest.Add("Framae Plate");
 		Chest.Add("Golden Belt");
-		//Chest[31] Strider based
 		Chest.Add("Golden Lion Padding");
-		//Chest[32] Heavy
 		Chest.Add("Grand Surcoat");
-		//Chest[33] Heavy
 		Chest.Add("Grisly Bone Armor");
-		//Chest[34] Heavy
 		Chest.Add("Griphic Armor");
-		//Chest[35] Mage based
 		Chest.Add("Healer's Robe");
-		//Chest[36] Mage based
 		Chest.Add("Heresy Armor");
-		//Chest[37] Heavy
 		Chest.Add("Hero's Surcoat");
-		//Chest[38] Fighter based
 		Chest.Add("Hide Armor");
-		//Chest[39] Strider based
 		Chest.Add("Hunter's Jacket");
-		//Chest[40] Heavy
 		Chest.Add("Immortal's Coat");
-		//Chest[41] Strider based
 		Chest.Add("Iron Lorica");
-		//Chest[42] Strider based
 		Chest.Add("Lamellar Jacket");
-		//Chest[43] No Mage/Sorc
 		Chest.Add("Leather Belts");
-		//Chest[44] No Mage/Sorc
 		Chest.Add("Leather Jacket");
-		//Chest[45] Strider based
 		Chest.Add("Leather Protector");
-		//Chest[46] Fighter based
 		Chest.Add("Leather Waistwrap");
-		//Chest[47] Mage Sorc M. Archer
 		Chest.Add("Magician's Surcoat");
-		//Chest[48] Female
 		Chest.Add("Maiden's Petticoat");
-		//Chest[49] Mage Sorc M. Archer
 		Chest.Add("Matte Robe");
-		//Chest[50] Heavy
 		Chest.Add("Meloirean Plate");
-		//Chest[51] Mage Sorc M. Archer
 		Chest.Add("Missionary's Robe");
-		//Chest[52] Strider based
 		Chest.Add("Monomi Coat");
 		Chest.Add("Mummer's Wear");
-		//Chest[54] Mage Sorc M. Archer
 		Chest.Add("Novice's Coat");
-		//Chest[55] Strider based
 		Chest.Add("Padded Armor");
 		Chest.Add("Plebian Shirt");
-		//Chest[57] Mage based
 		Chest.Add("Recluse's Robe");
-		//Chest[58] Warrior M. Knight
 		Chest.Add("Red Dragon Scale");
-		//Chest[59] Strider based
 		Chest.Add("Red Leather Armor");
-		//Chest[60] Strider based
 		Chest.Add("Rex Lion Padding");
-		//Chest[61] Mage Sorc M. Archer
 		Chest.Add("Robe of Enlightenment");
-		//Chest[62] Heavy
 		Chest.Add("Royal Surcaot");
-		//Chest[63] Mage Sorc M. Archer
 		Chest.Add("Sage's Robe");
-		//Chest[64] Fighter based
 		Chest.Add("Scale Coat");
-		//Chest[65] Mage Sorc M. Archer
 		Chest.Add("Scholar's Coat");
-		//Chest[66] Heavy
 		Chest.Add("Sectional Armor");
-		//Chest[67] Heavy
 		Chest.Add("Sectional Iron Plate");
-		//Chest[68] Mage Sorc M. Archer
 		Chest.Add("Shabby Robe");
-		//Chest[69] No Mage/Sorc
 		Chest.Add("Skull Belt");
-		//Chest[70] Heavy
 		Chest.Add("Solar Armor");
-		//Chest[71] Heavy
 		Chest.Add("Steel Cuircass");
-		//Chest[72] Female
 		Chest.Add("Sultry Pareo");
-		//Chest[73] Female
 		Chest.Add("Summery Pareo");
-		//Chest[74] Heavy
 		Chest.Add("Surcaot");
-		//Chest[75] Mage Sorc M. Archer
 		Chest.Add("Traveler's Vest");
-		//Chest[76] Strider based
 		Chest.Add("Trophy Jacket");
 		Chest.Add("Vagabond Armor");
-		//Chest[78] Mage based
 		Chest.Add("Votary's Robe");
 		Chest.Add("Wavering Cloth");
-		//Chest[80] No Mage/Sorc
 		Chest.Add("Weak Guard");
 		#endregion
 		//Leg Clothing
@@ -480,6 +408,85 @@ public class EqPanel : MonoBehaviour {
 		LCloth.Add("White Stockings");
 		LCloth.Add("Worker's Pants");
 		LCloth.Add("Yellow Gaiters");
+		#endregion
+		//Leg Armor
+		#region
+		Legs.Add("Abyssinal Greaves");
+		Legs.Add("Ancient Greaves");
+		Legs.Add("Apostate's Anklet");
+		Legs.Add("Assassin's Breaches");
+		Legs.Add("Assault Boots");
+		Legs.Add("Assembled Breaches");
+		Legs.Add("Battle Greaves");
+		Legs.Add("BBI3 Boots of Shadows");
+		Legs.Add("BBI3 Boots of Oblivion");
+		Legs.Add("BBI3 Grave Greaves");
+		Legs.Add("BBI3 Carrion Greaves");
+		Legs.Add("BBI3 Heavy Armor");
+		Legs.Add("Blue Longkilt");
+		Legs.Add("Bronze Sabatons");
+		Legs.Add("Budget Greaves");
+		Legs.Add("Carmine Breeches");
+		Legs.Add("Cassardi Greaves");
+		Legs.Add("Chainmail Skirt");
+		Legs.Add("Chaos Greaves");
+		Legs.Add("Chimeric Sabatons");
+		Legs.Add("Cloth Greaves");
+		Legs.Add("Crimson Sabatons");
+		Legs.Add("Dark Over-Knee Boots");
+		Legs.Add("Downcuffs & Cuisses");
+		Legs.Add("Dragonbeards");
+		Legs.Add("Dragonwing Boots");
+		Legs.Add("Dusk Shoes");
+		Legs.Add("Emissary Greaves");
+		Legs.Add("Exotic High Boots");
+		Legs.Add("Extrinsic Waistguard");
+		Legs.Add("Fine Over-Knee Boots");
+		Legs.Add("Flame Skirt");
+		Legs.Add("Foreign Waistguard");
+		Legs.Add("Fur & Cuisses");
+		Legs.Add("Fur Greaves");
+		Legs.Add("Gloaming Shoes");
+		Legs.Add("Grisly Greaves");
+		Legs.Add("Gryphic Greaves");
+		Legs.Add("Heresy Greaves");
+		Legs.Add("Hero's Cuisses");
+		Legs.Add("Hinterland Waistguard");
+		Legs.Add("Holy Cuisses");
+		Legs.Add("Immortal Sabatons");
+		Legs.Add("Iron Boots");
+		Legs.Add("Iron Cuisses");
+		Legs.Add("Iron Leg Guards");
+		Legs.Add("Leather Cuisses");
+		Legs.Add("Leather Ocreae");
+		Legs.Add("Leather Shoes");
+		Legs.Add("Mage's Shoes");
+		Legs.Add("Meloirean Greaves");
+		Legs.Add("Mercenary Slogs");
+		Legs.Add("Metal Greaves");
+		Legs.Add("Molten Boots");
+		Legs.Add("Monomi Greaves");
+		Legs.Add("Nimble Cuisses");
+		Legs.Add("Novice Breeches");
+		Legs.Add("Over-Knee Boots");
+		Legs.Add("Purple Longkilt");
+		Legs.Add("Raptor Cuisses");
+		Legs.Add("Red Leather Cuisses");
+		Legs.Add("Red Longkilt");
+		Legs.Add("Red Over-Knee Boots");
+		Legs.Add("Riveted Boots");
+		Legs.Add("Royal Cuisses");
+		Legs.Add("Scale Greaves");
+		Legs.Add("Scholar's Boots");
+		Legs.Add("Shadow Greaves");
+		Legs.Add("Steel Sabatons");
+		Legs.Add("Steel-Toed Boots");
+		Legs.Add("Striker's Greaves");
+		Legs.Add("Superior Cuisses");
+		Legs.Add("Thick Fur Greaves");
+		Legs.Add("Trophy Boots");
+		Legs.Add("Twilight Greaves");
+		Legs.Add("Wizard's Boots");
 		#endregion
 		//Cloaks
 		#region
@@ -594,7 +601,7 @@ public class EqPanel : MonoBehaviour {
 			//Heavy Armor
 			#region
 			if (!chara.GetVocation().Equals("Assassin")) {
-				//Head
+				//Head Armor
 				#region
 				EDD[0].EnableOption(8, true);
 				EDD[0].EnableOption(10, true);
@@ -613,8 +620,49 @@ public class EqPanel : MonoBehaviour {
 				EDD[0].EnableOption(70, true);
 				EDD[0].EnableOption(74, true);
 				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(9, true);
+				EDD[2].EnableOption(14, true);
+				EDD[2].EnableOption(17, true);
+				EDD[2].EnableOption(18, true);
+				EDD[2].EnableOption(20, true);
+				EDD[2].EnableOption(21, true);
+				EDD[2].EnableOption(26, true);
+				EDD[2].EnableOption(32, true);
+				EDD[2].EnableOption(33, true);
+				EDD[2].EnableOption(34, true);
+				EDD[2].EnableOption(37, true);
+				EDD[2].EnableOption(40, true);
+				EDD[2].EnableOption(50, true);
+				EDD[2].EnableOption(62, true);
+				EDD[2].EnableOption(66, true);
+				EDD[2].EnableOption(67, true);
+				EDD[2].EnableOption(70, true);
+				EDD[2].EnableOption(71, true);
+				EDD[2].EnableOption(74, true);
+				#endregion
+				//Leg Armor
+				#region
+				EDD[5].EnableOption(7, true);
+				EDD[5].EnableOption(12, true);
+				EDD[5].EnableOption(14, true);
+				EDD[5].EnableOption(18, true);
+				EDD[5].EnableOption(19, true);
+				EDD[5].EnableOption(21, true);
+				EDD[5].EnableOption(37, true);
+				EDD[5].EnableOption(39, true);
+				EDD[5].EnableOption(42, true);
+				EDD[5].EnableOption(44, true);
+				EDD[5].EnableOption(45, true);
+				EDD[5].EnableOption(50, true);
+				EDD[5].EnableOption(52, true);
+				EDD[5].EnableOption(53, true);
+				EDD[5].EnableOption(67, true);
+				EDD[5].EnableOption(68, true);
+				#endregion
 			} else {
-				//Head
+				//Head Armor
 				#region
 				EDD[0].EnableOption(8, false);
 				EDD[0].EnableOption(10, false);
@@ -633,24 +681,73 @@ public class EqPanel : MonoBehaviour {
 				EDD[0].EnableOption(70, false);
 				EDD[0].EnableOption(74, false);
 				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(9, false);
+				EDD[2].EnableOption(14, false);
+				EDD[2].EnableOption(17, false);
+				EDD[2].EnableOption(18, false);
+				EDD[2].EnableOption(20, false);
+				EDD[2].EnableOption(21, false);
+				EDD[2].EnableOption(26, false);
+				EDD[2].EnableOption(32, false);
+				EDD[2].EnableOption(33, false);
+				EDD[2].EnableOption(34, false);
+				EDD[2].EnableOption(37, false);
+				EDD[2].EnableOption(40, false);
+				EDD[2].EnableOption(50, false);
+				EDD[2].EnableOption(62, false);
+				EDD[2].EnableOption(66, false);
+				EDD[2].EnableOption(67, false);
+				EDD[2].EnableOption(70, false);
+				EDD[2].EnableOption(71, false);
+				EDD[2].EnableOption(74, false);
+				#endregion
+				//Leg Armor
+				#region
+				EDD[5].EnableOption(7, false);
+				EDD[5].EnableOption(12, false);
+				EDD[5].EnableOption(14, false);
+				EDD[5].EnableOption(18, false);
+				EDD[5].EnableOption(19, false);
+				EDD[5].EnableOption(21, false);
+				EDD[5].EnableOption(37, false);
+				EDD[5].EnableOption(39, false);
+				EDD[5].EnableOption(42, false);
+				EDD[5].EnableOption(44, false);
+				EDD[5].EnableOption(45, false);
+				EDD[5].EnableOption(50, false);
+				EDD[5].EnableOption(52, false);
+				EDD[5].EnableOption(53, false);
+				EDD[5].EnableOption(67, false);
+				EDD[5].EnableOption(68, false);
+				#endregion
 			}
 			#endregion
 			//Warrior/M. Knight
 			#region
 			if (chara.GetVocation().Equals("Warrior")|| chara.GetVocation().Equals("M. Knight")) {
-				//Head
+				//Head Armor
 				#region
 				EDD[0].EnableOption(7, true);
 				EDD[0].EnableOption(22, true);
 				EDD[0].EnableOption(57, true);
 				#endregion
+				//Chest Armor
+				EDD[2].EnableOption(58, true);
+				//Leg Armor
+				EDD[2].EnableOption(24, true);
 			} else {
-				//Head
+				//Head Armor
 				#region
 				EDD[0].EnableOption(7, false);
 				EDD[0].EnableOption(22, false);
 				EDD[0].EnableOption(57, false);
 				#endregion
+				//Chest Armor
+				EDD[2].EnableOption(58, false);
+				//Leg Armor
+				EDD[5].EnableOption(24, false);
 			}
 			#endregion
 			//Head Armor
@@ -665,6 +762,14 @@ public class EqPanel : MonoBehaviour {
 			EDD[1].EnableOption(32, true);
 			EDD[1].EnableOption(37, true);
 			#endregion
+			//Chest Armor
+			#region
+			EDD[2].EnableOption(38, true);
+			EDD[2].EnableOption(46, true);
+			EDD[2].EnableOption(64, true);
+			#endregion
+			//LegArmor
+			EDD[5].EnableOption(15, true);
 		} else {
 			//Head Armor
 			#region
@@ -697,19 +802,66 @@ public class EqPanel : MonoBehaviour {
 			EDD[1].EnableOption(32, false);
 			EDD[1].EnableOption(37, false);
 			#endregion
-
+			//Chest Armor
+			#region
+			EDD[2].EnableOption(9, false);
+			EDD[2].EnableOption(14, false);
+			EDD[2].EnableOption(17, false);
+			EDD[2].EnableOption(18, false);
+			EDD[2].EnableOption(20, false);
+			EDD[2].EnableOption(21, false);
+			EDD[2].EnableOption(26, false);
+			EDD[2].EnableOption(32, false);
+			EDD[2].EnableOption(33, false);
+			EDD[2].EnableOption(34, false);
+			EDD[2].EnableOption(37, false);
+			EDD[2].EnableOption(38, false);
+			EDD[2].EnableOption(40, false);
+			EDD[2].EnableOption(46, false);
+			EDD[2].EnableOption(50, false);
+			EDD[2].EnableOption(58, false);
+			EDD[2].EnableOption(62, false);
+			EDD[2].EnableOption(64, false);
+			EDD[2].EnableOption(66, false);
+			EDD[2].EnableOption(67, false);
+			EDD[2].EnableOption(70, false);
+			EDD[2].EnableOption(71, false);
+			EDD[2].EnableOption(74, false);
+			#endregion
+			//Leg Armor
+			#region
+			EDD[5].EnableOption(7, false);
+			EDD[5].EnableOption(12, false);
+			EDD[5].EnableOption(14, false);
+			EDD[5].EnableOption(15, false);
+			EDD[5].EnableOption(18, false);
+			EDD[5].EnableOption(19, false);
+			EDD[5].EnableOption(21, false);
+			EDD[5].EnableOption(24, false);
+			EDD[5].EnableOption(37, false);
+			EDD[5].EnableOption(39, false);
+			EDD[5].EnableOption(42, false);
+			EDD[5].EnableOption(44, false);
+			EDD[5].EnableOption(45, false);
+			EDD[5].EnableOption(50, false);
+			EDD[5].EnableOption(52, false);
+			EDD[5].EnableOption(53, false);
+			EDD[5].EnableOption(67, false);
+			EDD[5].EnableOption(68, false);
+			#endregion
 		}
 		#endregion
 		//Strider based
 		#region
-		if(chara.GetVocation().Equals("Strider") || chara.GetVocation().Equals("Ranger") ||
+		if (chara.GetVocation().Equals("Strider") || chara.GetVocation().Equals("Ranger") ||
 			chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("M. Archer")) {
 			//No Magick Archer
 			#region
 			if (!chara.GetVocation().Equals("M. Archer")) {
 				//Head
 				EDD[0].EnableOption(34, true);
-			} else {
+			}
+			else {
 				//Head
 				EDD[0].EnableOption(34, false);
 			}
@@ -717,11 +869,19 @@ public class EqPanel : MonoBehaviour {
 			//More Specialized things
 			#region
 			if (chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("Ranger")) {
-				//Head
+				//Head Armor
 				EDD[0].EnableOption(77, true);
+				//Chest Armor
+				EDD[2].EnableOption(25, true);
+				//Leg Armor
+				EDD[5].EnableOption(74, true);
 			} else {
-				//Head
+				//Head Armor
 				EDD[0].EnableOption(77, false);
+				//Chest Armor
+				EDD[2].EnableOption(25, false);
+				//Leg Armor
+				EDD[5].EnableOption(74, false);
 			}
 			#endregion
 			//Head Armor
@@ -736,6 +896,37 @@ public class EqPanel : MonoBehaviour {
 			EDD[0].EnableOption(61, true);
 			EDD[0].EnableOption(65, true);
 			EDD[0].EnableOption(69, true);
+			#endregion
+			//Chest Amor
+			#region
+			EDD[2].EnableOption(5, true);
+			EDD[2].EnableOption(7, true);
+			EDD[2].EnableOption(8, true);
+			EDD[2].EnableOption(15, true);
+			EDD[2].EnableOption(27, true);
+			EDD[2].EnableOption(28, true);
+			EDD[2].EnableOption(31, true);
+			EDD[2].EnableOption(39, true);
+			EDD[2].EnableOption(41, true);
+			EDD[2].EnableOption(42, true);
+			EDD[2].EnableOption(45, true);
+			EDD[2].EnableOption(52, true);
+			EDD[2].EnableOption(55, true);
+			EDD[2].EnableOption(59, true);
+			EDD[2].EnableOption(60, true);
+			EDD[2].EnableOption(76, true);
+			#endregion
+			//Leg Armor
+			#region
+			EDD[5].EnableOption(8, true);
+			EDD[5].EnableOption(9, true);
+			EDD[5].EnableOption(33, true);
+			EDD[5].EnableOption(46, true);
+			EDD[5].EnableOption(54, true);
+			EDD[5].EnableOption(55, true);
+			EDD[5].EnableOption(60, true);
+			EDD[5].EnableOption(71, true);
+			EDD[5].EnableOption(73, true);
 			#endregion
 		} else {
 			//Head Armor
@@ -753,6 +944,39 @@ public class EqPanel : MonoBehaviour {
 			EDD[0].EnableOption(69, false);
 			EDD[0].EnableOption(77, false);
 			#endregion
+			//Chest Amor
+			#region
+			EDD[2].EnableOption(5, false);
+			EDD[2].EnableOption(7, false);
+			EDD[2].EnableOption(8, false);
+			EDD[2].EnableOption(15, false);
+			EDD[2].EnableOption(25, false);
+			EDD[2].EnableOption(27, false);
+			EDD[2].EnableOption(28, false);
+			EDD[2].EnableOption(31, false);
+			EDD[2].EnableOption(39, false);
+			EDD[2].EnableOption(41, false);
+			EDD[2].EnableOption(42, false);
+			EDD[2].EnableOption(45, false);
+			EDD[2].EnableOption(52, false);
+			EDD[2].EnableOption(55, false);
+			EDD[2].EnableOption(59, false);
+			EDD[2].EnableOption(60, false);
+			EDD[2].EnableOption(76, false);
+			#endregion
+			//Leg Armor
+			#region
+			EDD[5].EnableOption(8, false);
+			EDD[5].EnableOption(9, false);
+			EDD[5].EnableOption(33, false);
+			EDD[5].EnableOption(46, false);
+			EDD[5].EnableOption(54, false);
+			EDD[5].EnableOption(55, false);
+			EDD[5].EnableOption(60, false);
+			EDD[5].EnableOption(71, false);
+			EDD[5].EnableOption(73, false);
+			EDD[5].EnableOption(74, false);
+			#endregion
 		}
 		#endregion
 		//Mage based
@@ -762,7 +986,7 @@ public class EqPanel : MonoBehaviour {
 			 chara.GetVocation().Equals("M. Archer") || chara.GetVocation().Equals("M. Knight")) {
 			//Not for Mage/Sorc
 			#region
-			if (!chara.GetVocation().Equals("Mage") || !chara.GetVocation().Equals("Sorcerer")) {
+			if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer")) {
 				//Chest Clothing
 				#region
 				EDD[1].EnableOption(3, false);
@@ -774,12 +998,45 @@ public class EqPanel : MonoBehaviour {
 				EDD[1].EnableOption(36, false);
 				EDD[1].EnableOption(39, false);
 				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(12, false);
+				EDD[2].EnableOption(13, false);
+				EDD[2].EnableOption(19, false);
+				EDD[2].EnableOption(43, false);
+				EDD[2].EnableOption(44, false);
+				EDD[2].EnableOption(69, false);
+				EDD[2].EnableOption(80, false);
+				#endregion
 				//Leg Clothing
 				#region
 				EDD[4].EnableOption(12, false);
 				EDD[4].EnableOption(13, false);
 				EDD[4].EnableOption(16, false);
 				EDD[4].EnableOption(24, false);
+				#endregion
+				//Leg Amor
+				#region
+				//On
+				EDD[5].EnableOption(13, true);
+				EDD[5].EnableOption(58, true);
+				EDD[5].EnableOption(61, true);
+				//Off
+				EDD[5].EnableOption(4, false);
+				EDD[5].EnableOption(5, false);
+				EDD[5].EnableOption(6, false);
+				EDD[5].EnableOption(16, false);
+				EDD[5].EnableOption(17, false);
+				EDD[5].EnableOption(23, false);
+				EDD[5].EnableOption(27, false);
+				EDD[5].EnableOption(34, false);
+				EDD[5].EnableOption(36, false);
+				EDD[5].EnableOption(43, false);
+				EDD[5].EnableOption(47, false);
+				EDD[5].EnableOption(63, false);
+				EDD[5].EnableOption(69, false);
+				EDD[5].EnableOption(70, false);
+				EDD[5].EnableOption(72, false);
 				#endregion
 			} else {
 				//Chest Clothing
@@ -793,6 +1050,16 @@ public class EqPanel : MonoBehaviour {
 				EDD[1].EnableOption(36, true);
 				EDD[1].EnableOption(39, true);
 				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(12, true);
+				EDD[2].EnableOption(13, true);
+				EDD[2].EnableOption(19, true);
+				EDD[2].EnableOption(43, true);
+				EDD[2].EnableOption(44, true);
+				EDD[2].EnableOption(69, true);
+				EDD[2].EnableOption(80, true);
+				#endregion
 				//Leg Clothing
 				#region
 				EDD[4].EnableOption(12, true);
@@ -800,21 +1067,88 @@ public class EqPanel : MonoBehaviour {
 				EDD[4].EnableOption(16, true);
 				EDD[4].EnableOption(24, true);
 				#endregion
+				//Leg Amor
+				#region
+				//On
+				EDD[5].EnableOption(13, false);
+				EDD[5].EnableOption(58, false);
+				EDD[5].EnableOption(61, false);
+				//Off
+				EDD[5].EnableOption(4, true);
+				EDD[5].EnableOption(5, true);
+				EDD[5].EnableOption(6, true);
+				EDD[5].EnableOption(16, true);
+				EDD[5].EnableOption(17, true);
+				EDD[5].EnableOption(23, true);
+				EDD[5].EnableOption(27, true);
+				EDD[5].EnableOption(34, true);
+				EDD[5].EnableOption(36, true);
+				EDD[5].EnableOption(43, true);
+				EDD[5].EnableOption(47, true);
+				EDD[5].EnableOption(63, true);
+				EDD[5].EnableOption(69, true);
+				EDD[5].EnableOption(70, true);
+				EDD[5].EnableOption(72, true);
+				#endregion
 			}
 			#endregion
 			//No Mystic Knight
 			#region
-			if(!chara.GetVocation().Equals("M. Knight")) {
-				//Head
+			if (!chara.GetVocation().Equals("M. Knight")) {
+				//Head Armor
 				#region
 				EDD[0].EnableOption(1, true);
 				EDD[0].EnableOption(13, true);
 				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(2, true);
+				EDD[2].EnableOption(10, true);
+				EDD[2].EnableOption(16, true);
+				EDD[2].EnableOption(22, true);
+				EDD[2].EnableOption(24, true);
+				EDD[2].EnableOption(47, true);
+				EDD[2].EnableOption(49, true);
+				EDD[2].EnableOption(51, true);
+				EDD[2].EnableOption(54, true);
+				EDD[2].EnableOption(61, true);
+				EDD[2].EnableOption(63, true);
+				EDD[2].EnableOption(65, true);
+				EDD[2].EnableOption(68, true);
+				EDD[2].EnableOption(75, true);
+				#endregion
+				//Leg Armor
+				#region
+				EDD[5].EnableOption(10, true);
+				EDD[5].EnableOption(11, true);
+				#endregion
 			} else {
-				//Head
+				//Head Armor
 				#region
 				EDD[0].EnableOption(1, false);
 				EDD[0].EnableOption(13, false);
+				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(2, false);
+				EDD[2].EnableOption(10, false);
+				EDD[2].EnableOption(16, false);
+				EDD[2].EnableOption(22, false);
+				EDD[2].EnableOption(24, false);
+				EDD[2].EnableOption(47, false);
+				EDD[2].EnableOption(49, false);
+				EDD[2].EnableOption(51, false);
+				EDD[2].EnableOption(54, false);
+				EDD[2].EnableOption(61, false);
+				EDD[2].EnableOption(63, false);
+				EDD[2].EnableOption(65, false);
+				EDD[2].EnableOption(68, false);
+				EDD[2].EnableOption(75, false);
+				#endregion
+				//Leg Armor
+				#region
+				EDD[5].EnableOption(10, false);
+				EDD[5].EnableOption(11, false);
 				#endregion
 			}
 			#endregion
@@ -843,6 +1177,15 @@ public class EqPanel : MonoBehaviour {
 			#endregion
 			//Chest Clothing
 			EDD[1].EnableOption(6, true);
+			//Chest Armor
+			#region
+			EDD[2].EnableOption(3, true);
+			EDD[2].EnableOption(4, true);
+			EDD[2].EnableOption(35, true);
+			EDD[2].EnableOption(36, true);
+			EDD[2].EnableOption(57, true);
+			EDD[2].EnableOption(78, true);
+			#endregion
 		} else {
 			//Head Armor
 			#region
@@ -861,12 +1204,85 @@ public class EqPanel : MonoBehaviour {
 			EDD[0].EnableOption(81, false);
 			#endregion
 			//Chest Clothing
+			#region
+			EDD[1].EnableOption(3, true);
 			EDD[1].EnableOption(6, false);
+			EDD[1].EnableOption(10, true);
+			EDD[1].EnableOption(11, true);
+			EDD[1].EnableOption(15, true);
+			EDD[1].EnableOption(29, true);
+			EDD[1].EnableOption(34, true);
+			EDD[1].EnableOption(36, true);
+			EDD[1].EnableOption(39, true);
+			#endregion
+			//Chest Armor
+			#region
+			EDD[2].EnableOption(2, false);
+			EDD[2].EnableOption(3, false);
+			EDD[2].EnableOption(4, false);
+			EDD[2].EnableOption(10, false);
+			EDD[2].EnableOption(12, true);
+			EDD[2].EnableOption(13, true);
+			EDD[2].EnableOption(16, false);
+			EDD[2].EnableOption(19, true);
+			EDD[2].EnableOption(22, false);
+			EDD[2].EnableOption(24, false);
+			EDD[2].EnableOption(35, false);
+			EDD[2].EnableOption(36, false);
+			EDD[2].EnableOption(43, true);
+			EDD[2].EnableOption(44, true);
+			EDD[2].EnableOption(47, false);
+			EDD[2].EnableOption(49, false);
+			EDD[2].EnableOption(51, false);
+			EDD[2].EnableOption(54, false);
+			EDD[2].EnableOption(57, false);
+			EDD[2].EnableOption(61, false);
+			EDD[2].EnableOption(63, false);
+			EDD[2].EnableOption(65, false);
+			EDD[2].EnableOption(68, false);
+			EDD[2].EnableOption(69, true);
+			EDD[2].EnableOption(75, false);
+			EDD[2].EnableOption(78, false);
+			EDD[2].EnableOption(80, true);
+			#endregion
+			//Leg Clothing
+			#region
+			EDD[4].EnableOption(12, true);
+			EDD[4].EnableOption(13, true);
+			EDD[4].EnableOption(16, true);
+			EDD[4].EnableOption(24, true);
+			#endregion
+			//Leg Armor
+			#region
+			EDD[5].EnableOption(10, false);
+			EDD[5].EnableOption(11, false);
+			EDD[5].EnableOption(13, false);
+			EDD[5].EnableOption(58, false);
+			EDD[5].EnableOption(61, false);
+			//Seperator
+			EDD[5].EnableOption(4, true);
+			EDD[5].EnableOption(5, true);
+			EDD[5].EnableOption(6, true);
+			EDD[5].EnableOption(16, true);
+			EDD[5].EnableOption(17, true);
+			EDD[5].EnableOption(23, true);
+			EDD[5].EnableOption(27, true);
+			EDD[5].EnableOption(34, true);
+			EDD[5].EnableOption(36, true);
+			EDD[5].EnableOption(43, true);
+			EDD[5].EnableOption(47, true);
+			EDD[5].EnableOption(63, true);
+			EDD[5].EnableOption(69, true);
+			EDD[5].EnableOption(70, true);
+			EDD[5].EnableOption(72, true);
+			#endregion
 		}
 		#endregion
 		//Special Snowflakes
 		#region
-		if(chara.GetVocation().Equals("Warrior") || chara.GetVocation().Equals("Ranger") ||
+		//???
+		#region
+		if (chara.GetVocation().Equals("Warrior") || chara.GetVocation().Equals("Ranger") ||
 			chara.GetVocation().Equals("M.Archer") || chara.GetVocation().Equals("M.Knight")) {
 			//Head
 			#region
@@ -881,9 +1297,30 @@ public class EqPanel : MonoBehaviour {
 			#endregion
 		}
 		#endregion
+		//No Basic
+		#region
+		if (chara.GetVocation().Equals("Fighter") || chara.GetVocation().Equals("Strider") ||
+			chara.GetVocation().Equals("Mage")) {
+			EDD[5].EnableOption(41, false);
+			EDD[5].EnableOption(59, false);
+			EDD[5].EnableOption(64, false);
+		} else {
+			EDD[5].EnableOption(41, true);
+			EDD[5].EnableOption(59, true);
+			EDD[5].EnableOption(64, true);
+		}
+		#endregion
+		//!?!?!?
+		#region
+		if(chara.GetVocation().Equals("Mage")|| chara.GetVocation().Equals("Sorcerer")||
+			chara.GetVocation().Equals("M. Archer")) {
+			EDD[5].EnableOption(51, false);
+		} else { EDD[5].EnableOption(51, true); }
+		#endregion
+		#endregion
 		//Gender
 		#region
-			if (!chara.GetGender()) {
+		if (!chara.GetGender()) {
 			//Dissable all the female only options
 			#region
 			//Head Armor
@@ -894,17 +1331,17 @@ public class EqPanel : MonoBehaviour {
 			EDD[1].EnableOption(28, false);
 			EDD[1].EnableOption(30, false);
 			//Chest Armor
-
+			EDD[2].EnableOption(11, false);
+			EDD[2].EnableOption(29, false);
+			EDD[2].EnableOption(48, false);
+			EDD[2].EnableOption(72, false);
+			EDD[2].EnableOption(73, false);
 			//Leg Clothing
 			EDD[4].EnableOption(9, false);
 			EDD[4].EnableOption(22, false);
 			EDD[4].EnableOption(28, false);
-			//Maiden's Petticoat
-			//Berserkin
-			//Flame Skirt
-			//Framae Plate
-			//Sultry Pareo
-			//Summery Pareo
+			//Leg Armor
+			EDD[5].EnableOption(31, false);
 			#endregion
 		} else {
 			//Enable all the female only options
@@ -916,13 +1353,27 @@ public class EqPanel : MonoBehaviour {
 			EDD[1].EnableOption(24, true);
 			EDD[1].EnableOption(28, true);
 			EDD[1].EnableOption(30, true);
+			//Chest Armor
+			EDD[2].EnableOption(29, true);
+			EDD[2].EnableOption(48, true);
+			EDD[2].EnableOption(72, true);
+			EDD[2].EnableOption(73, true);
 			//Leg Clothing
 			EDD[4].EnableOption(9, true);
 			EDD[4].EnableOption(22, true);
 			EDD[4].EnableOption(28, true);
+			//Other
+			EDD[5].EnableOption(31, true);
+			if (chara.GetVocation().Equals("Sorcerer") || chara.GetVocation().Equals("M.Archer")) {
+				EDD[2].EnableOption(11, true);
+			} else {
+				EDD[2].EnableOption(11, false);
+			}
+			//Flame Skirt
 			#endregion
 		}
 		#endregion
+
 	}
 
 	//Functions for switching equipmentpieces
@@ -2447,6 +2898,11 @@ public class EqPanel : MonoBehaviour {
 		}
 	}
 	private void SwitchArms() {
+		switch (iCurrent[3]) {
+			case 1:
+				break;
+		}
+		iCurrent[3] = Equipment[3].value;
 	}
 	private void SwitchLClothing() {
 		switch (iCurrent[4]) {
@@ -2606,6 +3062,641 @@ public class EqPanel : MonoBehaviour {
 		}
 	}
 	private void SwitchLegs() {
+		switch (iCurrent[5]) {
+			case 1:
+				SetDebilitationRes(-84, 0);
+				SetDebilitationRes(-84, 1);
+				SetDebilitationRes(-84, 5);
+				break;
+			case 2:
+				SetDebilitationRes(-40, 0);
+				SetDebilitationRes(-40, 1);
+				SetDebilitationRes(-40, 3);
+				SetDebilitationRes(-40, 4);
+				SetDebilitationRes(-40, 5);
+				SetDebilitationRes(-40, 7);
+				SetDebilitationRes(-40, 8);
+				SetDebilitationRes(-15, 2);
+				SetDebilitationRes(-15, 6);
+				break;
+			case 3:
+				SetDebilitationRes(-60, 4);
+				SetDebilitationRes(-60, 7);
+				SetDebilitationRes(-60, 10);
+				SetDebilitationRes(-60, 12);
+				break;
+			case 4:
+				SetDebilitationRes(-60, 1);
+				SetDebilitationRes(-52, 7);
+				break;
+			case 5:
+				chara.SetAtk(-30);
+				SetDebilitationRes(-60, 2);
+				SetDebilitationRes(-60, 9);
+				SetDebilitationRes(-15, 10);
+				break;
+			case 6:
+				SetDebilitationRes(-44, 6);
+				break;
+			case 7:
+				SetDebilitationRes(-35, 2);
+				break;
+			case 8:
+				SetDebilitationRes(-100, 5);
+				SetDebilitationRes(-20, 8);
+				SetDebilitationRes(-10, 9);
+				SetDebilitationRes(-10, 10);
+				SetDebilitationRes(-10, 11);
+				SetDebilitationRes(-10, 12);
+				break;
+			case 9:
+				SetDebilitationRes(-100, 5);
+				SetDebilitationRes(-20, 8);
+				SetDebilitationRes(-15, 9);
+				SetDebilitationRes(-15, 10);
+				SetDebilitationRes(-15, 11);
+				SetDebilitationRes(-15, 12);
+				break;
+			case 10:
+				SetDebilitationRes(-100, 1);
+				SetDebilitationRes(-100, 7);
+				SetDebilitationRes(-100, 3);
+				break;
+			case 11:
+				SetDebilitationRes(-100, 1);
+				SetDebilitationRes(-100, 7);
+				SetDebilitationRes(-20, 3);
+				break;
+			case 12:
+				SetDebilitationRes(-100, 0);
+				SetDebilitationRes(-100, 4);
+				SetDebilitationRes(-100, 5);
+				break;
+			case 13:
+				SetDebilitationRes(-55, 2);
+				break;
+			case 14:
+				SetDebilitationRes(-30, 4);
+				break;
+			case 15:
+				SetDebilitationRes(-24, 6);
+				break;
+			case 16:
+				SetDebilitationRes(-32, 0);
+				break;
+			case 17:
+				SetDebilitationRes(-39, 6);
+				break;
+			case 18:
+				SetDebilitationRes(-35, 4);
+				break;
+			case 19:
+				SetDebilitationRes(-32, 7);
+				SetDebilitationRes(-30, 0);
+				break;
+			case 20:
+				chara.SetAtk(-2);
+				chara.SetMAtk(-1);
+				SetDebilitationRes(-27, 2);
+				SetDebilitationRes(-24, 6);
+				break;
+			case 21:
+				SetDebilitationRes(-100, 1);
+				break;
+			case 22:
+				SetDebilitationRes(-39, 9);
+				SetDebilitationRes(-32, 7);
+				break;
+			case 23:
+				SetDebilitationRes(-39, 10);
+				SetDebilitationRes(-32, 7);
+				break;
+			case 24:
+				SetDebilitationRes(-30, 6);
+				SetDebilitationRes(-30, 7);
+				break;
+			case 25:
+				SetDebilitationRes(-72, 4);
+				SetDebilitationRes(-72, 11);
+				SetDebilitationRes(-72, 12);
+				break;
+			case 26:
+				SetDebilitationRes(-60, 0);
+				SetDebilitationRes(-60, 1);
+				SetDebilitationRes(-60, 8);
+				break;
+			case 27:
+				SetDebilitationRes(-36, 7);
+				break;
+			case 28:
+				SetDebilitationRes(-32, 5);
+				SetDebilitationRes(-30, 4);
+				break;
+			case 29:
+				SetDebilitationRes(-75, 1);
+				SetDebilitationRes(-27, 5);
+				break;
+			case 30:
+				SetDebilitationRes(-75, 1);
+				break;
+			case 31:
+				SetDebilitationRes(-55, 5);
+				SetDebilitationRes(-48, 11);
+				break;
+			case 32:
+				chara.SetAtk(-8);
+				chara.SetMAtk(-8);
+				SetDebilitationRes(-64, 8);
+				break;
+			case 33:
+				SetDebilitationRes(-25, 4);
+				SetDebilitationRes(-25, 7);
+				break;
+			case 34:
+				SetDebilitationRes(-40, 6);
+				break;
+			case 35:
+				SetDebilitationRes(-32, 6);
+				break;
+			case 36:
+				SetDebilitationRes(-45, 7);
+				SetDebilitationRes(-39, 8);
+				break;
+			case 37:
+				SetDebilitationRes(-24, 2);
+				SetDebilitationRes(-24, 6);
+				SetDebilitationRes(-7, 8);
+				break;
+			case 38:
+				SetDebilitationRes(-40, 5);
+				break;
+			case 39:
+				SetDebilitationRes(-32, 8);
+				SetDebilitationRes(-30, 0);
+				break;
+			case 40:
+				SetDebilitationRes(-32, 4);
+				SetDebilitationRes(-30, 8);
+				break;
+			case 41:
+				chara.SetAtk(-7);
+				chara.SetMAtk(-7);
+				SetDebilitationRes(-100, 9);
+				SetDebilitationRes(-100, 10);
+				SetDebilitationRes(-55, 0);
+				break;
+			case 42:
+				SetDebilitationRes(-60, 4);
+				SetDebilitationRes(-60, 6);
+				break;
+			case 43:
+				SetDebilitationRes(-28, 7);
+				break;
+			case 44:
+				SetDebilitationRes(-36, 2);
+				break;
+			case 45:
+				SetDebilitationRes(-72, 5);
+				SetDebilitationRes(-70, 11);
+				SetDebilitationRes(-70, 12);
+				break;
+			case 46:
+				SetDebilitationRes(-28, 5);
+				break;
+			case 47:
+				SetDebilitationRes(-45, 8);
+				break;
+			case 48:
+				SetDebilitationRes(-28, 3);
+				break;
+			case 49:
+				chara.SetMAtk(-3);
+				SetDebilitationRes(-45, 3);
+				break;
+			case 50:
+				SetDebilitationRes(-60, 1);
+				SetDebilitationRes(-36, 4);
+				break;
+			case 51:
+				SetDebilitationRes(-60, 2);
+				SetDebilitationRes(-60, 4);
+				SetDebilitationRes(-60, 5);
+				SetDebilitationRes(-15, 11);
+				break;
+			case 52:
+				SetDebilitationRes(-24, 5);
+				break;
+			case 53:
+				SetDebilitationRes(-33, 5);
+				SetDebilitationRes(-28, 0);
+				break;
+			case 54:
+				SetDebilitationRes(-32, 6);
+				SetDebilitationRes(-30, 7);
+				break;
+			case 55:
+				SetDebilitationRes(-70, 5);
+				break;
+			case 56:
+				SetDebilitationRes(-32, 2);
+				break;
+			case 57:
+				SetDebilitationRes(-42, 12);
+				SetDebilitationRes(-35, 5);
+				break;
+			case 58:
+				SetDebilitationRes(-55, 0);
+				break;
+			case 60:
+				chara.SetAtk(-3);
+				chara.SetMAtk(-3);
+				SetDebilitationRes(-45, 9);
+				SetDebilitationRes(-45, 10);
+				SetDebilitationRes(-36, 4);
+				break;
+			case 61:
+				SetDebilitationRes(-40, 5);
+				break;
+			case 62:
+				SetDebilitationRes(-55, 8);
+				break;
+			case 63:
+				SetDebilitationRes(-51, 12);
+				SetDebilitationRes(-50, 5);
+				break;
+			case 64:
+				SetDebilitationRes(-32, 5);
+				break;
+			case 65:
+				chara.SetAtk(-5);
+				chara.SetMAtk(-5);
+				SetDebilitationRes(-56, 9);
+				SetDebilitationRes(-44, 8);
+				SetDebilitationRes(-23, 10);
+				break;
+			case 66:
+				SetDebilitationRes(-64, 6);
+				SetDebilitationRes(-39, 5);
+				SetDebilitationRes(-33, 7);
+				break;
+			case 67:
+				SetDebilitationRes(-25, 5);
+				break;
+			case 68:
+				SetDebilitationRes(-39, 8);
+				SetDebilitationRes(-36, 7);
+				break;
+			case 69:
+				SetDebilitationRes(-45, 11);
+				SetDebilitationRes(-16, 0);
+				break;
+			case 70:
+				SetDebilitationRes(-24, 2);
+				break;
+			case 71:
+				chara.SetAtk(-5);
+				SetDebilitationRes(-48, 9);
+				SetDebilitationRes(-45, 5);
+				break;
+			case 72:
+				SetDebilitationRes(-70, 4);
+				break;
+			case 73:
+				SetDebilitationRes(-44, 4);
+				break;
+			case 74:
+				chara.SetMAtk(-30);
+				SetDebilitationRes(-60, 2);
+				SetDebilitationRes(-60, 7);
+				break;
+			case 75:
+				SetDebilitationRes(-52, 5);
+				SetDebilitationRes(-40, 7);
+				SetDebilitationRes(-36, 8);
+				break;
+			case 76:
+				chara.SetMAtk(-4);
+				SetDebilitationRes(-60, 3);
+				break;
+		}
+		iCurrent[5] = Equipment[5].value;
+		switch (iCurrent[5]) {
+			case 1:
+				SetDebilitationRes(84, 0);
+				SetDebilitationRes(84, 1);
+				SetDebilitationRes(84, 5);
+				break;
+			case 2:
+				SetDebilitationRes(40, 0);
+				SetDebilitationRes(40, 1);
+				SetDebilitationRes(40, 3);
+				SetDebilitationRes(40, 4);
+				SetDebilitationRes(40, 5);
+				SetDebilitationRes(40, 7);
+				SetDebilitationRes(40, 8);
+				SetDebilitationRes(15, 2);
+				SetDebilitationRes(15, 6);
+				break;
+			case 3:
+				SetDebilitationRes(60, 4);
+				SetDebilitationRes(60, 7);
+				SetDebilitationRes(60, 10);
+				SetDebilitationRes(60, 12);
+				break;
+			case 4:
+				SetDebilitationRes(60, 1);
+				SetDebilitationRes(52, 7);
+				break;
+			case 5:
+				chara.SetAtk(30);
+				SetDebilitationRes(60, 2);
+				SetDebilitationRes(60, 9);
+				SetDebilitationRes(15, 10);
+				break;
+			case 6:
+				SetDebilitationRes(44, 6);
+				break;
+			case 7:
+				SetDebilitationRes(35, 2);
+				break;
+			case 8:
+				SetDebilitationRes(100, 5);
+				SetDebilitationRes(20, 8);
+				SetDebilitationRes(10, 9);
+				SetDebilitationRes(10, 10);
+				SetDebilitationRes(10, 11);
+				SetDebilitationRes(10, 12);
+				break;
+			case 9:
+				SetDebilitationRes(100, 5);
+				SetDebilitationRes(20, 8);
+				SetDebilitationRes(15, 9);
+				SetDebilitationRes(15, 10);
+				SetDebilitationRes(15, 11);
+				SetDebilitationRes(15, 12);
+				break;
+			case 10:
+				SetDebilitationRes(100, 1);
+				SetDebilitationRes(100, 7);
+				SetDebilitationRes(100, 3);
+				break;
+			case 11:
+				SetDebilitationRes(100, 1);
+				SetDebilitationRes(100, 7);
+				SetDebilitationRes(20, 3);
+				break;
+			case 12:
+				SetDebilitationRes(100, 0);
+				SetDebilitationRes(100, 4);
+				SetDebilitationRes(100, 5);
+				break;
+			case 13:
+				SetDebilitationRes(55, 2);
+				break;
+			case 14:
+				SetDebilitationRes(30, 4);
+				break;
+			case 15:
+				SetDebilitationRes(24, 6);
+				break;
+			case 16:
+				SetDebilitationRes(32, 0);
+				break;
+			case 17:
+				SetDebilitationRes(39, 6);
+				break;
+			case 18:
+				SetDebilitationRes(35, 4);
+				break;
+			case 19:
+				SetDebilitationRes(32, 7);
+				SetDebilitationRes(30, 0);
+				break;
+			case 20:
+				chara.SetAtk(2);
+				chara.SetMAtk(1);
+				SetDebilitationRes(27, 2);
+				SetDebilitationRes(24, 6);
+				break;
+			case 21:
+				SetDebilitationRes(100, 1);
+				break;
+			case 22:
+				SetDebilitationRes(39, 9);
+				SetDebilitationRes(32, 7);
+				break;
+			case 23:
+				SetDebilitationRes(39, 10);
+				SetDebilitationRes(32, 7);
+				break;
+			case 24:
+				SetDebilitationRes(30, 6);
+				SetDebilitationRes(30, 7);
+				break;
+			case 25:
+				SetDebilitationRes(72, 4);
+				SetDebilitationRes(72, 11);
+				SetDebilitationRes(72, 12);
+				break;
+			case 26:
+				SetDebilitationRes(60, 0);
+				SetDebilitationRes(60, 1);
+				SetDebilitationRes(60, 8);
+				break;
+			case 27:
+				SetDebilitationRes(36, 7);
+				break;
+			case 28:
+				SetDebilitationRes(32, 5);
+				SetDebilitationRes(30, 4);
+				break;
+			case 29:
+				SetDebilitationRes(75, 1);
+				SetDebilitationRes(27, 5);
+				break;
+			case 30:
+				SetDebilitationRes(75, 1);
+				break;
+			case 31:
+				SetDebilitationRes(55, 5);
+				SetDebilitationRes(48, 11);
+				break;
+			case 32:
+				chara.SetAtk(8);
+				chara.SetMAtk(8);
+				SetDebilitationRes(64, 8);
+				break;
+			case 33:
+				SetDebilitationRes(25, 4);
+				SetDebilitationRes(25, 7);
+				break;
+			case 34:
+				SetDebilitationRes(40, 6);
+				break;
+			case 35:
+				SetDebilitationRes(32, 6);
+				break;
+			case 36:
+				SetDebilitationRes(45, 7);
+				SetDebilitationRes(39, 8);
+				break;
+			case 37:
+				SetDebilitationRes(24, 2);
+				SetDebilitationRes(24, 6);
+				SetDebilitationRes(7, 8);
+				break;
+			case 38:
+				SetDebilitationRes(40, 5);
+				break;
+			case 39:
+				SetDebilitationRes(32, 8);
+				SetDebilitationRes(30, 0);
+				break;
+			case 40:
+				SetDebilitationRes(32, 4);
+				SetDebilitationRes(30, 8);
+				break;
+			case 41:
+				chara.SetAtk(7);
+				chara.SetMAtk(7);
+				SetDebilitationRes(100, 9);
+				SetDebilitationRes(100, 10);
+				SetDebilitationRes(55, 0);
+				break;
+			case 42:
+				SetDebilitationRes(60, 4);
+				SetDebilitationRes(60, 6);
+				break;
+			case 43:
+				SetDebilitationRes(28, 7);
+				break;
+			case 44:
+				SetDebilitationRes(36, 2);
+				break;
+			case 45:
+				SetDebilitationRes(72, 5);
+				SetDebilitationRes(70, 11);
+				SetDebilitationRes(70, 12);
+				break;
+			case 46:
+				SetDebilitationRes(28, 5);
+				break;
+			case 47:
+				SetDebilitationRes(45, 8);
+				break;
+			case 48:
+				SetDebilitationRes(28, 3);
+				break;
+			case 49:
+				chara.SetMAtk(3);
+				SetDebilitationRes(45, 3);
+				break;
+			case 50:
+				SetDebilitationRes(60, 1);
+				SetDebilitationRes(36, 4);
+				break;
+			case 51:
+				SetDebilitationRes(60, 2);
+				SetDebilitationRes(60, 4);
+				SetDebilitationRes(60, 5);
+				SetDebilitationRes(15, 11);
+				break;
+			case 52:
+				SetDebilitationRes(24, 5);
+				break;
+			case 53:
+				SetDebilitationRes(33, 5);
+				SetDebilitationRes(28, 0);
+				break;
+			case 54:
+				SetDebilitationRes(32, 6);
+				SetDebilitationRes(30, 7);
+				break;
+			case 55:
+				SetDebilitationRes(70, 5);
+				break;
+			case 56:
+				SetDebilitationRes(32, 2);
+				break;
+			case 57:
+				SetDebilitationRes(42, 12);
+				SetDebilitationRes(35, 5);
+				break;
+			case 58:
+				SetDebilitationRes(55, 0);
+				break;
+			case 60:
+				chara.SetAtk(3);
+				chara.SetMAtk(3);
+				SetDebilitationRes(45, 9);
+				SetDebilitationRes(45, 10);
+				SetDebilitationRes(36, 4);
+				break;
+			case 61:
+				SetDebilitationRes(40, 5);
+				break;
+			case 62:
+				SetDebilitationRes(55, 8);
+				break;
+			case 63:
+				SetDebilitationRes(51, 12);
+				SetDebilitationRes(50, 5);
+				break;
+			case 64:
+				SetDebilitationRes(32, 5);
+				break;
+			case 65:
+				chara.SetAtk(5);
+				chara.SetMAtk(5);
+				SetDebilitationRes(56, 9);
+				SetDebilitationRes(44, 8);
+				SetDebilitationRes(23, 10);
+				break;
+			case 66:
+				SetDebilitationRes(64, 6);
+				SetDebilitationRes(39, 5);
+				SetDebilitationRes(33, 7);
+				break;
+			case 67:
+				SetDebilitationRes(25, 5);
+				break;
+			case 68:
+				SetDebilitationRes(39, 8);
+				SetDebilitationRes(36, 7);
+				break;
+			case 69:
+				SetDebilitationRes(45, 11);
+				SetDebilitationRes(16, 0);
+				break;
+			case 70:
+				SetDebilitationRes(24, 2);
+				break;
+			case 71:
+				chara.SetAtk(5);
+				SetDebilitationRes(48, 9);
+				SetDebilitationRes(45, 5);
+				break;
+			case 72:
+				SetDebilitationRes(70, 4);
+				break;
+			case 73:
+				SetDebilitationRes(44, 4);
+				break;
+			case 74:
+				chara.SetMAtk(30);
+				SetDebilitationRes(60, 2);
+				SetDebilitationRes(60, 7);
+				break;
+			case 75:
+				SetDebilitationRes(52, 5);
+				SetDebilitationRes(40, 7);
+				SetDebilitationRes(36, 8);
+				break;
+			case 76:
+				chara.SetMAtk(4);
+				SetDebilitationRes(60, 3);
+				break;
+		}
 	}
 	private void SwitchCloak() {
 		//Remove

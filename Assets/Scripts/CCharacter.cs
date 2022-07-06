@@ -3,6 +3,7 @@ using Homebrew;
 using TMPro;
 
 public class CCharacter : MonoBehaviour, IDataPersistance {
+	[Foldout("Interaction")] [SerializeField] private EqPanel Equipment;
 	[Foldout("Interaction")] [SerializeField] private GameObject Gender;
 	[Foldout("Interaction")] [SerializeField] private TMP_InputField CName;
 	[Foldout("Display")] [SerializeField] private TextMeshProUGUI Vocation;
@@ -25,7 +26,10 @@ public class CCharacter : MonoBehaviour, IDataPersistance {
 
 	//Constantly Updating all variables that are shown
 	void FixedUpdate() {
-		Vocation.text = sVocation;
+		if (!Vocation.text.Equals(sVocation)) {
+			Vocation.text = sVocation;
+			Equipment.EquipReset();
+		}
 		hpDisplay.text = iHp.ToString();
 		spDisplay.text = iSp.ToString();
 		lvlDisplay.text = iLvl.ToString();

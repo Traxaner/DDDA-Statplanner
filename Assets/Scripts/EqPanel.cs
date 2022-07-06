@@ -4,7 +4,7 @@ using Homebrew;
 using System;
 using TMPro;
 
-public class EqPanel : MonoBehaviour {
+public class EqPanel : MonoBehaviour, IDataPersistance {
 	//Some basic necesities for things to work well
 	[SerializeField] private CCharacter chara;
 	private int[] iCurrent = new int[9];
@@ -70,9 +70,11 @@ public class EqPanel : MonoBehaviour {
 		Debilitations[11] = defLow;
 		Debilitations[12] = mDefLow;
 		#endregion
+		//initializing the Dropdowns with content
 		EquipmentSetup1();
 		ListsOfPainAndSuffering();
 		EquipmentSetup2();
+		//
 	}
 
 	//Basic Setup
@@ -164,6 +166,7 @@ public class EqPanel : MonoBehaviour {
 		#endregion
 	}
 
+	//Adding all the Armorparts to the Lists
 	private void ListsOfPainAndSuffering() {
 		//Head Armor
 		#region
@@ -652,957 +655,6 @@ public class EqPanel : MonoBehaviour {
 		 string s = Debilitations[iDebilitation].text;
 		s = s.Remove(s.Length - 1);
 		Debilitations[iDebilitation].text = (Int32.Parse(s) + iPercent).ToString() + "%";
-	}
-
-	public void SetAll(int iPercent) {
-		for(int i = 0; i < 13; i++) {
-			SetDebilitationRes(iPercent, i);
-		}
-	}
-
-	public void OnPanelDisplay() {
-		//Fighter based
-		#region
-		if (chara.GetVocation().Equals("Fighter") || chara.GetVocation().Equals("Warrior")||
-			 chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("M. Knight")) {
-			//Heavy Armor
-			#region
-			if (!chara.GetVocation().Equals("Assassin")) {
-				//Head Armor
-				#region
-				EDD[0].EnableOption(8, true);
-				EDD[0].EnableOption(10, true);
-				EDD[0].EnableOption(11, true);
-				EDD[0].EnableOption(15, true);
-				EDD[0].EnableOption(16, true);
-				EDD[0].EnableOption(20, true);
-				EDD[0].EnableOption(26, true);
-				EDD[0].EnableOption(39, true);
-				EDD[0].EnableOption(40, true);
-				EDD[0].EnableOption(43, true);
-				EDD[0].EnableOption(44, true);
-				EDD[0].EnableOption(48, true);
-				EDD[0].EnableOption(58, true);
-				EDD[0].EnableOption(62, true);
-				EDD[0].EnableOption(70, true);
-				EDD[0].EnableOption(74, true);
-				#endregion
-				//Chest Armor
-				#region
-				EDD[2].EnableOption(9, true);
-				EDD[2].EnableOption(14, true);
-				EDD[2].EnableOption(17, true);
-				EDD[2].EnableOption(18, true);
-				EDD[2].EnableOption(20, true);
-				EDD[2].EnableOption(21, true);
-				EDD[2].EnableOption(26, true);
-				EDD[2].EnableOption(32, true);
-				EDD[2].EnableOption(33, true);
-				EDD[2].EnableOption(34, true);
-				EDD[2].EnableOption(37, true);
-				EDD[2].EnableOption(40, true);
-				EDD[2].EnableOption(50, true);
-				EDD[2].EnableOption(62, true);
-				EDD[2].EnableOption(66, true);
-				EDD[2].EnableOption(67, true);
-				EDD[2].EnableOption(70, true);
-				EDD[2].EnableOption(71, true);
-				EDD[2].EnableOption(74, true);
-				#endregion
-				//Arm Armor
-				#region
-				EDD[3].EnableOption(9, true);
-				EDD[3].EnableOption(16, true);
-				EDD[3].EnableOption(19, true);
-				EDD[3].EnableOption(20, true);
-				EDD[3].EnableOption(22, true);
-				EDD[3].EnableOption(34, true);
-				EDD[3].EnableOption(37, true);
-				EDD[3].EnableOption(38, true);
-				EDD[3].EnableOption(39, true);
-				EDD[3].EnableOption(45, true);
-				EDD[3].EnableOption(54, true);
-				EDD[3].EnableOption(56, true);
-				#endregion
-				//Leg Armor
-				#region
-				EDD[5].EnableOption(7, true);
-				EDD[5].EnableOption(12, true);
-				EDD[5].EnableOption(14, true);
-				EDD[5].EnableOption(19, true);
-				EDD[5].EnableOption(20, true);
-				EDD[5].EnableOption(22, true);
-				EDD[5].EnableOption(38, true);
-				EDD[5].EnableOption(40, true);
-				EDD[5].EnableOption(43, true);
-				EDD[5].EnableOption(45, true);
-				EDD[5].EnableOption(46, true);
-				EDD[5].EnableOption(51, true);
-				EDD[5].EnableOption(53, true);
-				EDD[5].EnableOption(54, true);
-				EDD[5].EnableOption(68, true);
-				EDD[5].EnableOption(69, true);
-				#endregion
-			} else {
-				//Head Armor
-				#region
-				EDD[0].EnableOption(8, false);
-				EDD[0].EnableOption(10, false);
-				EDD[0].EnableOption(11, false);
-				EDD[0].EnableOption(15, false);
-				EDD[0].EnableOption(16, false);
-				EDD[0].EnableOption(20, false);
-				EDD[0].EnableOption(26, false);
-				EDD[0].EnableOption(39, false);
-				EDD[0].EnableOption(40, false);
-				EDD[0].EnableOption(43, false);
-				EDD[0].EnableOption(44, false);
-				EDD[0].EnableOption(48, false);
-				EDD[0].EnableOption(58, false);
-				EDD[0].EnableOption(62, false);
-				EDD[0].EnableOption(70, false);
-				EDD[0].EnableOption(74, false);
-				#endregion
-				//Chest Armor
-				#region
-				EDD[2].EnableOption(9, false);
-				EDD[2].EnableOption(14, false);
-				EDD[2].EnableOption(17, false);
-				EDD[2].EnableOption(18, false);
-				EDD[2].EnableOption(20, false);
-				EDD[2].EnableOption(21, false);
-				EDD[2].EnableOption(26, false);
-				EDD[2].EnableOption(32, false);
-				EDD[2].EnableOption(33, false);
-				EDD[2].EnableOption(34, false);
-				EDD[2].EnableOption(37, false);
-				EDD[2].EnableOption(40, false);
-				EDD[2].EnableOption(50, false);
-				EDD[2].EnableOption(62, false);
-				EDD[2].EnableOption(66, false);
-				EDD[2].EnableOption(67, false);
-				EDD[2].EnableOption(70, false);
-				EDD[2].EnableOption(71, false);
-				EDD[2].EnableOption(74, false);
-				#endregion
-				//Arm Armor
-				#region
-				EDD[3].EnableOption(9, false);
-				EDD[3].EnableOption(16, false);
-				EDD[3].EnableOption(19, false);
-				EDD[3].EnableOption(20, false);
-				EDD[3].EnableOption(22, false);
-				EDD[3].EnableOption(34, false);
-				EDD[3].EnableOption(37, false);
-				EDD[3].EnableOption(38, false);
-				EDD[3].EnableOption(39, false);
-				EDD[3].EnableOption(45, false);
-				EDD[3].EnableOption(54, false);
-				EDD[3].EnableOption(56, false);
-				#endregion
-				//Leg Armor
-				#region
-				EDD[5].EnableOption(7, false);
-				EDD[5].EnableOption(12, false);
-				EDD[5].EnableOption(14, false);
-				EDD[5].EnableOption(19, false);
-				EDD[5].EnableOption(20, false);
-				EDD[5].EnableOption(22, false);
-				EDD[5].EnableOption(38, false);
-				EDD[5].EnableOption(40, false);
-				EDD[5].EnableOption(43, false);
-				EDD[5].EnableOption(45, false);
-				EDD[5].EnableOption(46, false);
-				EDD[5].EnableOption(51, false);
-				EDD[5].EnableOption(53, false);
-				EDD[5].EnableOption(54, false);
-				EDD[5].EnableOption(68, false);
-				EDD[5].EnableOption(69, false);
-				#endregion
-			}
-			#endregion
-			//Warrior/M. Knight
-			#region
-			if (chara.GetVocation().Equals("Warrior")|| chara.GetVocation().Equals("M. Knight")) {
-				//Head Armor
-				#region
-				EDD[0].EnableOption(7, true);
-				EDD[0].EnableOption(22, true);
-				EDD[0].EnableOption(57, true);
-				#endregion
-				//Chest Armor
-				EDD[2].EnableOption(58, true);
-				//Arm Armor
-				EDD[3].EnableOption(25, true);
-				//Leg Armor
-				EDD[2].EnableOption(25, true);
-			} else {
-				//Head Armor
-				#region
-				EDD[0].EnableOption(7, false);
-				EDD[0].EnableOption(22, false);
-				EDD[0].EnableOption(57, false);
-				#endregion
-				//Chest Armor
-				EDD[2].EnableOption(58, false);
-				//Arm Armor
-				EDD[3].EnableOption(25, false);
-				//Leg Armor
-				EDD[5].EnableOption(25, false);
-			}
-			#endregion
-			//Head Armor
-			#region
-			EDD[0].EnableOption(14, true);
-			EDD[0].EnableOption(45, true);
-			#endregion
-			//Chest Clothing
-			#region
-			EDD[1].EnableOption(16, true);
-			EDD[1].EnableOption(23, true);
-			EDD[1].EnableOption(32, true);
-			EDD[1].EnableOption(37, true);
-			#endregion
-			//Arm Armor
-			#region
-			EDD[3].EnableOption(13, true);
-			EDD[3].EnableOption(51, true);
-			#endregion
-			//Chest Armor
-			#region
-			EDD[2].EnableOption(38, true);
-			EDD[2].EnableOption(46, true);
-			EDD[2].EnableOption(64, true);
-			#endregion
-			//LegArmor
-			EDD[5].EnableOption(15, true);
-		} else {
-			//Head Armor
-			#region
-			EDD[0].EnableOption(7, false);
-			EDD[0].EnableOption(8, false);
-			EDD[0].EnableOption(10, false);
-			EDD[0].EnableOption(11, false);
-			EDD[0].EnableOption(14, false);
-			EDD[0].EnableOption(15, false);
-			EDD[0].EnableOption(16, false);
-			EDD[0].EnableOption(20, false);
-			EDD[0].EnableOption(22, false);
-			EDD[0].EnableOption(26, false);
-			EDD[0].EnableOption(39, false);
-			EDD[0].EnableOption(40, false);
-			EDD[0].EnableOption(43, false);
-			EDD[0].EnableOption(44, false);
-			EDD[0].EnableOption(45, false);
-			EDD[0].EnableOption(48, false);
-			EDD[0].EnableOption(57, false);
-			EDD[0].EnableOption(58, false);
-			EDD[0].EnableOption(62, false);
-			EDD[0].EnableOption(70, false);
-			EDD[0].EnableOption(74, false);
-			#endregion
-			//Chest Clothing
-			#region
-			EDD[1].EnableOption(16, false);
-			EDD[1].EnableOption(23, false);
-			EDD[1].EnableOption(32, false);
-			EDD[1].EnableOption(37, false);
-			#endregion
-			//Chest Armor
-			#region
-			EDD[2].EnableOption(9, false);
-			EDD[2].EnableOption(14, false);
-			EDD[2].EnableOption(17, false);
-			EDD[2].EnableOption(18, false);
-			EDD[2].EnableOption(20, false);
-			EDD[2].EnableOption(21, false);
-			EDD[2].EnableOption(26, false);
-			EDD[2].EnableOption(32, false);
-			EDD[2].EnableOption(33, false);
-			EDD[2].EnableOption(34, false);
-			EDD[2].EnableOption(37, false);
-			EDD[2].EnableOption(38, false);
-			EDD[2].EnableOption(40, false);
-			EDD[2].EnableOption(46, false);
-			EDD[2].EnableOption(50, false);
-			EDD[2].EnableOption(58, false);
-			EDD[2].EnableOption(62, false);
-			EDD[2].EnableOption(64, false);
-			EDD[2].EnableOption(66, false);
-			EDD[2].EnableOption(67, false);
-			EDD[2].EnableOption(70, false);
-			EDD[2].EnableOption(71, false);
-			EDD[2].EnableOption(74, false);
-			#endregion
-			//Arm Armor
-			#region
-			EDD[3].EnableOption(9, false);
-			EDD[3].EnableOption(16, false);
-			EDD[3].EnableOption(13, false);
-			EDD[3].EnableOption(19, false);
-			EDD[3].EnableOption(20, false);
-			EDD[3].EnableOption(22, false);
-			EDD[3].EnableOption(25, false);
-			EDD[3].EnableOption(34, false);
-			EDD[3].EnableOption(37, false);
-			EDD[3].EnableOption(38, false);
-			EDD[3].EnableOption(39, false);
-			EDD[3].EnableOption(45, false);
-			EDD[3].EnableOption(51, false);
-			EDD[3].EnableOption(54, false);
-			EDD[3].EnableOption(56, false);
-			#endregion
-			//Leg Armor
-			#region
-			EDD[5].EnableOption(7, false);
-			EDD[5].EnableOption(12, false);
-			EDD[5].EnableOption(14, false);
-			EDD[5].EnableOption(15, false);
-			EDD[5].EnableOption(19, false);
-			EDD[5].EnableOption(20, false);
-			EDD[5].EnableOption(22, false);
-			EDD[5].EnableOption(25, false);
-			EDD[5].EnableOption(38, false);
-			EDD[5].EnableOption(40, false);
-			EDD[5].EnableOption(43, false);
-			EDD[5].EnableOption(45, false);
-			EDD[5].EnableOption(46, false);
-			EDD[5].EnableOption(51, false);
-			EDD[5].EnableOption(53, false);
-			EDD[5].EnableOption(54, false);
-			EDD[5].EnableOption(68, false);
-			EDD[5].EnableOption(69, false);
-			#endregion
-		}
-		#endregion
-		//Strider based
-		#region
-		if (chara.GetVocation().Equals("Strider") || chara.GetVocation().Equals("Ranger") ||
-			chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("M. Archer")) {
-			//No Magick Archer
-			#region
-			if (!chara.GetVocation().Equals("M. Archer")) {
-				//Head
-				EDD[0].EnableOption(34, true);
-			}
-			else {
-				//Head
-				EDD[0].EnableOption(34, false);
-			}
-			#endregion
-			//More Specialized things
-			#region
-			if (chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("Ranger")) {
-				//Head Armor
-				EDD[0].EnableOption(77, true);
-				//Chest Armor
-				EDD[2].EnableOption(25, true);
-				//Arm Armor
-				EDD[3].EnableOption(61, true);
-				//Leg Armor
-				EDD[5].EnableOption(75, true);
-			} else {
-				//Head Armor
-				EDD[0].EnableOption(77, false);
-				//Chest Armor
-				EDD[2].EnableOption(25, false);
-				//Arm Armor
-				EDD[3].EnableOption(61, false);
-				//Leg Armor
-				EDD[5].EnableOption(75, false);
-			}
-			#endregion
-			//Head Armor
-			#region
-			EDD[0].EnableOption(4, true);
-			EDD[0].EnableOption(12, true);
-			EDD[0].EnableOption(19, true);
-			EDD[0].EnableOption(37, true);
-			EDD[0].EnableOption(47, true);
-			EDD[0].EnableOption(53, true);
-			EDD[0].EnableOption(54, true);
-			EDD[0].EnableOption(61, true);
-			EDD[0].EnableOption(65, true);
-			EDD[0].EnableOption(69, true);
-			#endregion
-			//Chest Amor
-			#region
-			EDD[2].EnableOption(5, true);
-			EDD[2].EnableOption(7, true);
-			EDD[2].EnableOption(8, true);
-			EDD[2].EnableOption(15, true);
-			EDD[2].EnableOption(27, true);
-			EDD[2].EnableOption(28, true);
-			EDD[2].EnableOption(31, true);
-			EDD[2].EnableOption(39, true);
-			EDD[2].EnableOption(41, true);
-			EDD[2].EnableOption(42, true);
-			EDD[2].EnableOption(45, true);
-			EDD[2].EnableOption(52, true);
-			EDD[2].EnableOption(55, true);
-			EDD[2].EnableOption(59, true);
-			EDD[2].EnableOption(60, true);
-			EDD[2].EnableOption(76, true);
-			#endregion
-			//Arm Armor
-			#region
-			EDD[3].EnableOption(7, true);
-			EDD[3].EnableOption(10, true);
-			EDD[3].EnableOption(24, true);
-			EDD[3].EnableOption(46, true);
-			EDD[3].EnableOption(60, true);
-			#endregion
-			//Leg Armor
-			#region
-			EDD[5].EnableOption(8, true);
-			EDD[5].EnableOption(9, true);
-			EDD[5].EnableOption(34, true);
-			EDD[5].EnableOption(47, true);
-			EDD[5].EnableOption(55, true);
-			EDD[5].EnableOption(56, true);
-			EDD[5].EnableOption(61, true);
-			EDD[5].EnableOption(72, true);
-			EDD[5].EnableOption(74, true);
-			#endregion
-		} else {
-			//Head Armor
-			#region
-			EDD[0].EnableOption(4, false);
-			EDD[0].EnableOption(12, false);
-			EDD[0].EnableOption(19, false);
-			EDD[0].EnableOption(34, false);
-			EDD[0].EnableOption(37, false);
-			EDD[0].EnableOption(47, false);
-			EDD[0].EnableOption(53, false);
-			EDD[0].EnableOption(54, false);
-			EDD[0].EnableOption(61, false);
-			EDD[0].EnableOption(65, false);
-			EDD[0].EnableOption(69, false);
-			EDD[0].EnableOption(77, false);
-			#endregion
-			//Chest Amor
-			#region
-			EDD[2].EnableOption(5, false);
-			EDD[2].EnableOption(7, false);
-			EDD[2].EnableOption(8, false);
-			EDD[2].EnableOption(15, false);
-			EDD[2].EnableOption(25, false);
-			EDD[2].EnableOption(27, false);
-			EDD[2].EnableOption(28, false);
-			EDD[2].EnableOption(31, false);
-			EDD[2].EnableOption(39, false);
-			EDD[2].EnableOption(41, false);
-			EDD[2].EnableOption(42, false);
-			EDD[2].EnableOption(45, false);
-			EDD[2].EnableOption(52, false);
-			EDD[2].EnableOption(55, false);
-			EDD[2].EnableOption(59, false);
-			EDD[2].EnableOption(60, false);
-			EDD[2].EnableOption(76, false);
-			#endregion
-			//Arm Armor
-			#region
-			EDD[3].EnableOption(7, false);
-			EDD[3].EnableOption(10, false);
-			EDD[3].EnableOption(24, false);
-			EDD[3].EnableOption(46, false);
-			EDD[3].EnableOption(60, false);
-			EDD[3].EnableOption(61, false);
-			#endregion
-			//Leg Armor
-			#region
-			EDD[5].EnableOption(8, false);
-			EDD[5].EnableOption(9, false);
-			EDD[5].EnableOption(34, false);
-			EDD[5].EnableOption(47, false);
-			EDD[5].EnableOption(55, false);
-			EDD[5].EnableOption(56, false);
-			EDD[5].EnableOption(61, false);
-			EDD[5].EnableOption(72, false);
-			EDD[5].EnableOption(74, false);
-			EDD[5].EnableOption(75, false);
-			#endregion
-		}
-		#endregion
-		//Mage based
-		#region
-		//Mage|Sorcerer
-		if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer")||
-			 chara.GetVocation().Equals("M. Archer") || chara.GetVocation().Equals("M. Knight")) {
-			//Not for Mage/Sorc
-			#region
-			if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer")) {
-				//Chest Clothing
-				#region
-				EDD[1].EnableOption(3, false);
-				EDD[1].EnableOption(10, false);
-				EDD[1].EnableOption(11, false);
-				EDD[1].EnableOption(15, false);
-				EDD[1].EnableOption(29, false);
-				EDD[1].EnableOption(34, false);
-				EDD[1].EnableOption(36, false);
-				EDD[1].EnableOption(39, false);
-				#endregion
-				//Chest Armor
-				#region
-				EDD[2].EnableOption(12, false);
-				EDD[2].EnableOption(13, false);
-				EDD[2].EnableOption(19, false);
-				EDD[2].EnableOption(43, false);
-				EDD[2].EnableOption(44, false);
-				EDD[2].EnableOption(69, false);
-				EDD[2].EnableOption(80, false);
-				#endregion
-				//Arm Armor
-				#region
-				EDD[3].EnableOption(4, false);
-				EDD[3].EnableOption(5, false);
-				EDD[3].EnableOption(6, false);
-				EDD[3].EnableOption(8, false);
-				EDD[3].EnableOption(12, false);
-				EDD[3].EnableOption(17, false);
-				EDD[3].EnableOption(23, false);
-				EDD[3].EnableOption(27, false);
-				EDD[3].EnableOption(35, false);
-				EDD[3].EnableOption(40, false);
-				EDD[3].EnableOption(41, false);
-				EDD[3].EnableOption(43, false);
-				EDD[3].EnableOption(44, false);
-				EDD[3].EnableOption(47, false);
-				EDD[3].EnableOption(48, false);
-				EDD[3].EnableOption(49, false);
-				EDD[3].EnableOption(52, false);
-				EDD[3].EnableOption(58, false);
-				#endregion
-				//Leg Clothing
-				#region
-				EDD[4].EnableOption(12, false);
-				EDD[4].EnableOption(13, false);
-				EDD[4].EnableOption(16, false);
-				EDD[4].EnableOption(24, false);
-				#endregion
-				//Leg Amor
-				#region
-				//On
-				EDD[5].EnableOption(13, true);
-				EDD[5].EnableOption(59, true);
-				EDD[5].EnableOption(62, true);
-				//Off
-				EDD[5].EnableOption(4, false);
-				EDD[5].EnableOption(5, false);
-				EDD[5].EnableOption(6, false);
-				EDD[5].EnableOption(16, false);
-				EDD[5].EnableOption(18, false);
-				EDD[5].EnableOption(24, false);
-				EDD[5].EnableOption(28, false);
-				EDD[5].EnableOption(35, false);
-				EDD[5].EnableOption(37, false);
-				EDD[5].EnableOption(44, false);
-				EDD[5].EnableOption(48, false);
-				EDD[5].EnableOption(64, false);
-				EDD[5].EnableOption(70, false);
-				EDD[5].EnableOption(71, false);
-				EDD[5].EnableOption(73, false);
-				#endregion
-			} else {
-				//Chest Clothing
-				#region
-				EDD[1].EnableOption(3, true);
-				EDD[1].EnableOption(10, true);
-				EDD[1].EnableOption(11, true);
-				EDD[1].EnableOption(15, true);
-				EDD[1].EnableOption(29, true);
-				EDD[1].EnableOption(34, true);
-				EDD[1].EnableOption(36, true);
-				EDD[1].EnableOption(39, true);
-				#endregion
-				//Chest Armor
-				#region
-				EDD[2].EnableOption(12, true);
-				EDD[2].EnableOption(13, true);
-				EDD[2].EnableOption(19, true);
-				EDD[2].EnableOption(43, true);
-				EDD[2].EnableOption(44, true);
-				EDD[2].EnableOption(69, true);
-				EDD[2].EnableOption(80, true);
-				#endregion
-				//Arm Armor
-				#region
-				EDD[3].EnableOption(4, true);
-				EDD[3].EnableOption(5, true);
-				EDD[3].EnableOption(6, true);
-				EDD[3].EnableOption(8, true);
-				EDD[3].EnableOption(12, true);
-				EDD[3].EnableOption(17, true);
-				EDD[3].EnableOption(23, true);
-				EDD[3].EnableOption(27, true);
-				EDD[3].EnableOption(35, true);
-				EDD[3].EnableOption(40, true);
-				EDD[3].EnableOption(41, true);
-				EDD[3].EnableOption(43, true);
-				EDD[3].EnableOption(44, true);
-				EDD[3].EnableOption(47, true);
-				EDD[3].EnableOption(48, true);
-				EDD[3].EnableOption(49, true);
-				EDD[3].EnableOption(52, true);
-				EDD[3].EnableOption(58, true);
-				#endregion
-
-				//Leg Clothing
-				#region
-				EDD[4].EnableOption(12, true);
-				EDD[4].EnableOption(13, true);
-				EDD[4].EnableOption(16, true);
-				EDD[4].EnableOption(24, true);
-				#endregion
-				//Leg Amor
-				#region
-				//On
-				EDD[5].EnableOption(13, false);
-				EDD[5].EnableOption(59, false);
-				EDD[5].EnableOption(62, false);
-				//Off
-				EDD[5].EnableOption(4, true);
-				EDD[5].EnableOption(5, true);
-				EDD[5].EnableOption(6, true);
-				EDD[5].EnableOption(16, true);
-				EDD[5].EnableOption(18, true);
-				EDD[5].EnableOption(24, true);
-				EDD[5].EnableOption(28, true);
-				EDD[5].EnableOption(35, true);
-				EDD[5].EnableOption(37, true);
-				EDD[5].EnableOption(44, true);
-				EDD[5].EnableOption(48, true);
-				EDD[5].EnableOption(64, true);
-				EDD[5].EnableOption(70, true);
-				EDD[5].EnableOption(71, true);
-				EDD[5].EnableOption(73, true);
-				#endregion
-			}
-			#endregion
-			//No Mystic Knight
-			#region
-			if (!chara.GetVocation().Equals("M. Knight")) {
-				//Head Armor
-				#region
-				EDD[0].EnableOption(1, true);
-				EDD[0].EnableOption(13, true);
-				#endregion
-				//Chest Armor
-				#region
-				EDD[2].EnableOption(2, true);
-				EDD[2].EnableOption(10, true);
-				EDD[2].EnableOption(16, true);
-				EDD[2].EnableOption(22, true);
-				EDD[2].EnableOption(24, true);
-				EDD[2].EnableOption(47, true);
-				EDD[2].EnableOption(49, true);
-				EDD[2].EnableOption(51, true);
-				EDD[2].EnableOption(54, true);
-				EDD[2].EnableOption(61, true);
-				EDD[2].EnableOption(63, true);
-				EDD[2].EnableOption(65, true);
-				EDD[2].EnableOption(68, true);
-				EDD[2].EnableOption(75, true);
-				#endregion
-				//Arm Armor
-				#region
-				//On
-				EDD[3].EnableOption(11, true);
-				//Off
-				EDD[3].EnableOption(21, false);
-				EDD[3].EnableOption(33, false);
-				#endregion
-				//Leg Armor
-				#region
-				EDD[5].EnableOption(10, true);
-				EDD[5].EnableOption(11, true);
-				#endregion
-			} else {
-				//Head Armor
-				#region
-				EDD[0].EnableOption(1, false);
-				EDD[0].EnableOption(13, false);
-				#endregion
-				//Chest Armor
-				#region
-				EDD[2].EnableOption(2, false);
-				EDD[2].EnableOption(10, false);
-				EDD[2].EnableOption(16, false);
-				EDD[2].EnableOption(22, false);
-				EDD[2].EnableOption(24, false);
-				EDD[2].EnableOption(47, false);
-				EDD[2].EnableOption(49, false);
-				EDD[2].EnableOption(51, false);
-				EDD[2].EnableOption(54, false);
-				EDD[2].EnableOption(61, false);
-				EDD[2].EnableOption(63, false);
-				EDD[2].EnableOption(65, false);
-				EDD[2].EnableOption(68, false);
-				EDD[2].EnableOption(75, false);
-				#endregion
-				//Arm Armor
-				#region
-				//On
-				EDD[3].EnableOption(11, false);
-				//Off
-				EDD[3].EnableOption(21, true);
-				EDD[3].EnableOption(33, true);
-				#endregion
-				//Leg Armor
-				#region
-				EDD[5].EnableOption(10, false);
-				EDD[5].EnableOption(11, false);
-				#endregion
-			}
-			#endregion
-			//Just Sorc/M. Archer
-			#region
-			if (chara.GetVocation().Equals("Sorcerer")|| chara.GetVocation().Equals("M. Archer")) {
-				//Head
-				EDD[0].EnableOption(23, true);
-			} else {
-				//Head
-				EDD[0].EnableOption(23, false);
-			}
-			#endregion
-			//Head Armor
-			#region
-			EDD[0].EnableOption(3, true);
-			EDD[0].EnableOption(5, true);
-			EDD[0].EnableOption(21, true);
-			EDD[0].EnableOption(32, true);
-			EDD[0].EnableOption(35, true);
-			EDD[0].EnableOption(42, true);
-			EDD[0].EnableOption(67, true);
-			EDD[0].EnableOption(76, true);
-			EDD[0].EnableOption(79, true);
-			EDD[0].EnableOption(81, true);
-			#endregion
-			//Chest Clothing
-			EDD[1].EnableOption(6, true);
-			//Chest Armor
-			#region
-			EDD[2].EnableOption(3, true);
-			EDD[2].EnableOption(4, true);
-			EDD[2].EnableOption(35, true);
-			EDD[2].EnableOption(36, true);
-			EDD[2].EnableOption(57, true);
-			EDD[2].EnableOption(78, true);
-			#endregion
-		} else {
-			//Head Armor
-			#region
-			EDD[0].EnableOption(1, false);
-			EDD[0].EnableOption(3, false);
-			EDD[0].EnableOption(5, false);
-			EDD[0].EnableOption(13, false);
-			EDD[0].EnableOption(21, false);
-			EDD[0].EnableOption(23, false);
-			EDD[0].EnableOption(32, false);
-			EDD[0].EnableOption(35, false);
-			EDD[0].EnableOption(42, false);
-			EDD[0].EnableOption(67, false);
-			EDD[0].EnableOption(76, false);
-			EDD[0].EnableOption(79, false);
-			EDD[0].EnableOption(81, false);
-			#endregion
-			//Chest Clothing
-			#region
-			EDD[1].EnableOption(3, true);
-			EDD[1].EnableOption(6, false);
-			EDD[1].EnableOption(10, true);
-			EDD[1].EnableOption(11, true);
-			EDD[1].EnableOption(15, true);
-			EDD[1].EnableOption(29, true);
-			EDD[1].EnableOption(34, true);
-			EDD[1].EnableOption(36, true);
-			EDD[1].EnableOption(39, true);
-			#endregion
-			//Chest Armor
-			#region
-			EDD[2].EnableOption(2, false);
-			EDD[2].EnableOption(3, false);
-			EDD[2].EnableOption(4, false);
-			EDD[2].EnableOption(10, false);
-			EDD[2].EnableOption(12, true);
-			EDD[2].EnableOption(13, true);
-			EDD[2].EnableOption(16, false);
-			EDD[2].EnableOption(19, true);
-			EDD[2].EnableOption(22, false);
-			EDD[2].EnableOption(24, false);
-			EDD[2].EnableOption(35, false);
-			EDD[2].EnableOption(36, false);
-			EDD[2].EnableOption(43, true);
-			EDD[2].EnableOption(44, true);
-			EDD[2].EnableOption(47, false);
-			EDD[2].EnableOption(49, false);
-			EDD[2].EnableOption(51, false);
-			EDD[2].EnableOption(54, false);
-			EDD[2].EnableOption(57, false);
-			EDD[2].EnableOption(61, false);
-			EDD[2].EnableOption(63, false);
-			EDD[2].EnableOption(65, false);
-			EDD[2].EnableOption(68, false);
-			EDD[2].EnableOption(69, true);
-			EDD[2].EnableOption(75, false);
-			EDD[2].EnableOption(78, false);
-			EDD[2].EnableOption(80, true);
-			#endregion
-			//Arm Armor
-			#region
-			//On
-			EDD[3].EnableOption(11, false);
-			//Off
-			EDD[3].EnableOption(4, true);
-			EDD[3].EnableOption(5, true);
-			EDD[3].EnableOption(6, true);
-			EDD[3].EnableOption(8, true);
-			EDD[3].EnableOption(12, true);
-			EDD[3].EnableOption(17, true);
-			EDD[3].EnableOption(21, true);
-			EDD[3].EnableOption(23, true);
-			EDD[3].EnableOption(27, true);
-			EDD[3].EnableOption(33, true);
-			EDD[3].EnableOption(35, true);
-			EDD[3].EnableOption(40, true);
-			EDD[3].EnableOption(41, true);
-			EDD[3].EnableOption(43, true);
-			EDD[3].EnableOption(44, true);
-			EDD[3].EnableOption(47, true);
-			EDD[3].EnableOption(48, true);
-			EDD[3].EnableOption(49, true);
-			EDD[3].EnableOption(52, true);
-			EDD[3].EnableOption(58, true);
-			#endregion
-			//Leg Clothing
-			#region
-			EDD[4].EnableOption(12, true);
-			EDD[4].EnableOption(13, true);
-			EDD[4].EnableOption(16, true);
-			EDD[4].EnableOption(24, true);
-			#endregion
-			//Leg Armor
-			#region
-			EDD[5].EnableOption(10, false);
-			EDD[5].EnableOption(11, false);
-			EDD[5].EnableOption(13, false);
-			EDD[5].EnableOption(59, false);
-			EDD[5].EnableOption(62, false);
-			//Seperator
-			EDD[5].EnableOption(4, true);
-			EDD[5].EnableOption(5, true);
-			EDD[5].EnableOption(6, true);
-			EDD[5].EnableOption(16, true);
-			EDD[5].EnableOption(18, true);
-			EDD[5].EnableOption(24, true);
-			EDD[5].EnableOption(28, true);
-			EDD[5].EnableOption(35, true);
-			EDD[5].EnableOption(37, true);
-			EDD[5].EnableOption(44, true);
-			EDD[5].EnableOption(48, true);
-			EDD[5].EnableOption(64, true);
-			EDD[5].EnableOption(70, true);
-			EDD[5].EnableOption(71, true);
-			EDD[5].EnableOption(73, true);
-			#endregion
-		}
-		#endregion
-		//Special Snowflakes
-		#region
-		//???
-		#region
-		if (chara.GetVocation().Equals("Warrior") || chara.GetVocation().Equals("Ranger") ||
-			chara.GetVocation().Equals("M.Archer") || chara.GetVocation().Equals("M.Knight")) {
-			//Head
-			#region
-			EDD[0].EnableOption(24, true);
-			EDD[0].EnableOption(55, true);
-			#endregion
-		} else {
-			//Head
-			#region
-			EDD[0].EnableOption(24, false);
-			EDD[0].EnableOption(55, false);
-			#endregion
-		}
-		#endregion
-		//No Basic
-		#region
-		if (chara.GetVocation().Equals("Fighter") || chara.GetVocation().Equals("Strider") ||
-			chara.GetVocation().Equals("Mage")) {
-			EDD[5].EnableOption(42, false);
-			EDD[5].EnableOption(60, false);
-			EDD[5].EnableOption(65, false);
-		} else {
-			EDD[5].EnableOption(42, true);
-			EDD[5].EnableOption(60, true);
-			EDD[5].EnableOption(65, true);
-		}
-		#endregion
-		//!?!?!?
-		#region
-		if(chara.GetVocation().Equals("Mage")|| chara.GetVocation().Equals("Sorcerer")||
-			chara.GetVocation().Equals("M. Archer")) {
-			EDD[5].EnableOption(52, false);
-		} else { EDD[5].EnableOption(52, true); }
-		#endregion
-		#endregion
-		//Gender
-		#region
-		if (!chara.GetGender()) {
-			//Dissable all the female only options
-			#region
-			//Head Armor
-			EDD[0].EnableOption(71, false);
-			EDD[0].EnableOption(72, false);
-			//Chest Clothing
-			EDD[1].EnableOption(24, false);
-			EDD[1].EnableOption(28, false);
-			EDD[1].EnableOption(30, false);
-			//Chest Armor
-			EDD[2].EnableOption(11, false);
-			EDD[2].EnableOption(29, false);
-			EDD[2].EnableOption(48, false);
-			EDD[2].EnableOption(72, false);
-			EDD[2].EnableOption(73, false);
-			//Leg Clothing
-			EDD[4].EnableOption(9, false);
-			EDD[4].EnableOption(22, false);
-			EDD[4].EnableOption(28, false);
-			//Leg Armor
-			EDD[5].EnableOption(32, false);
-			#endregion
-		} else {
-			//Enable all the female only options
-			#region
-			//Head Armor
-			EDD[0].EnableOption(71, true);
-			EDD[0].EnableOption(72, true);
-			//Chest Clothing
-			EDD[1].EnableOption(24, true);
-			EDD[1].EnableOption(28, true);
-			EDD[1].EnableOption(30, true);
-			//Chest Armor
-			EDD[2].EnableOption(29, true);
-			EDD[2].EnableOption(48, true);
-			EDD[2].EnableOption(72, true);
-			EDD[2].EnableOption(73, true);
-			//Leg Clothing
-			EDD[4].EnableOption(9, true);
-			EDD[4].EnableOption(22, true);
-			EDD[4].EnableOption(28, true);
-			//Other
-			EDD[5].EnableOption(32, true);
-			if (chara.GetVocation().Equals("Sorcerer") || chara.GetVocation().Equals("M.Archer")) {
-				EDD[2].EnableOption(11, true);
-			} else {
-				EDD[2].EnableOption(11, false);
-			}
-			//Flame Skirt
-			#endregion
-		}
-		#endregion
 	}
 
 	//Functions for switching equipmentpieces
@@ -4456,8 +3508,7 @@ public class EqPanel : MonoBehaviour {
 		}
 	}
 	private void SwitchCloak() {
-		//Remove
-		switch (iCurrent[6]-1) {
+		switch (iCurrent[6] - 1) {
 			case 0:
 				SetDebilitationRes(-56, 3);
 				SetDebilitationRes(-56, 7);
@@ -4607,7 +3658,6 @@ public class EqPanel : MonoBehaviour {
 				break;
 		}
 		iCurrent[6] = Equipment[6].value;
-		//Add
 		switch (iCurrent[6] - 1) {
 			case 0:
 				SetDebilitationRes(56, 3);
@@ -4759,8 +3809,7 @@ public class EqPanel : MonoBehaviour {
 		}
 	}
 	private void SwitchRing(int iRing) {
-		//Subtract here
-		switch (iCurrent[iRing + 7]-1) {
+		switch (iCurrent[iRing + 7] - 1) {
 			case 2:
 				SetDebilitationRes(-60, 8);
 				break;
@@ -4808,10 +3857,8 @@ public class EqPanel : MonoBehaviour {
 				SetDebilitationRes(-60, 11);
 				break;
 		}
-		//Maths
 		iCurrent[iRing + 7] = Rings[iRing].value;
-		//Add here
-		switch (iCurrent[iRing + 7]-1) {
+		switch (iCurrent[iRing + 7] - 1) {
 			case 2:
 				SetDebilitationRes(60, 8);
 				break;
@@ -4861,4 +3908,978 @@ public class EqPanel : MonoBehaviour {
 		}
 	}
 	#endregion
+	
+	//Public Methods
+	public void SetAll(int iPercent) {
+		for(int i = 0; i < 13; i++) {
+			SetDebilitationRes(iPercent, i);
+		}
+	}
+
+	public void EquipReset() {
+		for(int i = 0; i < 7; i++) {
+			if (i < 2) { Rings[i].value = 0; }
+			Equipment[i].value = 0;
+		}
+		SwitchHead();
+		SwitchTClothing();
+		SwitchChest();
+		SwitchArms();
+		SwitchLClothing();
+		SwitchLegs();
+		SwitchCloak();
+		SwitchRing(0);
+		SwitchRing(1);
+	}
+
+	public void OnPanelDisplay() {
+		//Fighter based
+		#region
+		if (chara.GetVocation().Equals("Fighter") || chara.GetVocation().Equals("Warrior")||
+			 chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("M. Knight")) {
+			//Heavy Armor
+			#region
+			if (!chara.GetVocation().Equals("Assassin")) {
+				//Head Armor
+				#region
+				EDD[0].EnableOption(8, true);
+				EDD[0].EnableOption(10, true);
+				EDD[0].EnableOption(11, true);
+				EDD[0].EnableOption(15, true);
+				EDD[0].EnableOption(16, true);
+				EDD[0].EnableOption(20, true);
+				EDD[0].EnableOption(26, true);
+				EDD[0].EnableOption(39, true);
+				EDD[0].EnableOption(40, true);
+				EDD[0].EnableOption(43, true);
+				EDD[0].EnableOption(44, true);
+				EDD[0].EnableOption(48, true);
+				EDD[0].EnableOption(58, true);
+				EDD[0].EnableOption(62, true);
+				EDD[0].EnableOption(70, true);
+				EDD[0].EnableOption(74, true);
+				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(9, true);
+				EDD[2].EnableOption(14, true);
+				EDD[2].EnableOption(17, true);
+				EDD[2].EnableOption(18, true);
+				EDD[2].EnableOption(20, true);
+				EDD[2].EnableOption(21, true);
+				EDD[2].EnableOption(26, true);
+				EDD[2].EnableOption(32, true);
+				EDD[2].EnableOption(33, true);
+				EDD[2].EnableOption(34, true);
+				EDD[2].EnableOption(37, true);
+				EDD[2].EnableOption(40, true);
+				EDD[2].EnableOption(50, true);
+				EDD[2].EnableOption(62, true);
+				EDD[2].EnableOption(66, true);
+				EDD[2].EnableOption(67, true);
+				EDD[2].EnableOption(70, true);
+				EDD[2].EnableOption(71, true);
+				EDD[2].EnableOption(74, true);
+				#endregion
+				//Arm Armor
+				#region
+				EDD[3].EnableOption(9, true);
+				EDD[3].EnableOption(16, true);
+				EDD[3].EnableOption(19, true);
+				EDD[3].EnableOption(20, true);
+				EDD[3].EnableOption(22, true);
+				EDD[3].EnableOption(34, true);
+				EDD[3].EnableOption(37, true);
+				EDD[3].EnableOption(38, true);
+				EDD[3].EnableOption(39, true);
+				EDD[3].EnableOption(45, true);
+				EDD[3].EnableOption(54, true);
+				EDD[3].EnableOption(56, true);
+				#endregion
+				//Leg Armor
+				#region
+				EDD[5].EnableOption(7, true);
+				EDD[5].EnableOption(12, true);
+				EDD[5].EnableOption(14, true);
+				EDD[5].EnableOption(19, true);
+				EDD[5].EnableOption(20, true);
+				EDD[5].EnableOption(22, true);
+				EDD[5].EnableOption(38, true);
+				EDD[5].EnableOption(40, true);
+				EDD[5].EnableOption(43, true);
+				EDD[5].EnableOption(45, true);
+				EDD[5].EnableOption(46, true);
+				EDD[5].EnableOption(51, true);
+				EDD[5].EnableOption(53, true);
+				EDD[5].EnableOption(54, true);
+				EDD[5].EnableOption(68, true);
+				EDD[5].EnableOption(69, true);
+				#endregion
+			} else {
+				//Head Armor
+				#region
+				EDD[0].EnableOption(8, false);
+				EDD[0].EnableOption(10, false);
+				EDD[0].EnableOption(11, false);
+				EDD[0].EnableOption(15, false);
+				EDD[0].EnableOption(16, false);
+				EDD[0].EnableOption(20, false);
+				EDD[0].EnableOption(26, false);
+				EDD[0].EnableOption(39, false);
+				EDD[0].EnableOption(40, false);
+				EDD[0].EnableOption(43, false);
+				EDD[0].EnableOption(44, false);
+				EDD[0].EnableOption(48, false);
+				EDD[0].EnableOption(58, false);
+				EDD[0].EnableOption(62, false);
+				EDD[0].EnableOption(70, false);
+				EDD[0].EnableOption(74, false);
+				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(9, false);
+				EDD[2].EnableOption(14, false);
+				EDD[2].EnableOption(17, false);
+				EDD[2].EnableOption(18, false);
+				EDD[2].EnableOption(20, false);
+				EDD[2].EnableOption(21, false);
+				EDD[2].EnableOption(26, false);
+				EDD[2].EnableOption(32, false);
+				EDD[2].EnableOption(33, false);
+				EDD[2].EnableOption(34, false);
+				EDD[2].EnableOption(37, false);
+				EDD[2].EnableOption(40, false);
+				EDD[2].EnableOption(50, false);
+				EDD[2].EnableOption(62, false);
+				EDD[2].EnableOption(66, false);
+				EDD[2].EnableOption(67, false);
+				EDD[2].EnableOption(70, false);
+				EDD[2].EnableOption(71, false);
+				EDD[2].EnableOption(74, false);
+				#endregion
+				//Arm Armor
+				#region
+				EDD[3].EnableOption(9, false);
+				EDD[3].EnableOption(16, false);
+				EDD[3].EnableOption(19, false);
+				EDD[3].EnableOption(20, false);
+				EDD[3].EnableOption(22, false);
+				EDD[3].EnableOption(34, false);
+				EDD[3].EnableOption(37, false);
+				EDD[3].EnableOption(38, false);
+				EDD[3].EnableOption(39, false);
+				EDD[3].EnableOption(45, false);
+				EDD[3].EnableOption(54, false);
+				EDD[3].EnableOption(56, false);
+				#endregion
+				//Leg Armor
+				#region
+				EDD[5].EnableOption(7, false);
+				EDD[5].EnableOption(12, false);
+				EDD[5].EnableOption(14, false);
+				EDD[5].EnableOption(19, false);
+				EDD[5].EnableOption(20, false);
+				EDD[5].EnableOption(22, false);
+				EDD[5].EnableOption(38, false);
+				EDD[5].EnableOption(40, false);
+				EDD[5].EnableOption(43, false);
+				EDD[5].EnableOption(45, false);
+				EDD[5].EnableOption(46, false);
+				EDD[5].EnableOption(51, false);
+				EDD[5].EnableOption(53, false);
+				EDD[5].EnableOption(54, false);
+				EDD[5].EnableOption(68, false);
+				EDD[5].EnableOption(69, false);
+				#endregion
+			}
+			#endregion
+			//Warrior/M. Knight
+			#region
+			if (chara.GetVocation().Equals("Warrior")|| chara.GetVocation().Equals("M. Knight")) {
+				//Head Armor
+				#region
+				EDD[0].EnableOption(7, true);
+				EDD[0].EnableOption(22, true);
+				EDD[0].EnableOption(57, true);
+				#endregion
+				//Chest Armor
+				EDD[2].EnableOption(58, true);
+				//Arm Armor
+				EDD[3].EnableOption(25, true);
+				//Leg Armor
+				EDD[2].EnableOption(25, true);
+			} else {
+				//Head Armor
+				#region
+				EDD[0].EnableOption(7, false);
+				EDD[0].EnableOption(22, false);
+				EDD[0].EnableOption(57, false);
+				#endregion
+				//Chest Armor
+				EDD[2].EnableOption(58, false);
+				//Arm Armor
+				EDD[3].EnableOption(25, false);
+				//Leg Armor
+				EDD[5].EnableOption(25, false);
+			}
+			#endregion
+			//Head Armor
+			#region
+			EDD[0].EnableOption(14, true);
+			EDD[0].EnableOption(45, true);
+			#endregion
+			//Chest Clothing
+			#region
+			EDD[1].EnableOption(16, true);
+			EDD[1].EnableOption(23, true);
+			EDD[1].EnableOption(32, true);
+			EDD[1].EnableOption(37, true);
+			#endregion
+			//Arm Armor
+			#region
+			EDD[3].EnableOption(13, true);
+			EDD[3].EnableOption(51, true);
+			#endregion
+			//Chest Armor
+			#region
+			EDD[2].EnableOption(38, true);
+			EDD[2].EnableOption(46, true);
+			EDD[2].EnableOption(64, true);
+			#endregion
+			//LegArmor
+			EDD[5].EnableOption(15, true);
+		} else {
+			//Head Armor
+			#region
+			EDD[0].EnableOption(7, false);
+			EDD[0].EnableOption(8, false);
+			EDD[0].EnableOption(10, false);
+			EDD[0].EnableOption(11, false);
+			EDD[0].EnableOption(14, false);
+			EDD[0].EnableOption(15, false);
+			EDD[0].EnableOption(16, false);
+			EDD[0].EnableOption(20, false);
+			EDD[0].EnableOption(22, false);
+			EDD[0].EnableOption(26, false);
+			EDD[0].EnableOption(39, false);
+			EDD[0].EnableOption(40, false);
+			EDD[0].EnableOption(43, false);
+			EDD[0].EnableOption(44, false);
+			EDD[0].EnableOption(45, false);
+			EDD[0].EnableOption(48, false);
+			EDD[0].EnableOption(57, false);
+			EDD[0].EnableOption(58, false);
+			EDD[0].EnableOption(62, false);
+			EDD[0].EnableOption(70, false);
+			EDD[0].EnableOption(74, false);
+			#endregion
+			//Chest Clothing
+			#region
+			EDD[1].EnableOption(16, false);
+			EDD[1].EnableOption(23, false);
+			EDD[1].EnableOption(32, false);
+			EDD[1].EnableOption(37, false);
+			#endregion
+			//Chest Armor
+			#region
+			EDD[2].EnableOption(9, false);
+			EDD[2].EnableOption(14, false);
+			EDD[2].EnableOption(17, false);
+			EDD[2].EnableOption(18, false);
+			EDD[2].EnableOption(20, false);
+			EDD[2].EnableOption(21, false);
+			EDD[2].EnableOption(26, false);
+			EDD[2].EnableOption(32, false);
+			EDD[2].EnableOption(33, false);
+			EDD[2].EnableOption(34, false);
+			EDD[2].EnableOption(37, false);
+			EDD[2].EnableOption(38, false);
+			EDD[2].EnableOption(40, false);
+			EDD[2].EnableOption(46, false);
+			EDD[2].EnableOption(50, false);
+			EDD[2].EnableOption(58, false);
+			EDD[2].EnableOption(62, false);
+			EDD[2].EnableOption(64, false);
+			EDD[2].EnableOption(66, false);
+			EDD[2].EnableOption(67, false);
+			EDD[2].EnableOption(70, false);
+			EDD[2].EnableOption(71, false);
+			EDD[2].EnableOption(74, false);
+			#endregion
+			//Arm Armor
+			#region
+			EDD[3].EnableOption(9, false);
+			EDD[3].EnableOption(16, false);
+			EDD[3].EnableOption(13, false);
+			EDD[3].EnableOption(19, false);
+			EDD[3].EnableOption(20, false);
+			EDD[3].EnableOption(22, false);
+			EDD[3].EnableOption(25, false);
+			EDD[3].EnableOption(34, false);
+			EDD[3].EnableOption(37, false);
+			EDD[3].EnableOption(38, false);
+			EDD[3].EnableOption(39, false);
+			EDD[3].EnableOption(45, false);
+			EDD[3].EnableOption(51, false);
+			EDD[3].EnableOption(54, false);
+			EDD[3].EnableOption(56, false);
+			#endregion
+			//Leg Armor
+			#region
+			EDD[5].EnableOption(7, false);
+			EDD[5].EnableOption(12, false);
+			EDD[5].EnableOption(14, false);
+			EDD[5].EnableOption(15, false);
+			EDD[5].EnableOption(19, false);
+			EDD[5].EnableOption(20, false);
+			EDD[5].EnableOption(22, false);
+			EDD[5].EnableOption(25, false);
+			EDD[5].EnableOption(38, false);
+			EDD[5].EnableOption(40, false);
+			EDD[5].EnableOption(43, false);
+			EDD[5].EnableOption(45, false);
+			EDD[5].EnableOption(46, false);
+			EDD[5].EnableOption(51, false);
+			EDD[5].EnableOption(53, false);
+			EDD[5].EnableOption(54, false);
+			EDD[5].EnableOption(68, false);
+			EDD[5].EnableOption(69, false);
+			#endregion
+		}
+		#endregion
+		//Strider based
+		#region
+		if (chara.GetVocation().Equals("Strider") || chara.GetVocation().Equals("Ranger") ||
+			chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("M. Archer")) {
+			//No Magick Archer
+			#region
+			if (!chara.GetVocation().Equals("M. Archer")) {
+				//Head
+				EDD[0].EnableOption(34, true);
+			}
+			else {
+				//Head
+				EDD[0].EnableOption(34, false);
+			}
+			#endregion
+			//More Specialized things
+			#region
+			if (chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("Ranger")) {
+				//Head Armor
+				EDD[0].EnableOption(77, true);
+				//Chest Armor
+				EDD[2].EnableOption(25, true);
+				//Arm Armor
+				EDD[3].EnableOption(61, true);
+				//Leg Armor
+				EDD[5].EnableOption(75, true);
+			} else {
+				//Head Armor
+				EDD[0].EnableOption(77, false);
+				//Chest Armor
+				EDD[2].EnableOption(25, false);
+				//Arm Armor
+				EDD[3].EnableOption(61, false);
+				//Leg Armor
+				EDD[5].EnableOption(75, false);
+			}
+			#endregion
+			//Head Armor
+			#region
+			EDD[0].EnableOption(4, true);
+			EDD[0].EnableOption(12, true);
+			EDD[0].EnableOption(19, true);
+			EDD[0].EnableOption(37, true);
+			EDD[0].EnableOption(47, true);
+			EDD[0].EnableOption(53, true);
+			EDD[0].EnableOption(54, true);
+			EDD[0].EnableOption(61, true);
+			EDD[0].EnableOption(65, true);
+			EDD[0].EnableOption(69, true);
+			#endregion
+			//Chest Amor
+			#region
+			EDD[2].EnableOption(5, true);
+			EDD[2].EnableOption(7, true);
+			EDD[2].EnableOption(8, true);
+			EDD[2].EnableOption(15, true);
+			EDD[2].EnableOption(27, true);
+			EDD[2].EnableOption(28, true);
+			EDD[2].EnableOption(31, true);
+			EDD[2].EnableOption(39, true);
+			EDD[2].EnableOption(41, true);
+			EDD[2].EnableOption(42, true);
+			EDD[2].EnableOption(45, true);
+			EDD[2].EnableOption(52, true);
+			EDD[2].EnableOption(55, true);
+			EDD[2].EnableOption(59, true);
+			EDD[2].EnableOption(60, true);
+			EDD[2].EnableOption(76, true);
+			#endregion
+			//Arm Armor
+			#region
+			EDD[3].EnableOption(7, true);
+			EDD[3].EnableOption(10, true);
+			EDD[3].EnableOption(24, true);
+			EDD[3].EnableOption(46, true);
+			EDD[3].EnableOption(60, true);
+			#endregion
+			//Leg Armor
+			#region
+			EDD[5].EnableOption(8, true);
+			EDD[5].EnableOption(9, true);
+			EDD[5].EnableOption(34, true);
+			EDD[5].EnableOption(47, true);
+			EDD[5].EnableOption(55, true);
+			EDD[5].EnableOption(56, true);
+			EDD[5].EnableOption(61, true);
+			EDD[5].EnableOption(72, true);
+			EDD[5].EnableOption(74, true);
+			#endregion
+		} else {
+			//Head Armor
+			#region
+			EDD[0].EnableOption(4, false);
+			EDD[0].EnableOption(12, false);
+			EDD[0].EnableOption(19, false);
+			EDD[0].EnableOption(34, false);
+			EDD[0].EnableOption(37, false);
+			EDD[0].EnableOption(47, false);
+			EDD[0].EnableOption(53, false);
+			EDD[0].EnableOption(54, false);
+			EDD[0].EnableOption(61, false);
+			EDD[0].EnableOption(65, false);
+			EDD[0].EnableOption(69, false);
+			EDD[0].EnableOption(77, false);
+			#endregion
+			//Chest Amor
+			#region
+			EDD[2].EnableOption(5, false);
+			EDD[2].EnableOption(7, false);
+			EDD[2].EnableOption(8, false);
+			EDD[2].EnableOption(15, false);
+			EDD[2].EnableOption(25, false);
+			EDD[2].EnableOption(27, false);
+			EDD[2].EnableOption(28, false);
+			EDD[2].EnableOption(31, false);
+			EDD[2].EnableOption(39, false);
+			EDD[2].EnableOption(41, false);
+			EDD[2].EnableOption(42, false);
+			EDD[2].EnableOption(45, false);
+			EDD[2].EnableOption(52, false);
+			EDD[2].EnableOption(55, false);
+			EDD[2].EnableOption(59, false);
+			EDD[2].EnableOption(60, false);
+			EDD[2].EnableOption(76, false);
+			#endregion
+			//Arm Armor
+			#region
+			EDD[3].EnableOption(7, false);
+			EDD[3].EnableOption(10, false);
+			EDD[3].EnableOption(24, false);
+			EDD[3].EnableOption(46, false);
+			EDD[3].EnableOption(60, false);
+			EDD[3].EnableOption(61, false);
+			#endregion
+			//Leg Armor
+			#region
+			EDD[5].EnableOption(8, false);
+			EDD[5].EnableOption(9, false);
+			EDD[5].EnableOption(34, false);
+			EDD[5].EnableOption(47, false);
+			EDD[5].EnableOption(55, false);
+			EDD[5].EnableOption(56, false);
+			EDD[5].EnableOption(61, false);
+			EDD[5].EnableOption(72, false);
+			EDD[5].EnableOption(74, false);
+			EDD[5].EnableOption(75, false);
+			#endregion
+		}
+		#endregion
+		//Mage based
+		#region
+		//Mage|Sorcerer
+		if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer")||
+			 chara.GetVocation().Equals("M. Archer") || chara.GetVocation().Equals("M. Knight")) {
+			//Not for Mage/Sorc
+			#region
+			if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer")) {
+				//Chest Clothing
+				#region
+				EDD[1].EnableOption(3, false);
+				EDD[1].EnableOption(10, false);
+				EDD[1].EnableOption(11, false);
+				EDD[1].EnableOption(15, false);
+				EDD[1].EnableOption(29, false);
+				EDD[1].EnableOption(34, false);
+				EDD[1].EnableOption(36, false);
+				EDD[1].EnableOption(39, false);
+				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(12, false);
+				EDD[2].EnableOption(13, false);
+				EDD[2].EnableOption(19, false);
+				EDD[2].EnableOption(43, false);
+				EDD[2].EnableOption(44, false);
+				EDD[2].EnableOption(69, false);
+				EDD[2].EnableOption(80, false);
+				#endregion
+				//Arm Armor
+				#region
+				EDD[3].EnableOption(4, false);
+				EDD[3].EnableOption(5, false);
+				EDD[3].EnableOption(6, false);
+				EDD[3].EnableOption(8, false);
+				EDD[3].EnableOption(12, false);
+				EDD[3].EnableOption(17, false);
+				EDD[3].EnableOption(23, false);
+				EDD[3].EnableOption(27, false);
+				EDD[3].EnableOption(35, false);
+				EDD[3].EnableOption(40, false);
+				EDD[3].EnableOption(41, false);
+				EDD[3].EnableOption(43, false);
+				EDD[3].EnableOption(44, false);
+				EDD[3].EnableOption(47, false);
+				EDD[3].EnableOption(48, false);
+				EDD[3].EnableOption(49, false);
+				EDD[3].EnableOption(52, false);
+				EDD[3].EnableOption(58, false);
+				#endregion
+				//Leg Clothing
+				#region
+				EDD[4].EnableOption(12, false);
+				EDD[4].EnableOption(13, false);
+				EDD[4].EnableOption(16, false);
+				EDD[4].EnableOption(24, false);
+				#endregion
+				//Leg Amor
+				#region
+				//On
+				EDD[5].EnableOption(13, true);
+				EDD[5].EnableOption(59, true);
+				EDD[5].EnableOption(62, true);
+				//Off
+				EDD[5].EnableOption(4, false);
+				EDD[5].EnableOption(5, false);
+				EDD[5].EnableOption(6, false);
+				EDD[5].EnableOption(16, false);
+				EDD[5].EnableOption(18, false);
+				EDD[5].EnableOption(24, false);
+				EDD[5].EnableOption(28, false);
+				EDD[5].EnableOption(35, false);
+				EDD[5].EnableOption(37, false);
+				EDD[5].EnableOption(44, false);
+				EDD[5].EnableOption(48, false);
+				EDD[5].EnableOption(64, false);
+				EDD[5].EnableOption(70, false);
+				EDD[5].EnableOption(71, false);
+				EDD[5].EnableOption(73, false);
+				#endregion
+			} else {
+				//Chest Clothing
+				#region
+				EDD[1].EnableOption(3, true);
+				EDD[1].EnableOption(10, true);
+				EDD[1].EnableOption(11, true);
+				EDD[1].EnableOption(15, true);
+				EDD[1].EnableOption(29, true);
+				EDD[1].EnableOption(34, true);
+				EDD[1].EnableOption(36, true);
+				EDD[1].EnableOption(39, true);
+				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(12, true);
+				EDD[2].EnableOption(13, true);
+				EDD[2].EnableOption(19, true);
+				EDD[2].EnableOption(43, true);
+				EDD[2].EnableOption(44, true);
+				EDD[2].EnableOption(69, true);
+				EDD[2].EnableOption(80, true);
+				#endregion
+				//Arm Armor
+				#region
+				EDD[3].EnableOption(4, true);
+				EDD[3].EnableOption(5, true);
+				EDD[3].EnableOption(6, true);
+				EDD[3].EnableOption(8, true);
+				EDD[3].EnableOption(12, true);
+				EDD[3].EnableOption(17, true);
+				EDD[3].EnableOption(23, true);
+				EDD[3].EnableOption(27, true);
+				EDD[3].EnableOption(35, true);
+				EDD[3].EnableOption(40, true);
+				EDD[3].EnableOption(41, true);
+				EDD[3].EnableOption(43, true);
+				EDD[3].EnableOption(44, true);
+				EDD[3].EnableOption(47, true);
+				EDD[3].EnableOption(48, true);
+				EDD[3].EnableOption(49, true);
+				EDD[3].EnableOption(52, true);
+				EDD[3].EnableOption(58, true);
+				#endregion
+
+				//Leg Clothing
+				#region
+				EDD[4].EnableOption(12, true);
+				EDD[4].EnableOption(13, true);
+				EDD[4].EnableOption(16, true);
+				EDD[4].EnableOption(24, true);
+				#endregion
+				//Leg Amor
+				#region
+				//On
+				EDD[5].EnableOption(13, false);
+				EDD[5].EnableOption(59, false);
+				EDD[5].EnableOption(62, false);
+				//Off
+				EDD[5].EnableOption(4, true);
+				EDD[5].EnableOption(5, true);
+				EDD[5].EnableOption(6, true);
+				EDD[5].EnableOption(16, true);
+				EDD[5].EnableOption(18, true);
+				EDD[5].EnableOption(24, true);
+				EDD[5].EnableOption(28, true);
+				EDD[5].EnableOption(35, true);
+				EDD[5].EnableOption(37, true);
+				EDD[5].EnableOption(44, true);
+				EDD[5].EnableOption(48, true);
+				EDD[5].EnableOption(64, true);
+				EDD[5].EnableOption(70, true);
+				EDD[5].EnableOption(71, true);
+				EDD[5].EnableOption(73, true);
+				#endregion
+			}
+			#endregion
+			//No Mystic Knight
+			#region
+			if (!chara.GetVocation().Equals("M. Knight")) {
+				//Head Armor
+				#region
+				EDD[0].EnableOption(1, true);
+				EDD[0].EnableOption(13, true);
+				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(2, true);
+				EDD[2].EnableOption(10, true);
+				EDD[2].EnableOption(16, true);
+				EDD[2].EnableOption(22, true);
+				EDD[2].EnableOption(24, true);
+				EDD[2].EnableOption(47, true);
+				EDD[2].EnableOption(49, true);
+				EDD[2].EnableOption(51, true);
+				EDD[2].EnableOption(54, true);
+				EDD[2].EnableOption(61, true);
+				EDD[2].EnableOption(63, true);
+				EDD[2].EnableOption(65, true);
+				EDD[2].EnableOption(68, true);
+				EDD[2].EnableOption(75, true);
+				#endregion
+				//Arm Armor
+				#region
+				//On
+				EDD[3].EnableOption(11, true);
+				//Off
+				EDD[3].EnableOption(21, false);
+				EDD[3].EnableOption(33, false);
+				#endregion
+				//Leg Armor
+				#region
+				EDD[5].EnableOption(10, true);
+				EDD[5].EnableOption(11, true);
+				#endregion
+			} else {
+				//Head Armor
+				#region
+				EDD[0].EnableOption(1, false);
+				EDD[0].EnableOption(13, false);
+				#endregion
+				//Chest Armor
+				#region
+				EDD[2].EnableOption(2, false);
+				EDD[2].EnableOption(10, false);
+				EDD[2].EnableOption(16, false);
+				EDD[2].EnableOption(22, false);
+				EDD[2].EnableOption(24, false);
+				EDD[2].EnableOption(47, false);
+				EDD[2].EnableOption(49, false);
+				EDD[2].EnableOption(51, false);
+				EDD[2].EnableOption(54, false);
+				EDD[2].EnableOption(61, false);
+				EDD[2].EnableOption(63, false);
+				EDD[2].EnableOption(65, false);
+				EDD[2].EnableOption(68, false);
+				EDD[2].EnableOption(75, false);
+				#endregion
+				//Arm Armor
+				#region
+				//On
+				EDD[3].EnableOption(11, false);
+				//Off
+				EDD[3].EnableOption(21, true);
+				EDD[3].EnableOption(33, true);
+				#endregion
+				//Leg Armor
+				#region
+				EDD[5].EnableOption(10, false);
+				EDD[5].EnableOption(11, false);
+				#endregion
+			}
+			#endregion
+			//Just Sorc/M. Archer
+			#region
+			if (chara.GetVocation().Equals("Sorcerer")|| chara.GetVocation().Equals("M. Archer")) {
+				//Head
+				EDD[0].EnableOption(23, true);
+			} else {
+				//Head
+				EDD[0].EnableOption(23, false);
+			}
+			#endregion
+			//Head Armor
+			#region
+			EDD[0].EnableOption(3, true);
+			EDD[0].EnableOption(5, true);
+			EDD[0].EnableOption(21, true);
+			EDD[0].EnableOption(32, true);
+			EDD[0].EnableOption(35, true);
+			EDD[0].EnableOption(42, true);
+			EDD[0].EnableOption(67, true);
+			EDD[0].EnableOption(76, true);
+			EDD[0].EnableOption(79, true);
+			EDD[0].EnableOption(81, true);
+			#endregion
+			//Chest Clothing
+			EDD[1].EnableOption(6, true);
+			//Chest Armor
+			#region
+			EDD[2].EnableOption(3, true);
+			EDD[2].EnableOption(4, true);
+			EDD[2].EnableOption(35, true);
+			EDD[2].EnableOption(36, true);
+			EDD[2].EnableOption(57, true);
+			EDD[2].EnableOption(78, true);
+			#endregion
+		} else {
+			//Head Armor
+			#region
+			EDD[0].EnableOption(1, false);
+			EDD[0].EnableOption(3, false);
+			EDD[0].EnableOption(5, false);
+			EDD[0].EnableOption(13, false);
+			EDD[0].EnableOption(21, false);
+			EDD[0].EnableOption(23, false);
+			EDD[0].EnableOption(32, false);
+			EDD[0].EnableOption(35, false);
+			EDD[0].EnableOption(42, false);
+			EDD[0].EnableOption(67, false);
+			EDD[0].EnableOption(76, false);
+			EDD[0].EnableOption(79, false);
+			EDD[0].EnableOption(81, false);
+			#endregion
+			//Chest Clothing
+			#region
+			EDD[1].EnableOption(3, true);
+			EDD[1].EnableOption(6, false);
+			EDD[1].EnableOption(10, true);
+			EDD[1].EnableOption(11, true);
+			EDD[1].EnableOption(15, true);
+			EDD[1].EnableOption(29, true);
+			EDD[1].EnableOption(34, true);
+			EDD[1].EnableOption(36, true);
+			EDD[1].EnableOption(39, true);
+			#endregion
+			//Chest Armor
+			#region
+			EDD[2].EnableOption(2, false);
+			EDD[2].EnableOption(3, false);
+			EDD[2].EnableOption(4, false);
+			EDD[2].EnableOption(10, false);
+			EDD[2].EnableOption(12, true);
+			EDD[2].EnableOption(13, true);
+			EDD[2].EnableOption(16, false);
+			EDD[2].EnableOption(19, true);
+			EDD[2].EnableOption(22, false);
+			EDD[2].EnableOption(24, false);
+			EDD[2].EnableOption(35, false);
+			EDD[2].EnableOption(36, false);
+			EDD[2].EnableOption(43, true);
+			EDD[2].EnableOption(44, true);
+			EDD[2].EnableOption(47, false);
+			EDD[2].EnableOption(49, false);
+			EDD[2].EnableOption(51, false);
+			EDD[2].EnableOption(54, false);
+			EDD[2].EnableOption(57, false);
+			EDD[2].EnableOption(61, false);
+			EDD[2].EnableOption(63, false);
+			EDD[2].EnableOption(65, false);
+			EDD[2].EnableOption(68, false);
+			EDD[2].EnableOption(69, true);
+			EDD[2].EnableOption(75, false);
+			EDD[2].EnableOption(78, false);
+			EDD[2].EnableOption(80, true);
+			#endregion
+			//Arm Armor
+			#region
+			//On
+			EDD[3].EnableOption(11, false);
+			//Off
+			EDD[3].EnableOption(4, true);
+			EDD[3].EnableOption(5, true);
+			EDD[3].EnableOption(6, true);
+			EDD[3].EnableOption(8, true);
+			EDD[3].EnableOption(12, true);
+			EDD[3].EnableOption(17, true);
+			EDD[3].EnableOption(21, true);
+			EDD[3].EnableOption(23, true);
+			EDD[3].EnableOption(27, true);
+			EDD[3].EnableOption(33, true);
+			EDD[3].EnableOption(35, true);
+			EDD[3].EnableOption(40, true);
+			EDD[3].EnableOption(41, true);
+			EDD[3].EnableOption(43, true);
+			EDD[3].EnableOption(44, true);
+			EDD[3].EnableOption(47, true);
+			EDD[3].EnableOption(48, true);
+			EDD[3].EnableOption(49, true);
+			EDD[3].EnableOption(52, true);
+			EDD[3].EnableOption(58, true);
+			#endregion
+			//Leg Clothing
+			#region
+			EDD[4].EnableOption(12, true);
+			EDD[4].EnableOption(13, true);
+			EDD[4].EnableOption(16, true);
+			EDD[4].EnableOption(24, true);
+			#endregion
+			//Leg Armor
+			#region
+			EDD[5].EnableOption(10, false);
+			EDD[5].EnableOption(11, false);
+			EDD[5].EnableOption(13, false);
+			EDD[5].EnableOption(59, false);
+			EDD[5].EnableOption(62, false);
+			//Seperator
+			EDD[5].EnableOption(4, true);
+			EDD[5].EnableOption(5, true);
+			EDD[5].EnableOption(6, true);
+			EDD[5].EnableOption(16, true);
+			EDD[5].EnableOption(18, true);
+			EDD[5].EnableOption(24, true);
+			EDD[5].EnableOption(28, true);
+			EDD[5].EnableOption(35, true);
+			EDD[5].EnableOption(37, true);
+			EDD[5].EnableOption(44, true);
+			EDD[5].EnableOption(48, true);
+			EDD[5].EnableOption(64, true);
+			EDD[5].EnableOption(70, true);
+			EDD[5].EnableOption(71, true);
+			EDD[5].EnableOption(73, true);
+			#endregion
+		}
+		#endregion
+		//Special Snowflakes
+		#region
+		//???
+		#region
+		if (chara.GetVocation().Equals("Warrior") || chara.GetVocation().Equals("Ranger") ||
+			chara.GetVocation().Equals("M.Archer") || chara.GetVocation().Equals("M.Knight")) {
+			//Head
+			#region
+			EDD[0].EnableOption(24, true);
+			EDD[0].EnableOption(55, true);
+			#endregion
+		} else {
+			//Head
+			#region
+			EDD[0].EnableOption(24, false);
+			EDD[0].EnableOption(55, false);
+			#endregion
+		}
+		#endregion
+		//No Basic
+		#region
+		if (chara.GetVocation().Equals("Fighter") || chara.GetVocation().Equals("Strider") ||
+			chara.GetVocation().Equals("Mage")) {
+			EDD[5].EnableOption(42, false);
+			EDD[5].EnableOption(60, false);
+			EDD[5].EnableOption(65, false);
+		} else {
+			EDD[5].EnableOption(42, true);
+			EDD[5].EnableOption(60, true);
+			EDD[5].EnableOption(65, true);
+		}
+		#endregion
+		//!?!?!?
+		#region
+		if(chara.GetVocation().Equals("Mage")|| chara.GetVocation().Equals("Sorcerer")||
+			chara.GetVocation().Equals("M. Archer")) {
+			EDD[5].EnableOption(52, false);
+		} else { EDD[5].EnableOption(52, true); }
+		#endregion
+		#endregion
+		//Gender
+		#region
+		if (!chara.GetGender()) {
+			//Dissable all the female only options
+			#region
+			//Head Armor
+			EDD[0].EnableOption(71, false);
+			EDD[0].EnableOption(72, false);
+			//Chest Clothing
+			EDD[1].EnableOption(24, false);
+			EDD[1].EnableOption(28, false);
+			EDD[1].EnableOption(30, false);
+			//Chest Armor
+			EDD[2].EnableOption(11, false);
+			EDD[2].EnableOption(29, false);
+			EDD[2].EnableOption(48, false);
+			EDD[2].EnableOption(72, false);
+			EDD[2].EnableOption(73, false);
+			//Leg Clothing
+			EDD[4].EnableOption(9, false);
+			EDD[4].EnableOption(22, false);
+			EDD[4].EnableOption(28, false);
+			//Leg Armor
+			EDD[5].EnableOption(32, false);
+			#endregion
+		} else {
+			//Enable all the female only options
+			#region
+			//Head Armor
+			EDD[0].EnableOption(71, true);
+			EDD[0].EnableOption(72, true);
+			//Chest Clothing
+			EDD[1].EnableOption(24, true);
+			EDD[1].EnableOption(28, true);
+			EDD[1].EnableOption(30, true);
+			//Chest Armor
+			EDD[2].EnableOption(29, true);
+			EDD[2].EnableOption(48, true);
+			EDD[2].EnableOption(72, true);
+			EDD[2].EnableOption(73, true);
+			//Leg Clothing
+			EDD[4].EnableOption(9, true);
+			EDD[4].EnableOption(22, true);
+			EDD[4].EnableOption(28, true);
+			//Other
+			EDD[5].EnableOption(32, true);
+			if (chara.GetVocation().Equals("Sorcerer") || chara.GetVocation().Equals("M.Archer")) {
+				EDD[2].EnableOption(11, true);
+			} else {
+				EDD[2].EnableOption(11, false);
+			}
+			//Flame Skirt
+			#endregion
+		}
+		#endregion
+	}
+
+	public void SaveData(GameData data) {
+	}
+
+	public void LoadData(GameData data) {
+	}
 }

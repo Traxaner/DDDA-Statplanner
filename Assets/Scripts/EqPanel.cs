@@ -647,19 +647,19 @@ public class EqPanel : MonoBehaviour {
 				EDD[5].EnableOption(7, true);
 				EDD[5].EnableOption(12, true);
 				EDD[5].EnableOption(14, true);
-				EDD[5].EnableOption(18, true);
 				EDD[5].EnableOption(19, true);
-				EDD[5].EnableOption(21, true);
-				EDD[5].EnableOption(37, true);
-				EDD[5].EnableOption(39, true);
-				EDD[5].EnableOption(42, true);
-				EDD[5].EnableOption(44, true);
+				EDD[5].EnableOption(20, true);
+				EDD[5].EnableOption(22, true);
+				EDD[5].EnableOption(38, true);
+				EDD[5].EnableOption(40, true);
+				EDD[5].EnableOption(43, true);
 				EDD[5].EnableOption(45, true);
-				EDD[5].EnableOption(50, true);
-				EDD[5].EnableOption(52, true);
+				EDD[5].EnableOption(46, true);
+				EDD[5].EnableOption(51, true);
 				EDD[5].EnableOption(53, true);
-				EDD[5].EnableOption(67, true);
+				EDD[5].EnableOption(54, true);
 				EDD[5].EnableOption(68, true);
+				EDD[5].EnableOption(69, true);
 				#endregion
 			} else {
 				//Head Armor
@@ -708,19 +708,19 @@ public class EqPanel : MonoBehaviour {
 				EDD[5].EnableOption(7, false);
 				EDD[5].EnableOption(12, false);
 				EDD[5].EnableOption(14, false);
-				EDD[5].EnableOption(18, false);
 				EDD[5].EnableOption(19, false);
-				EDD[5].EnableOption(21, false);
-				EDD[5].EnableOption(37, false);
-				EDD[5].EnableOption(39, false);
-				EDD[5].EnableOption(42, false);
-				EDD[5].EnableOption(44, false);
+				EDD[5].EnableOption(20, false);
+				EDD[5].EnableOption(22, false);
+				EDD[5].EnableOption(38, false);
+				EDD[5].EnableOption(40, false);
+				EDD[5].EnableOption(43, false);
 				EDD[5].EnableOption(45, false);
-				EDD[5].EnableOption(50, false);
-				EDD[5].EnableOption(52, false);
+				EDD[5].EnableOption(46, false);
+				EDD[5].EnableOption(51, false);
 				EDD[5].EnableOption(53, false);
-				EDD[5].EnableOption(67, false);
+				EDD[5].EnableOption(54, false);
 				EDD[5].EnableOption(68, false);
+				EDD[5].EnableOption(69, false);
 				#endregion
 			}
 			#endregion
@@ -736,7 +736,7 @@ public class EqPanel : MonoBehaviour {
 				//Chest Armor
 				EDD[2].EnableOption(58, true);
 				//Leg Armor
-				EDD[2].EnableOption(24, true);
+				EDD[2].EnableOption(25, true);
 			} else {
 				//Head Armor
 				#region
@@ -747,7 +747,7 @@ public class EqPanel : MonoBehaviour {
 				//Chest Armor
 				EDD[2].EnableOption(58, false);
 				//Leg Armor
-				EDD[5].EnableOption(24, false);
+				EDD[5].EnableOption(25, false);
 			}
 			#endregion
 			//Head Armor
@@ -834,20 +834,20 @@ public class EqPanel : MonoBehaviour {
 			EDD[5].EnableOption(12, false);
 			EDD[5].EnableOption(14, false);
 			EDD[5].EnableOption(15, false);
-			EDD[5].EnableOption(18, false);
 			EDD[5].EnableOption(19, false);
-			EDD[5].EnableOption(21, false);
-			EDD[5].EnableOption(24, false);
-			EDD[5].EnableOption(37, false);
-			EDD[5].EnableOption(39, false);
-			EDD[5].EnableOption(42, false);
-			EDD[5].EnableOption(44, false);
+			EDD[5].EnableOption(20, false);
+			EDD[5].EnableOption(22, false);
+			EDD[5].EnableOption(25, false);
+			EDD[5].EnableOption(38, false);
+			EDD[5].EnableOption(40, false);
+			EDD[5].EnableOption(43, false);
 			EDD[5].EnableOption(45, false);
-			EDD[5].EnableOption(50, false);
-			EDD[5].EnableOption(52, false);
+			EDD[5].EnableOption(46, false);
+			EDD[5].EnableOption(51, false);
 			EDD[5].EnableOption(53, false);
-			EDD[5].EnableOption(67, false);
+			EDD[5].EnableOption(54, false);
 			EDD[5].EnableOption(68, false);
+			EDD[5].EnableOption(69, false);
 			#endregion
 		}
 		#endregion
@@ -874,14 +874,14 @@ public class EqPanel : MonoBehaviour {
 				//Chest Armor
 				EDD[2].EnableOption(25, true);
 				//Leg Armor
-				EDD[5].EnableOption(74, true);
+				EDD[5].EnableOption(75, true);
 			} else {
 				//Head Armor
 				EDD[0].EnableOption(77, false);
 				//Chest Armor
 				EDD[2].EnableOption(25, false);
 				//Leg Armor
-				EDD[5].EnableOption(74, false);
+				EDD[5].EnableOption(75, false);
 			}
 			#endregion
 			//Head Armor
@@ -920,13 +920,13 @@ public class EqPanel : MonoBehaviour {
 			#region
 			EDD[5].EnableOption(8, true);
 			EDD[5].EnableOption(9, true);
-			EDD[5].EnableOption(33, true);
-			EDD[5].EnableOption(46, true);
-			EDD[5].EnableOption(54, true);
+			EDD[5].EnableOption(34, true);
+			EDD[5].EnableOption(47, true);
 			EDD[5].EnableOption(55, true);
-			EDD[5].EnableOption(60, true);
-			EDD[5].EnableOption(71, true);
-			EDD[5].EnableOption(73, true);
+			EDD[5].EnableOption(56, true);
+			EDD[5].EnableOption(61, true);
+			EDD[5].EnableOption(72, true);
+			EDD[5].EnableOption(74, true);
 			#endregion
 		} else {
 			//Head Armor
@@ -968,14 +968,14 @@ public class EqPanel : MonoBehaviour {
 			#region
 			EDD[5].EnableOption(8, false);
 			EDD[5].EnableOption(9, false);
-			EDD[5].EnableOption(33, false);
-			EDD[5].EnableOption(46, false);
-			EDD[5].EnableOption(54, false);
+			EDD[5].EnableOption(34, false);
+			EDD[5].EnableOption(47, false);
 			EDD[5].EnableOption(55, false);
-			EDD[5].EnableOption(60, false);
-			EDD[5].EnableOption(71, false);
-			EDD[5].EnableOption(73, false);
+			EDD[5].EnableOption(56, false);
+			EDD[5].EnableOption(61, false);
+			EDD[5].EnableOption(72, false);
 			EDD[5].EnableOption(74, false);
+			EDD[5].EnableOption(75, false);
 			#endregion
 		}
 		#endregion
@@ -1019,24 +1019,24 @@ public class EqPanel : MonoBehaviour {
 				#region
 				//On
 				EDD[5].EnableOption(13, true);
-				EDD[5].EnableOption(58, true);
-				EDD[5].EnableOption(61, true);
+				EDD[5].EnableOption(59, true);
+				EDD[5].EnableOption(62, true);
 				//Off
 				EDD[5].EnableOption(4, false);
 				EDD[5].EnableOption(5, false);
 				EDD[5].EnableOption(6, false);
 				EDD[5].EnableOption(16, false);
-				EDD[5].EnableOption(17, false);
-				EDD[5].EnableOption(23, false);
-				EDD[5].EnableOption(27, false);
-				EDD[5].EnableOption(34, false);
-				EDD[5].EnableOption(36, false);
-				EDD[5].EnableOption(43, false);
-				EDD[5].EnableOption(47, false);
-				EDD[5].EnableOption(63, false);
-				EDD[5].EnableOption(69, false);
+				EDD[5].EnableOption(18, false);
+				EDD[5].EnableOption(24, false);
+				EDD[5].EnableOption(28, false);
+				EDD[5].EnableOption(35, false);
+				EDD[5].EnableOption(37, false);
+				EDD[5].EnableOption(44, false);
+				EDD[5].EnableOption(48, false);
+				EDD[5].EnableOption(64, false);
 				EDD[5].EnableOption(70, false);
-				EDD[5].EnableOption(72, false);
+				EDD[5].EnableOption(71, false);
+				EDD[5].EnableOption(73, false);
 				#endregion
 			} else {
 				//Chest Clothing
@@ -1071,24 +1071,24 @@ public class EqPanel : MonoBehaviour {
 				#region
 				//On
 				EDD[5].EnableOption(13, false);
-				EDD[5].EnableOption(58, false);
-				EDD[5].EnableOption(61, false);
+				EDD[5].EnableOption(59, false);
+				EDD[5].EnableOption(62, false);
 				//Off
 				EDD[5].EnableOption(4, true);
 				EDD[5].EnableOption(5, true);
 				EDD[5].EnableOption(6, true);
 				EDD[5].EnableOption(16, true);
-				EDD[5].EnableOption(17, true);
-				EDD[5].EnableOption(23, true);
-				EDD[5].EnableOption(27, true);
-				EDD[5].EnableOption(34, true);
-				EDD[5].EnableOption(36, true);
-				EDD[5].EnableOption(43, true);
-				EDD[5].EnableOption(47, true);
-				EDD[5].EnableOption(63, true);
-				EDD[5].EnableOption(69, true);
+				EDD[5].EnableOption(18, true);
+				EDD[5].EnableOption(24, true);
+				EDD[5].EnableOption(28, true);
+				EDD[5].EnableOption(35, true);
+				EDD[5].EnableOption(37, true);
+				EDD[5].EnableOption(44, true);
+				EDD[5].EnableOption(48, true);
+				EDD[5].EnableOption(64, true);
 				EDD[5].EnableOption(70, true);
-				EDD[5].EnableOption(72, true);
+				EDD[5].EnableOption(71, true);
+				EDD[5].EnableOption(73, true);
 				#endregion
 			}
 			#endregion
@@ -1257,24 +1257,24 @@ public class EqPanel : MonoBehaviour {
 			EDD[5].EnableOption(10, false);
 			EDD[5].EnableOption(11, false);
 			EDD[5].EnableOption(13, false);
-			EDD[5].EnableOption(58, false);
-			EDD[5].EnableOption(61, false);
+			EDD[5].EnableOption(59, false);
+			EDD[5].EnableOption(62, false);
 			//Seperator
 			EDD[5].EnableOption(4, true);
 			EDD[5].EnableOption(5, true);
 			EDD[5].EnableOption(6, true);
 			EDD[5].EnableOption(16, true);
-			EDD[5].EnableOption(17, true);
-			EDD[5].EnableOption(23, true);
-			EDD[5].EnableOption(27, true);
-			EDD[5].EnableOption(34, true);
-			EDD[5].EnableOption(36, true);
-			EDD[5].EnableOption(43, true);
-			EDD[5].EnableOption(47, true);
-			EDD[5].EnableOption(63, true);
-			EDD[5].EnableOption(69, true);
+			EDD[5].EnableOption(18, true);
+			EDD[5].EnableOption(24, true);
+			EDD[5].EnableOption(28, true);
+			EDD[5].EnableOption(35, true);
+			EDD[5].EnableOption(37, true);
+			EDD[5].EnableOption(44, true);
+			EDD[5].EnableOption(48, true);
+			EDD[5].EnableOption(64, true);
 			EDD[5].EnableOption(70, true);
-			EDD[5].EnableOption(72, true);
+			EDD[5].EnableOption(71, true);
+			EDD[5].EnableOption(73, true);
 			#endregion
 		}
 		#endregion
@@ -1301,21 +1301,21 @@ public class EqPanel : MonoBehaviour {
 		#region
 		if (chara.GetVocation().Equals("Fighter") || chara.GetVocation().Equals("Strider") ||
 			chara.GetVocation().Equals("Mage")) {
-			EDD[5].EnableOption(41, false);
-			EDD[5].EnableOption(59, false);
-			EDD[5].EnableOption(64, false);
+			EDD[5].EnableOption(42, false);
+			EDD[5].EnableOption(60, false);
+			EDD[5].EnableOption(65, false);
 		} else {
-			EDD[5].EnableOption(41, true);
-			EDD[5].EnableOption(59, true);
-			EDD[5].EnableOption(64, true);
+			EDD[5].EnableOption(42, true);
+			EDD[5].EnableOption(60, true);
+			EDD[5].EnableOption(65, true);
 		}
 		#endregion
 		//!?!?!?
 		#region
 		if(chara.GetVocation().Equals("Mage")|| chara.GetVocation().Equals("Sorcerer")||
 			chara.GetVocation().Equals("M. Archer")) {
-			EDD[5].EnableOption(51, false);
-		} else { EDD[5].EnableOption(51, true); }
+			EDD[5].EnableOption(52, false);
+		} else { EDD[5].EnableOption(52, true); }
 		#endregion
 		#endregion
 		//Gender
@@ -1341,7 +1341,7 @@ public class EqPanel : MonoBehaviour {
 			EDD[4].EnableOption(22, false);
 			EDD[4].EnableOption(28, false);
 			//Leg Armor
-			EDD[5].EnableOption(31, false);
+			EDD[5].EnableOption(32, false);
 			#endregion
 		} else {
 			//Enable all the female only options
@@ -1363,7 +1363,7 @@ public class EqPanel : MonoBehaviour {
 			EDD[4].EnableOption(22, true);
 			EDD[4].EnableOption(28, true);
 			//Other
-			EDD[5].EnableOption(31, true);
+			EDD[5].EnableOption(32, true);
 			if (chara.GetVocation().Equals("Sorcerer") || chara.GetVocation().Equals("M.Archer")) {
 				EDD[2].EnableOption(11, true);
 			} else {
@@ -1373,7 +1373,6 @@ public class EqPanel : MonoBehaviour {
 			#endregion
 		}
 		#endregion
-
 	}
 
 	//Functions for switching equipmentpieces

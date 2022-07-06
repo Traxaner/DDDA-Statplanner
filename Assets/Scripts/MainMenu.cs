@@ -70,7 +70,11 @@ public class MainMenu : MonoBehaviour {
 				if (iState == 0) {
 					iMessage = 0;
 				} else { iMessage = 2; }
-				information.text = "A is for changes to the Arisen\nP is for changes to your Main Pawn";
+				if (iState == 6) {
+					information.text = "To properly load things press load twice";
+				} else {
+					information.text = "A is for changes to the Arisen\nP is for changes to your Main Pawn";
+				}
 				break;
 			case 2:
 				iMessage = 0;

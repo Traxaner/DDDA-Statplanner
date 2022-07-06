@@ -16,7 +16,7 @@ public class CCharacter : MonoBehaviour, IDataPersistance {
 	[Foldout("Display")] [SerializeField] private TextMeshProUGUI mdefDisplay;
 
 	private int iLvl = 1, iHp = 0, iSp = 0, iAtk = 0, iDef = 0, iMAtk = 0, iMDef = 0, iCount0 = 0, iCount1 = 0, iCount2 = 0;
-	private bool bArisen, bFemale = false;
+	private bool bArisen, bFCheck, bFemale = false;
 	private string sVocation;
 
 	//Checking wether or not this Character is the Arisen using Tags
@@ -37,6 +37,7 @@ public class CCharacter : MonoBehaviour, IDataPersistance {
 		defDisplay.text = iDef.ToString();
 		matkDisplay.text = iMAtk.ToString();
 		mdefDisplay.text = iMDef.ToString();
+		if (bFCheck != bFemale) { Equipment.EquipReset(); bFCheck = bFemale; }
 		if (bFemale) { Gender.SetActive(false); } else { Gender.SetActive(true); }
 	}
 

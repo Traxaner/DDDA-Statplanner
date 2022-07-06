@@ -50,7 +50,7 @@ public class DataPersistenceManager : MonoBehaviour {
 	public void LoadData() {
 		menu.Display(11);
 		//pass the data to other scritps
-		foreach(IDataPersistance dataPersistanceObj in dataPersistanceObjects) {
+		foreach (IDataPersistance dataPersistanceObj in dataPersistanceObjects) {
 			dataPersistanceObj.LoadData(gameData);
 		}
 		//TODO file data handler

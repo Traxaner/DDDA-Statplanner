@@ -11,19 +11,19 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 	//Debilitations
 	#region
 	private TextMeshProUGUI[] Debilitations = new TextMeshProUGUI[13];
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI petrify;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI possession;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI sleep;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI silence;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI skillStiff;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI torpor;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI poison;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI blind;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI curse;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI strLow;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI magLow;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI defLow;
-	[Foldout("Debilitations")] [SerializeField]private TextMeshProUGUI mDefLow;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI petrify;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI possession;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI sleep;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI silence;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI skillStiff;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI torpor;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI poison;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI blind;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI curse;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI strLow;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI magLow;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI defLow;
+	[Foldout("Debilitations")] [SerializeField] private TextMeshProUGUI mDefLow;
 	#endregion
 	//Dropdowns of pain and suffering
 	#region
@@ -93,7 +93,7 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			lClothing.GetComponent<DropDownController>(),lArmor.GetComponent<DropDownController>()
 		};
 		//Getting the Dropdowns
-		for(int i = 0; i < 7; i++) {
+		for (int i = 0; i < 7; i++) {
 			//Clearing Dropdowns
 			Equipment[i].options.Clear();
 			//Adding empty option
@@ -102,7 +102,9 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			if (i < 2) {
 				Rings[i].options.Clear();
 				Rings[i].options.Add(new TMP_Dropdown.OptionData() { text = " - " });
-	}	}	}
+			}
+		}
+	}
 
 	//Putting the Lists to use
 	private void EquipmentSetup2() {
@@ -144,14 +146,14 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 		//Legarmor
 		#region
 		foreach (string Legs in Legs) {
-				Equipment[5].options.Add(new TMP_Dropdown.OptionData() { text = Legs });
+			Equipment[5].options.Add(new TMP_Dropdown.OptionData() { text = Legs });
 		}
 		Equipment[5].onValueChanged.AddListener(delegate { SwitchLegs(); });
 		#endregion
 		//Cloaks
 		#region
 		foreach (string Cloak in Cloak) {
-				Equipment[6].options.Add(new TMP_Dropdown.OptionData() { text = Cloak });
+			Equipment[6].options.Add(new TMP_Dropdown.OptionData() { text = Cloak });
 		}
 		Equipment[6].onValueChanged.AddListener(delegate { SwitchCloak(); });
 		#endregion
@@ -160,7 +162,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 		foreach (string Ringz in Ringz) {
 			for (int i = 0; i < 2; i++) {
 				Rings[i].options.Add(new TMP_Dropdown.OptionData() { text = Ringz });
-		}	}
+			}
+		}
 		Rings[0].onValueChanged.AddListener(delegate { SwitchRing(0); });
 		Rings[1].onValueChanged.AddListener(delegate { SwitchRing(1); });
 		#endregion
@@ -651,8 +654,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 		#endregion
 	}
 
-	private void SetDebilitationRes(int iPercent,int iDebilitation) {
-		 string s = Debilitations[iDebilitation].text;
+	private void SetDebilitationRes(int iPercent, int iDebilitation) {
+		string s = Debilitations[iDebilitation].text;
 		s = s.Remove(s.Length - 1);
 		Debilitations[iDebilitation].text = (Int32.Parse(s) + iPercent).ToString() + "%";
 	}
@@ -3908,16 +3911,16 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 		}
 	}
 	#endregion
-	
+
 	//Public Methods
 	public void SetAll(int iPercent) {
-		for(int i = 0; i < 13; i++) {
+		for (int i = 0; i < 13; i++) {
 			SetDebilitationRes(iPercent, i);
 		}
 	}
 
 	public void EquipReset() {
-		for(int i = 0; i < 7; i++) {
+		for (int i = 0; i < 7; i++) {
 			if (i < 2) { Rings[i].value = 0; }
 			Equipment[i].value = 0;
 		}
@@ -3935,7 +3938,7 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 	public void OnPanelDisplay() {
 		//Fighter based
 		#region
-		if (chara.GetVocation().Equals("Fighter") || chara.GetVocation().Equals("Warrior")||
+		if (chara.GetVocation().Equals("Fighter") || chara.GetVocation().Equals("Warrior") ||
 			 chara.GetVocation().Equals("Assassin") || chara.GetVocation().Equals("M. Knight")) {
 			//Heavy Armor
 			#region
@@ -4015,7 +4018,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 				EDD[5].EnableOption(68, true);
 				EDD[5].EnableOption(69, true);
 				#endregion
-			} else {
+			}
+			else {
 				//Head Armor
 				#region
 				EDD[0].EnableOption(8, false);
@@ -4095,7 +4099,7 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			#endregion
 			//Warrior/M. Knight
 			#region
-			if (chara.GetVocation().Equals("Warrior")|| chara.GetVocation().Equals("M. Knight")) {
+			if (chara.GetVocation().Equals("Warrior") || chara.GetVocation().Equals("M. Knight")) {
 				//Head Armor
 				#region
 				EDD[0].EnableOption(7, true);
@@ -4108,7 +4112,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 				EDD[3].EnableOption(25, true);
 				//Leg Armor
 				EDD[2].EnableOption(25, true);
-			} else {
+			}
+			else {
 				//Head Armor
 				#region
 				EDD[0].EnableOption(7, false);
@@ -4148,7 +4153,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			#endregion
 			//LegArmor
 			EDD[5].EnableOption(15, true);
-		} else {
+		}
+		else {
 			//Head Armor
 			#region
 			EDD[0].EnableOption(7, false);
@@ -4273,7 +4279,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 				EDD[3].EnableOption(61, true);
 				//Leg Armor
 				EDD[5].EnableOption(75, true);
-			} else {
+			}
+			else {
 				//Head Armor
 				EDD[0].EnableOption(77, false);
 				//Chest Armor
@@ -4336,7 +4343,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			EDD[5].EnableOption(72, true);
 			EDD[5].EnableOption(74, true);
 			#endregion
-		} else {
+		}
+		else {
 			//Head Armor
 			#region
 			EDD[0].EnableOption(4, false);
@@ -4399,7 +4407,7 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 		//Mage based
 		#region
 		//Mage|Sorcerer
-		if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer")||
+		if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer") ||
 			 chara.GetVocation().Equals("M. Archer") || chara.GetVocation().Equals("M. Knight")) {
 			//Not for Mage/Sorc
 			#region
@@ -4476,7 +4484,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 				EDD[5].EnableOption(71, false);
 				EDD[5].EnableOption(73, false);
 				#endregion
-			} else {
+			}
+			else {
 				//Chest Clothing
 				#region
 				EDD[1].EnableOption(3, true);
@@ -4590,7 +4599,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 				EDD[5].EnableOption(10, true);
 				EDD[5].EnableOption(11, true);
 				#endregion
-			} else {
+			}
+			else {
 				//Head Armor
 				#region
 				EDD[0].EnableOption(1, false);
@@ -4630,10 +4640,11 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			#endregion
 			//Just Sorc/M. Archer
 			#region
-			if (chara.GetVocation().Equals("Sorcerer")|| chara.GetVocation().Equals("M. Archer")) {
+			if (chara.GetVocation().Equals("Sorcerer") || chara.GetVocation().Equals("M. Archer")) {
 				//Head
 				EDD[0].EnableOption(23, true);
-			} else {
+			}
+			else {
 				//Head
 				EDD[0].EnableOption(23, false);
 			}
@@ -4662,7 +4673,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			EDD[2].EnableOption(57, true);
 			EDD[2].EnableOption(78, true);
 			#endregion
-		} else {
+		}
+		else {
 			//Head Armor
 			#region
 			EDD[0].EnableOption(1, false);
@@ -4791,7 +4803,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			EDD[0].EnableOption(24, true);
 			EDD[0].EnableOption(55, true);
 			#endregion
-		} else {
+		}
+		else {
 			//Head
 			#region
 			EDD[0].EnableOption(24, false);
@@ -4806,7 +4819,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			EDD[5].EnableOption(42, false);
 			EDD[5].EnableOption(60, false);
 			EDD[5].EnableOption(65, false);
-		} else {
+		}
+		else {
 			EDD[5].EnableOption(42, true);
 			EDD[5].EnableOption(60, true);
 			EDD[5].EnableOption(65, true);
@@ -4814,10 +4828,11 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 		#endregion
 		//!?!?!?
 		#region
-		if(chara.GetVocation().Equals("Mage")|| chara.GetVocation().Equals("Sorcerer")||
+		if (chara.GetVocation().Equals("Mage") || chara.GetVocation().Equals("Sorcerer") ||
 			chara.GetVocation().Equals("M. Archer")) {
 			EDD[5].EnableOption(52, false);
-		} else { EDD[5].EnableOption(52, true); }
+		}
+		else { EDD[5].EnableOption(52, true); }
 		#endregion
 		#endregion
 		//Gender
@@ -4845,7 +4860,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			//Leg Armor
 			EDD[5].EnableOption(32, false);
 			#endregion
-		} else {
+		}
+		else {
 			//Enable all the female only options
 			#region
 			//Head Armor
@@ -4868,7 +4884,8 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 			EDD[5].EnableOption(32, true);
 			if (chara.GetVocation().Equals("Sorcerer") || chara.GetVocation().Equals("M.Archer")) {
 				EDD[2].EnableOption(11, true);
-			} else {
+			}
+			else {
 				EDD[2].EnableOption(11, false);
 			}
 			//Flame Skirt
@@ -4878,8 +4895,31 @@ public class EqPanel : MonoBehaviour, IDataPersistance {
 	}
 
 	public void SaveData(GameData data) {
-	}
+		for (int i = 0; i < 9; i++) {
+			if (chara.CompareTag("Arisen")) {
+				data.aEq[i] = iCurrent[i];
+			} else { data.pEq[i] = iCurrent[i]; }
+	}	}
 
 	public void LoadData(GameData data) {
+		for (int i = 0; i < 9; i++) {
+			if (i > 6) {
+				if (chara.CompareTag("Arisen")) {
+					Rings[i - 7].value = data.aEq[i];
+				} else { Rings[i - 7].value = data.pEq[i]; }
+			} else {
+				if (chara.CompareTag("Arisen")) {
+					Equipment[i].value = data.aEq[i];
+				} else { Equipment[i].value = data.pEq[i]; }
+		}	}
+		SwitchHead();
+		SwitchTClothing();
+		SwitchChest();
+		SwitchArms();
+		SwitchLClothing();
+		SwitchLegs();
+		SwitchCloak();
+		SwitchRing(0);
+		SwitchRing(1);
 	}
 }

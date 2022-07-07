@@ -18,7 +18,7 @@ public class VocationPanel : MonoBehaviour, IDataPersistance{
 	private int iMode, iLevel, iSteps, iCount1, iCount2, iCDis1 = 0, iCDis2 = 0;
 	private bool bOverride = false;
 
-	private void Awake() { GenerateGUID(); }
+	//private void Awake() { GenerateGUID(); }
 
 	private void UpdateInfo() {
 		iLevel = chara.GetLvl();

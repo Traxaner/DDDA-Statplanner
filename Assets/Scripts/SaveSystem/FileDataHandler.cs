@@ -4,44 +4,32 @@ using System;
 
 public class FileDataHandler {
 	private string sDirPath = "", fullPath = "";
-	private readonly string sFile0="File_0";
-	private readonly string sFile1="File_1";
-	private readonly string sFile2="File_2";
-	private readonly string sFile3="File_3";
-	private readonly string sFile4="File_4";
+	//Encryption
+	private bool bEncrypt = false;
+	private readonly string sCode = "Zangoku wa tenshi no yono ni, shounen yoshinunari naru";
+
 
 	public FileDataHandler(string dataDirPath) {
 		this.sDirPath = dataDirPath;
 	}
 
-	public void SetFullPath(int iFile=0) {
-		string filePath = "";
-		switch (iFile) {
-			case 0:
-				filePath = sFile0;
-				break;
-			case 1:
-				filePath = sFile1;
-				break;
-			case 2:
-				filePath = sFile2;
-				break;
-			case 3:
-				filePath = sFile3;
-				break;
-			case 4:
-				filePath = sFile4;
-				break;
+	private string DeEncrypt(string data) {
+		string modifiedData = "";
+		for(int i = 0; i < data.Length; i++) {
+			modifiedData += (char)(data[i] ^ sCode[i % sCode.Length]);
 		}
-		fullPath = Path.Combine(sDirPath, filePath);
+		return modifiedData;
 	}
 
-	public void Save(GameData data) {
+	public void Save(GameData data, string sFile) {
+		fullPath = Path.Combine(sDirPath, "Saves", sFile);
 		try {
 			//create Directory
 			Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
 			//serialize gamedata into JSON
 			string dataToStore = JsonUtility.ToJson(data, true);
+			//encryption
+			if (bEncrypt) { dataToStore = DeEncrypt(dataToStore); }
 			//write serialized data to file
 			using(FileStream stream=new FileStream(fullPath, FileMode.Create)) {
 				using(StreamWriter writer =new StreamWriter(stream)) {
@@ -52,7 +40,8 @@ public class FileDataHandler {
 			Debug.LogError("Error occured when trying to save data to file: " + fullPath + "\n" + e);
 		}
 	}
-	public GameData Load() {
+	public GameData Load(string sFile) {
+		fullPath = Path.Combine(sDirPath, "Saves", sFile);
 		GameData loadedData = null;
 		if (File.Exists(fullPath)) {
 			try {
@@ -63,6 +52,8 @@ public class FileDataHandler {
 						dataToLoad = reader.ReadToEnd();
 					}
 				}
+				//encryption
+				if (bEncrypt) { dataToLoad = DeEncrypt(dataToLoad); }
 				//deserialize from JSON to data
 				loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
 			}catch(Exception e) {

@@ -452,7 +452,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c53e10c3223d5d41bf2874843bd9dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   chara: {fileID: 0}
+  tools: {fileID: 0}
   lvl1: {fileID: 3381731870494475477}
   lvl2: {fileID: 3381731871567967200}
   iHPGr1: 0

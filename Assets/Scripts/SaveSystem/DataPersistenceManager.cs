@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class DataPersistenceManager : MonoBehaviour {
 
-	[Header("File Storage Config")]
-	[SerializeField] private int iFileSelector;
-
 	public static DataPersistenceManager instance { get; private set; }
 	private List<IDataPersistance> dataPersistanceObjects;
 	[SerializeField] private MainMenu menu;
 	private FileDataHandler dataHandler;
 	private GameData gameData;
+
+	[SerializeField] private string sFile = "";
 
 	private void Awake() {
 		if (instance != null) {
@@ -25,8 +24,10 @@ public class DataPersistenceManager : MonoBehaviour {
 		this.dataHandler = new FileDataHandler(Application.persistentDataPath);
 		this.dataPersistanceObjects = FindAllDataPersistenceObjects();
 		NewData();
+		ChangeFile("File_0");
 		SaveData();
 		LoadData();
+		ChangeFile("File_1");
 	}
 
 	private List<IDataPersistance> FindAllDataPersistenceObjects() {
@@ -34,31 +35,29 @@ public class DataPersistenceManager : MonoBehaviour {
 		return new List<IDataPersistance>(dataPersistanceObjects);
 	}
 
+	public void ChangeFile(string sFile) { this.sFile = sFile; }
+
 	public void NewData() {
 		this.gameData = new GameData();
 	}
-
-	public void SetFile(int iFile = 1) { this.iFileSelector = iFile; }
 
 	public void SaveData() {
 		if (this.gameData == null) {
 			Debug.LogError("No data was found. Initializing data to defaults.");
 			NewData();
-			iFileSelector = 0;
 		}
 		//Push loaded data to other Scripts
 		foreach(IDataPersistance dataPersistanceObj in dataPersistanceObjects) {
 			dataPersistanceObj.SaveData(gameData);
 		}
 		//write data to file
-		dataHandler.SetFullPath(iFileSelector);
-		dataHandler.Save(gameData);
+		dataHandler.Save(gameData, sFile);
 	}
 
 	public void LoadData() {
 		menu.Display(11);
 		//fetch data from file
-		dataHandler.Load();
+		dataHandler.Load(sFile);
 		//pass the data to other scritps
 		foreach (IDataPersistance dataPersistanceObj in dataPersistanceObjects) {
 			dataPersistanceObj.LoadData(gameData);

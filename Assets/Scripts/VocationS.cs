@@ -16,7 +16,7 @@ public class VocationS : MonoBehaviour, IDataPersistance{
 	private int iLevel, iCount, iCDis = 0;
 	private bool bOverride = false;
 
-	private void Awake() { GenerateGUID(); }
+	//private void Awake() { GenerateGUID(); }
 
 	private void UpdateInfo() {
 		iLevel = chara.GetLvl();
@@ -42,7 +42,7 @@ public class VocationS : MonoBehaviour, IDataPersistance{
 
 	public void LvlDown() {
 		if (!bOverride) { UpdateInfo(); } else { iCount = 9; }
-		if (iCount > 0) {
+		if (iCount > 0 && iCDis!=0) {
 			iCDis--;
 			chara.SetHp(-iHPGr);
 			chara.SetSp(-iSPGr);

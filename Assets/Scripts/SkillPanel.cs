@@ -34,7 +34,6 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 	List<string> mshield= new List<string>();
 	#endregion
 
-	//Pain
 	//Fighter
 	#region
 	private DropDownController[] FDDC1 = new DropDownController[3];
@@ -163,7 +162,7 @@ public class SkillPanel : MonoBehaviour, IDataPersistance {
 	[Foldout("Mystic Knight")] [SerializeField] private GameObject MKS8;
 	[Foldout("Mystic Knight")] [SerializeField] private GameObject MKS9;
 	#endregion
-	//Suffering
+
 	private int iCurent;
 
 	// Start is called before the first frame update

@@ -25,6 +25,9 @@ public class DataPersistenceManager : MonoBehaviour {
 		this.dataPersistanceObjects = FindAllDataPersistenceObjects();
 		NewData();
 		ChangeFile("File_0");
+		this.gameData.L10.OrderBy(x => x.Key);
+		this.gameData.L100.OrderBy(x => x.Key);
+		this.gameData.L200.OrderBy(x => x.Key);
 		SaveData();
 		LoadData();
 		ChangeFile("File_1");
@@ -39,6 +42,14 @@ public class DataPersistenceManager : MonoBehaviour {
 
 	public void NewData() {
 		this.gameData = new GameData();
+	}
+
+	public void ResetData(bool bSave = false) {
+		string pFile = sFile;
+		ChangeFile("File_0");
+		LoadData();
+		ChangeFile(pFile);
+		if (bSave) { SaveData(); }
 	}
 
 	public void SaveData() {

@@ -53,13 +53,15 @@ public class AugmentsPanel : MonoBehaviour, IDataPersistance {
 			DropdownItemSelected(i);
 			Dropdowns[i].RefreshShownValue();
 		}
-
+		//Setting the Listeners on the Dropdowns with Starting values
+		#region
 		Dropdowns[0].onValueChanged.AddListener(delegate { DropdownItemSelected(0); });
 		Dropdowns[1].onValueChanged.AddListener(delegate { DropdownItemSelected(1); });
 		Dropdowns[2].onValueChanged.AddListener(delegate { DropdownItemSelected(2); });
 		Dropdowns[3].onValueChanged.AddListener(delegate { DropdownItemSelected(3); });
 		Dropdowns[4].onValueChanged.AddListener(delegate { DropdownItemSelected(4); });
 		Dropdowns[5].onValueChanged.AddListener(delegate { DropdownItemSelected(5); });
+		#endregion
 	}
 
 	//Don't want to make Start() have 100 lines

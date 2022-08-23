@@ -44,12 +44,12 @@ public class DataPersistenceManager : MonoBehaviour {
 		this.gameData = new GameData();
 	}
 
-	public void ResetData(bool bSave = false) {
+	public void ResetData() {
 		string pFile = sFile;
 		ChangeFile("File_0");
 		LoadData();
 		ChangeFile(pFile);
-		if (bSave) { SaveData(); }
+		SaveData();
 	}
 
 	public void SaveData() {
@@ -71,6 +71,7 @@ public class DataPersistenceManager : MonoBehaviour {
 		dataHandler.Load(sFile);
 		//pass the data to other scritps
 		foreach (IDataPersistance dataPersistanceObj in dataPersistanceObjects) {
+			dataPersistanceObj.LoadData(gameData);
 			dataPersistanceObj.LoadData(gameData);
 		}
 		menu.Display(10);

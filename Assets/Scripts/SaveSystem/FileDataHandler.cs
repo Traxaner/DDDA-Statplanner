@@ -5,8 +5,9 @@ using System;
 public class FileDataHandler {
 	private string sDirPath = "", fullPath = "";
 	//Encryption
-	private bool bEncrypt = false;
-	private readonly string sCode = "Zangoku wa tenshi no yono ni, shounen yoshinunari naru";
+	private bool bEncrypt = true;
+	private readonly string sCode = "Uragiri no yuyake yakei mikara mizku asewo. Kirisa ku yo nishite mashine masakebu tau yo ni. Blow out loud. Mukuchina yosei wa sokoni iru. Blow out loud. Zubu na ima kudakeda ima kakera." +
+		"Asahi wa mamoru, yeah, iru no kagi wa. Ima shinjirena kawaruno sa, muri ni wa aji na. Asahi wa mamoru, yeah, yami no nukete. Ime kanjieba ni eru no sa muri i ja nai ano yume no.";
 
 
 	public FileDataHandler(string dataDirPath) {
